@@ -1,0 +1,24 @@
+{
+  "customers": {
+    "customer_id": "customer_id",
+    "first_name": "first_name",
+    "last_name": "last_name",
+    "email": "email",
+    "status": "status",
+    "region": "region"
+  },
+  "orders": {
+    "order_id": "order_id",
+    "customer_id": "customer_id",
+    "order_date": "order_date",
+    "status": "status",
+    "amount": "amount"
+  },
+  "order_items": {
+    "item_id": "item_id",
+    "order_id": "order_id",
+    "product_code": "product_code",
+    "quantity": "quantity",
+    "unit_price": "unit_price"
+  }
+}

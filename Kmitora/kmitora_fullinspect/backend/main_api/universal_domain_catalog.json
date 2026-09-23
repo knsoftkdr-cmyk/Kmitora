@@ -1,0 +1,856 @@
+{
+  "industries": [
+    {
+      "id": "D001",
+      "name": "Banking",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D002",
+      "name": "Capital Markets",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D003",
+      "name": "Insurance",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D004",
+      "name": "Payments",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D005",
+      "name": "FinTech",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D006",
+      "name": "Wealth Management",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D007",
+      "name": "Asset Management",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D008",
+      "name": "Accounting",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D009",
+      "name": "Audit",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D010",
+      "name": "Tax",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D011",
+      "name": "Healthcare",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D012",
+      "name": "Hospitals",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D013",
+      "name": "Pharmaceuticals",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D014",
+      "name": "Biotechnology",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D015",
+      "name": "Medical Devices",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D016",
+      "name": "Life Sciences",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D017",
+      "name": "Clinical Research",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D018",
+      "name": "Health Insurance",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D019",
+      "name": "Public Health",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D020",
+      "name": "Retail",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D021",
+      "name": "E-Commerce",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D022",
+      "name": "Consumer Goods",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D023",
+      "name": "FMCG",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D024",
+      "name": "Wholesale",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D025",
+      "name": "Distribution",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D026",
+      "name": "Fashion",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D027",
+      "name": "Luxury Goods",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D028",
+      "name": "Manufacturing",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D029",
+      "name": "Automotive",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D030",
+      "name": "Aerospace",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D031",
+      "name": "Defense",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D032",
+      "name": "Industrial Equipment",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D033",
+      "name": "Electronics",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D034",
+      "name": "Semiconductor",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D035",
+      "name": "Robotics",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D036",
+      "name": "Chemicals",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D037",
+      "name": "Energy",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D038",
+      "name": "Oil & Gas",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D039",
+      "name": "Utilities",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D040",
+      "name": "Renewable Energy",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D041",
+      "name": "Nuclear",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D042",
+      "name": "Mining",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D043",
+      "name": "Metals",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D044",
+      "name": "Water",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D045",
+      "name": "Telecommunications",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D046",
+      "name": "Media",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D047",
+      "name": "Entertainment",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D048",
+      "name": "Gaming",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D049",
+      "name": "Advertising",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D050",
+      "name": "Publishing",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D051",
+      "name": "Social Platforms",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D052",
+      "name": "Transportation",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D053",
+      "name": "Airlines",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D054",
+      "name": "Airports",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D055",
+      "name": "Rail",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D056",
+      "name": "Shipping",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D057",
+      "name": "Logistics",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D058",
+      "name": "Supply Chain",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D059",
+      "name": "Warehousing",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D060",
+      "name": "Postal / Courier",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D061",
+      "name": "Government",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D062",
+      "name": "Federal / National Government",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D063",
+      "name": "State / Regional Government",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D064",
+      "name": "Local Government",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D065",
+      "name": "Defense Administration",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D066",
+      "name": "Law Enforcement",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D067",
+      "name": "Judiciary",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D068",
+      "name": "Tax Authorities",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D069",
+      "name": "Customs",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D070",
+      "name": "Immigration",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D071",
+      "name": "Education",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D072",
+      "name": "Universities",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D073",
+      "name": "Schools",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D074",
+      "name": "Research Institutions",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D075",
+      "name": "EdTech",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D076",
+      "name": "Real Estate",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D077",
+      "name": "Construction",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D078",
+      "name": "Property Management",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D079",
+      "name": "Architecture",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D080",
+      "name": "Engineering Services",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D081",
+      "name": "Smart Buildings",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D082",
+      "name": "Agriculture",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D083",
+      "name": "Food Production",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D084",
+      "name": "Fisheries",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D085",
+      "name": "Forestry",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D086",
+      "name": "AgriTech",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D087",
+      "name": "Travel",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D088",
+      "name": "Hospitality",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D089",
+      "name": "Hotels",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D090",
+      "name": "Restaurants",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D091",
+      "name": "Tourism",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D092",
+      "name": "Legal",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D093",
+      "name": "Professional Services",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D094",
+      "name": "Consulting",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D095",
+      "name": "Outsourcing / BPO",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D096",
+      "name": "Staffing",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D097",
+      "name": "Technology",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D098",
+      "name": "Software",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D099",
+      "name": "Cloud Computing",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D100",
+      "name": "SaaS",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D101",
+      "name": "Hardware",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D102",
+      "name": "Data Centers",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D103",
+      "name": "AI / ML",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D104",
+      "name": "Cybersecurity",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D105",
+      "name": "Quantum Computing",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D106",
+      "name": "Space",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D107",
+      "name": "Satellites",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D108",
+      "name": "Geospatial",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D109",
+      "name": "Weather / Climate",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D110",
+      "name": "Nonprofit",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D111",
+      "name": "NGOs",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D112",
+      "name": "Charities",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D113",
+      "name": "International Organizations",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D114",
+      "name": "Sports",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D115",
+      "name": "Fitness",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D116",
+      "name": "Wellness",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D117",
+      "name": "Environment",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D118",
+      "name": "Sustainability",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D119",
+      "name": "Carbon Markets",
+      "kind": "INDUSTRY"
+    },
+    {
+      "id": "D120",
+      "name": "Waste Management",
+      "kind": "INDUSTRY"
+    }
+  ],
+  "functions": [
+    {
+      "id": "E001",
+      "name": "Strategy",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E002",
+      "name": "Enterprise Architecture",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E003",
+      "name": "Finance",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E004",
+      "name": "Treasury",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E005",
+      "name": "Procurement",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E006",
+      "name": "Supply Chain",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E007",
+      "name": "Human Resources",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E008",
+      "name": "Payroll",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E009",
+      "name": "Legal",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E010",
+      "name": "Compliance",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E011",
+      "name": "Risk",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E012",
+      "name": "Internal Audit",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E013",
+      "name": "Governance",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E014",
+      "name": "Sales",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E015",
+      "name": "Marketing",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E016",
+      "name": "Customer Service",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E017",
+      "name": "CRM",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E018",
+      "name": "Product Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E019",
+      "name": "Research & Development",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E020",
+      "name": "Operations",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E021",
+      "name": "Manufacturing Operations",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E022",
+      "name": "Service Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E023",
+      "name": "Project Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E024",
+      "name": "Portfolio Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E025",
+      "name": "IT",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E026",
+      "name": "Data",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E027",
+      "name": "Analytics",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E028",
+      "name": "AI",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E029",
+      "name": "Security",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E030",
+      "name": "Privacy",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E031",
+      "name": "Identity & Access",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E032",
+      "name": "Infrastructure",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E033",
+      "name": "Cloud",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E034",
+      "name": "Networking",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E035",
+      "name": "DevOps",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E036",
+      "name": "Platform Engineering",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E037",
+      "name": "SRE",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E038",
+      "name": "Quality Engineering",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E039",
+      "name": "Testing",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E040",
+      "name": "Business Continuity",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E041",
+      "name": "Disaster Recovery",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E042",
+      "name": "Facilities",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E043",
+      "name": "Asset Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E044",
+      "name": "Knowledge Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E045",
+      "name": "Records Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E046",
+      "name": "Document Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E047",
+      "name": "Integration",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E048",
+      "name": "API Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E049",
+      "name": "Master Data Management",
+      "kind": "ENTERPRISE_FUNCTION"
+    },
+    {
+      "id": "E050",
+      "name": "Data Governance",
+      "kind": "ENTERPRISE_FUNCTION"
+    }
+  ]
+}

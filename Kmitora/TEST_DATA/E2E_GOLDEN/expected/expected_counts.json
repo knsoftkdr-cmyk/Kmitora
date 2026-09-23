@@ -1,0 +1,14 @@
+{
+  "happy": {
+    "customers": 5,
+    "orders": 6,
+    "order_items": 8,
+    "total_rows": 19
+  },
+  "defects": {
+    "customers": 7,
+    "orders": 9,
+    "order_items": 10,
+    "notes": 2
+  }
+}

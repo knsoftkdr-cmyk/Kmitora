@@ -1,0 +1,4 @@
+import React from "react";
+import KMITORAEnterpriseOS from "./KMITORAEnterpriseOS";
+export default function KMITORAEnterpriseOSDemo(){return <KMITORAEnterpriseOS source={{id:"source",name:"Oracle Source",status:"connected",understandingPercent:76,counts:{tables:152,views:38,procedures:47,packages:12,functions:19,triggers:31,indexes:84,jobs:17,interfaces:6}}} target={{id:"target",name:"PostgreSQL Target",status:"connected",understandingPercent:81,counts:{tables:91,views:27,functions:13,indexes:46,interfaces:8}}} adapter={{connectSource:()=>console.log("wire source connection"),connectTarget:()=>console.log("wire target connection"),openSourceData:()=>console.log("wire source view"),openTargetData:()=>console.log("wire target view"),openEngineeringView:()=>console.log("wire advanced engineering"),openOperations:()=>console.log("wire operations"),analyseRequirement:d=>console.log("wire requirement analysis",d),askKmitora:p=>console.log("wire assistant",p)}}/>}
+

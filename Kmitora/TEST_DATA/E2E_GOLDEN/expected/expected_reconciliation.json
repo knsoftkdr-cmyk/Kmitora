@@ -1,0 +1,15 @@
+{
+  "happy": {
+    "row_counts": {
+      "customers": 5,
+      "orders": 6,
+      "order_items": 8
+    },
+    "primary_key_duplicates": 0,
+    "orphan_customer_refs": 0,
+    "orphan_order_refs": 0,
+    "negative_order_amounts": 0,
+    "non_positive_item_quantities": 0,
+    "production_writes": 0
+  }
+}

@@ -1,0 +1,28 @@
+﻿TABLE: target_customers
+customer_id INTEGER PRIMARY KEY
+customer_name VARCHAR(200) NOT NULL
+status VARCHAR(10)
+region VARCHAR(20)
+email VARCHAR(255)
+balance NUMERIC(18,2)
+
+TABLE: target_orders
+order_id INTEGER PRIMARY KEY
+customer_id INTEGER NOT NULL
+order_date DATE
+status VARCHAR(30)
+amount NUMERIC(18,2)
+
+TABLE: target_payments
+payment_id VARCHAR(50) PRIMARY KEY
+order_id INTEGER NOT NULL
+payment_date DATE
+payment_method VARCHAR(50)
+amount NUMERIC(18,2)
+status VARCHAR(30)
+
+RELATIONSHIP
+target_orders.customer_id -> target_customers.customer_id
+
+RELATIONSHIP
+target_payments.order_id -> target_orders.order_id

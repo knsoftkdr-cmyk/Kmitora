@@ -1,0 +1,138 @@
+id,number,name,owner,category,authority,dependencies,mandatory_evidence,implementation_state
+KCAP-001,1,A000 Universal Orchestrator v2,orchestrator,orchestration,GOVERNED_WRITE,,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-002,2,Universal Enterprise Understanding Engine,enterprise_understanding,understanding,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-003,3,Business Capability Model,enterprise_understanding,understanding,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-004,4,Business Process Miner,enterprise_understanding,understanding,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-005,5,Business Rule DNA Engine v2,business_rule_dna,understanding,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-006,6,Requirements Intelligence Engine,enterprise_understanding,understanding,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-007,7,Document Intelligence Pipeline,document_intelligence,understanding,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-008,8,Architecture Understanding Engine,enterprise_understanding,discovery,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-009,9,Source System Fingerprint F1,fingerprint,discovery,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-010,10,Target System Fingerprint F2,fingerprint,discovery,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-011,11,Source-Target Gap Analyzer,gap_analysis,discovery,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-012,12,Universal Knowledge Graph,knowledge_graph,knowledge,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-013,13,Digital Twin Engine v2,digital_twin,knowledge,READ_ONLY,KCAP-001,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-014,14,Tenant Isolation Engine,tenant_boundary,security,GOVERNED_WRITE,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-015,15,Memory Namespace Manager,tenant_memory,memory,VERIFIED_LEARNING,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-016,16,Verified Learning Vault,verified_learning,memory,VERIFIED_LEARNING,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-017,17,Dynamic Agent Factory,agent_factory,agents,GOVERNED_WRITE,KCAP-001;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-018,18,Agent Skill Registry,agent_registry,agents,READ_ONLY,KCAP-001;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-019,19,Agent Consensus Engine,consensus,agents,READ_ONLY,KCAP-001;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-020,20,Agent Disagreement Resolver,consensus,agents,READ_ONLY,KCAP-001;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-021,21,Confidence Calibration Engine,assurance,quality,READ_ONLY,KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-022,22,Evidence Completeness Scorer,assurance,quality,READ_ONLY,KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-023,23,Universal Problem Solver,universal_problem_solver,problem_solving,PLAN_ONLY,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-024,24,Autonomous Defect Triage,defect_triage,problem_solving,READ_ONLY,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-025,25,Root Cause Investigation Engine,root_cause,problem_solving,READ_ONLY,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-026,26,Blast Radius Predictor,impact_analysis,problem_solving,READ_ONLY,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-027,27,What-Breaks-If Engine,impact_analysis,problem_solving,READ_ONLY,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-028,28,Code Defect Analyzer,code_healing,self_healing,READ_ONLY,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-029,29,Code Self-Healing Engine,code_healing,self_healing,GOVERNED_WRITE,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-030,30,Business Logic Self-Healer,business_healing,self_healing,GOVERNED_WRITE,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-031,31,Database Problem Solver,database_healing,self_healing,GOVERNED_WRITE,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-032,32,API/Integration Self-Healer,integration_healing,self_healing,GOVERNED_WRITE,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-033,33,Infrastructure Self-Healer,infrastructure_healing,self_healing,GOVERNED_WRITE,KCAP-002;KCAP-012;KCAP-021;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-034,34,Migration Autopilot v2,migration_autopilot,migration,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-035,35,Schema Mapping Intelligence,mapping,migration,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-036,36,Semantic Mapping Engine,mapping,migration,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-037,37,Data Profiling Engine,data_quality,data,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-038,38,Data Quality Engine,data_quality,data,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-039,39,Data Cleansing Engine,data_transform,data,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-040,40,Data Conversion Engine,data_transform,data,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-041,41,Transformation Engine,data_transform,data,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-042,42,Reference Data Resolver,data_transform,data,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-043,43,CDC Intelligence Engine,cdc,migration,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-044,44,Exception Classification Engine,exception_recovery,recovery,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-045,45,Autonomous Exception Recovery,exception_recovery,recovery,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-046,46,Dead-Letter / Quarantine Manager,exception_recovery,recovery,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-047,47,Retry Strategy Engine,recovery,recovery,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-048,48,Compensation Engine,recovery,recovery,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-049,49,Rollback Engine,recovery,recovery,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-050,50,Canary Engine,simulation,recovery,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-051,51,Simulation Engine,simulation,simulation,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-052,52,Dry-Run Engine,simulation,simulation,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-053,53,Dynamic Test Generator,testing,testing,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-054,54,Unit/Contract Test Runner,testing,testing,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-055,55,Integration Test Engine,testing,testing,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-056,56,Business Scenario Tester,testing,testing,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-057,57,Failure Injection Engine,resilience,testing,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-058,58,Chaos/Resilience Engine,resilience,testing,SANDBOX_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-059,59,Validation Intelligence Engine,validation,validation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-060,60,Data Contract Guardian,validation,validation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-061,61,Referential Integrity Validator,validation,validation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-062,62,Business Control Validator,validation,validation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-063,63,Semantic Validator,validation,validation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-064,64,Reconciliation Radar,reconciliation,reconciliation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-065,65,Exception Explainer,reconciliation,reconciliation,READ_ONLY,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-066,66,Auto-Reconciliation Repair,reconciliation,reconciliation,GOVERNED_WRITE,KCAP-009;KCAP-010;KCAP-012;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-067,67,Evidence-by-Design Engine,evidence,evidence,EVIDENCE_ONLY,KCAP-012,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-068,68,Decision Ledger,evidence,evidence,EVIDENCE_ONLY,KCAP-067;KCAP-106,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-069,69,Change Passport,evidence,evidence,EVIDENCE_ONLY,KCAP-067;KCAP-106,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-070,70,Regulatory Evidence Pack Generator,evidence,evidence,EVIDENCE_ONLY,KCAP-067;KCAP-106,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-071,71,Observability Collector,observability,operations,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-072,72,Incident Correlation Engine,observability,operations,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-073,73,SLA/SLO Intelligence,observability,operations,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-074,74,Continuous Drift Detection,drift,operations,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-075,75,Performance Optimizer,optimization,operations,PLAN_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-076,76,Security/Access Analyzer,security,security,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-077,77,Prompt Injection Defense,security,security,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-078,78,Memory Poisoning Defense,security,security,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-079,79,Tool Permission Broker,policy,security,GOVERNED_WRITE,KCAP-012;KCAP-067,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,ENGINE_ADAPTER_ACTIVE
+KCAP-080,80,Policy-as-Code Engine,policy,governance,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-081,81,Authorization Gate Engine,policy,governance,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-082,82,Environment Boundary Engine,policy,governance,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-083,83,Idempotency Manager,workflow,reliability,GOVERNED_WRITE,KCAP-001;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-084,84,Transaction/Checkpoint Manager,workflow,reliability,GOVERNED_WRITE,KCAP-001;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-085,85,Distributed Workflow Engine,workflow,reliability,GOVERNED_WRITE,KCAP-001;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-086,86,Autonomous Replanning Engine,orchestrator,orchestration,PLAN_ONLY,KCAP-001;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-087,87,Goal Completion Verifier,assurance,quality,READ_ONLY,KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-088,88,Unknown/Uncertainty Detector,assurance,quality,READ_ONLY,KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-089,89,Contradiction Detector,assurance,quality,READ_ONLY,KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-090,90,Hallucination Guard,assurance,quality,READ_ONLY,KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-091,91,Grounded Retrieval Layer,retrieval,knowledge,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-092,92,Multi-Model Evaluator,model_evaluation,quality,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-093,93,Deterministic Rule Engine,rule_engine,reasoning,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-094,94,Constraint Solver,optimization,reasoning,PLAN_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-095,95,Optimization Engine,optimization,reasoning,PLAN_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-096,96,Cost/Risk Decision Engine,risk,reasoning,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-097,97,Historical Incident Intelligence,retrieval,learning,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-098,98,Pattern Generalization Engine,verified_learning,learning,VERIFIED_LEARNING,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-099,99,Domain Adapter Framework,domain_adapter,universality,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-100,100,Universal Connector Framework,connectors,universality,GOVERNED_WRITE,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-101,101,Connector Capability Discovery,connectors,universality,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-102,102,Tool-Agnostic Migration Interface,connectors,universality,PLAN_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-103,103,Legacy Code Archaeologist v2,legacy_intelligence,discovery,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-104,104,SQL/ETL Rule Extractor,legacy_intelligence,discovery,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-105,105,Lineage Engine,lineage,knowledge,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-106,106,Provenance Engine,lineage,evidence,READ_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-107,107,Versioned Artifact Store,artifact_store,evidence,GOVERNED_WRITE,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-108,108,Replay Engine,replay,simulation,SANDBOX_ONLY,KCAP-012;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-109,109,Golden Dataset Framework,certification,certification,READ_ONLY,KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-110,110,Golden Business Scenario Framework,certification,certification,READ_ONLY,KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-111,111,Benchmark/Evaluation Harness,certification,certification,SANDBOX_ONLY,KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-112,112,Accuracy Metrics Service,certification,certification,READ_ONLY,KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-113,113,False Positive/Negative Analyzer,certification,certification,READ_ONLY,KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-114,114,Human-Independent Acceptance Engine,certification,certification,READ_ONLY,KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-115,115,Autonomous Recovery Supervisor,recovery,reliability,GOVERNED_WRITE,KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-116,116,Circuit Breaker / Kill Switch,policy,safety,GOVERNED_WRITE,KCAP-080,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-117,117,Production Safety Controller,policy,safety,READ_ONLY,KCAP-080,trace_id;provenance;confidence,ENGINE_ADAPTER_ACTIVE
+KCAP-118,118,Zero-Surprise Cutover Simulator,simulation,migration,SANDBOX_ONLY,KCAP-013;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-119,119,Hypercare Autopilot,operations,operations,GOVERNED_WRITE,KCAP-013;KCAP-067;KCAP-080,trace_id;provenance;confidence;test_result;rollback_plan;policy_decision,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-120,120,Decommission Intelligence,operations,operations,PLAN_ONLY,KCAP-013;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-121,121,Continuous Optimization Loop,optimization,operations,PLAN_ONLY,KCAP-013;KCAP-067;KCAP-080,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-122,122,Frontend Universal Control Plane,frontend,frontend,READ_ONLY,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-123,123,Source View / Target View,frontend,frontend,READ_ONLY,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-124,124,Business Context Workspace,frontend,frontend,GOVERNED_WRITE,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-125,125,Autonomous Problem Solver UI,frontend,frontend,READ_ONLY,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-126,126,Agent Control Tower,frontend,frontend,READ_ONLY,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-127,127,Evidence Explorer,frontend,frontend,READ_ONLY,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-128,128,Risk/Confidence Dashboard,frontend,frontend,READ_ONLY,KCAP-001;KCAP-067,trace_id;provenance;confidence,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-129,129,DEV Autonomous Certification Suite,certification,certification,SANDBOX_ONLY,KCAP-067;KCAP-080;KCAP-117,trace_id;provenance;confidence;certification_result,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-130,130,Migration Certification Suite,certification,certification,SANDBOX_ONLY,KCAP-067;KCAP-080;KCAP-117,trace_id;provenance;confidence;certification_result,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-131,131,Production Support Certification Suite,certification,certification,SANDBOX_ONLY,KCAP-067;KCAP-080;KCAP-117,trace_id;provenance;confidence;certification_result,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-132,132,Adversarial Certification Suite,certification,certification,SANDBOX_ONLY,KCAP-067;KCAP-080;KCAP-117,trace_id;provenance;confidence;certification_result,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-133,133,Chaos Certification Suite,certification,certification,SANDBOX_ONLY,KCAP-067;KCAP-080;KCAP-117,trace_id;provenance;confidence;certification_result,SHARED_CONTRACT_READY_NOT_CERTIFIED
+KCAP-134,134,Formal Gate Engine,gates,governance,READ_ONLY,KCAP-067;KCAP-080;KCAP-117,trace_id;provenance;confidence;certification_result,ENGINE_ADAPTER_ACTIVE
+KCAP-135,135,MODEL_VALIDATED Gate,gates,governance,EXTERNAL_GATE,KCAP-111,trace_id;provenance;confidence;certification_result,ENGINE_ADAPTER_ACTIVE
+KCAP-136,136,MIGRATION_READY Gate,gates,governance,READ_ONLY,KCAP-129;KCAP-130;KCAP-135,trace_id;provenance;confidence;certification_result,ENGINE_ADAPTER_ACTIVE
+KCAP-137,137,PRODUCTION_ELIGIBLE Gate,gates,governance,READ_ONLY,KCAP-132;KCAP-136;KCAP-117,trace_id;provenance;confidence;certification_result,ENGINE_ADAPTER_ACTIVE

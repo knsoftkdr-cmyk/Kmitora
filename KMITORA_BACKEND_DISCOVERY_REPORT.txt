@@ -1,0 +1,50 @@
+﻿KMITORA Backend Discovery Report
+===============================
+Project Root: C:\KMITORA\Kmitora-main
+Generated: 2026-09-20 00:32:11
+
+Ranked candidates:
+Score=65 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\F1033_server.py | Signals=/health; port 8080; port 8081; entrypoint-like filename
+Score=65 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\KMITORA_STORAGE_QUOTA_001_PATCH_ROOTLESS_20260919\backend\main_api\F1033_server.py | Signals=/health; port 8080; port 8081; entrypoint-like filename
+Score=65 | Tech=Python | Path=C:\KMITORA\Kmitora-main\semantic\api_router.py | Signals=HTTP route decorators; /health; entrypoint-like filename
+Score=40 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\dev_e2e\certification.py | Signals=/health; port 8081; port 8082
+Score=35 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\demo_backend_mega_e2e\run_mega_backend_e2e.py | Signals=/health; port 8080
+Score=35 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\vite.config.ts | Signals=/health; port 8080
+Score=35 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\supervisor\kmitora_demo_supervisor.py | Signals=/health; port 8080
+Score=30 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\source_api\kmitora_source_api.py | Signals=/health; port 8081
+Score=30 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\target_api\kmitora_target_api.py | Signals=/health; port 8082
+Score=20 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\dev_e2e\test_runner_integration.py | Signals=/health
+Score=20 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\a000_intelligence\api_adapter.py | Signals=entrypoint-like filename
+Score=20 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\services\api.ts | Signals=/health
+Score=20 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\services\backendApi.ts | Signals=/health
+Score=20 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\tests\e2e\05_production_write_block.spec.ts | Signals=/health
+Score=20 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\tests\e2e\helpers\api.ts | Signals=/health
+Score=20 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\tools\autonomy_137\apply_autonomy_137.py | Signals=entrypoint-like filename
+Score=15 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\digital_twin_graph_api.py | Signals=port 8080
+Score=15 | Tech=Python | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\mega_demo_controller.py | Signals=port 8080
+Score=15 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\services\enterpriseTwinGraphDemo.ts | Signals=port 8080
+Score=15 | Tech=Node/TypeScript | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\tests\e2e\helpers\env.ts | Signals=port 8080
+Score=5 | Tech=Config | Path=C:\KMITORA\Kmitora-main\Kmitora-main\backend\requirements.txt | Signals=config/start file
+Score=5 | Tech=Config | Path=C:\KMITORA\Kmitora-main\Kmitora-main\frontend\package.json | Signals=config/start file
+Score=5 | Tech=Config | Path=C:\KMITORA\Kmitora-main\Kmitora-main\TEST_DATA\REFERENCE_MIGRATION_001\BUSINESS_RULES\requirements.txt | Signals=config/start file
+Score=5 | Tech=Config | Path=C:\KMITORA\Kmitora-main\Kmitora-main\TEST_DATA\REFERENCE_MIGRATION_002_DRY_RUN_CLEAN\BUSINESS_RULES\requirements.txt | Signals=config/start file
+
+Likely runtime files:
+C:\KMITORA\Kmitora-main\KMITORA_MAIN_SEMANTIC_A000_STATUS.txt
+C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\domain_intelligence.py
+C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\F1033_server.py
+C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\test_domain_intelligence.py
+C:\KMITORA\Kmitora-main\Kmitora-main\backend\main_api\universal_domain_catalog.json
+C:\KMITORA\Kmitora-main\Kmitora-main\backend\source_api\kmitora_source_api.py
+C:\KMITORA\Kmitora-main\Kmitora-main\backend\target_api\kmitora_target_api.py
+C:\KMITORA\Kmitora-main\Kmitora-main\docs\features\UNIVERSAL_DOMAIN_INTELLIGENCE.md
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\main.tsx
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\components\ServerFileBrowserModal.tsx
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\config\domainRegistry.ts
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\pages\DomainIntelligence.tsx
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\services\domainContext.ts
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\services\domainIntelligence.ts
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\src\services\domainIntelligenceApi.ts
+C:\KMITORA\Kmitora-main\Kmitora-main\frontend\tests\e2e\14_domain_intelligence.spec.ts
+C:\KMITORA\Kmitora-main\Kmitora-main\KMITORA_STORAGE_QUOTA_001_PATCH_ROOTLESS_20260919\backend\main_api\F1033_server.py
+C:\KMITORA\Kmitora-main\Kmitora-main\scripts\run-domain-intelligence-e2e.ps1

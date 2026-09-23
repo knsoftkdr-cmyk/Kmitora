@@ -1,0 +1,23 @@
+﻿BR-001 customer_id must be unique.
+BR-002 customer_name must be trimmed before target mapping.
+BR-003 email must be normalized to lowercase.
+BR-004 ACTIVE customer status must normalize to A.
+BR-005 INACTIVE customer status must normalize to I.
+BR-006 SOUTH region must normalize to S.
+BR-007 NORTH region must normalize to N.
+BR-008 EAST region must normalize to E.
+BR-009 WEST region must normalize to W.
+BR-010 customer balance must be nonnegative.
+BR-011 every order must reference an existing customer.
+BR-012 OPEN order status must normalize to PENDING.
+BR-013 COMPLETED order status must remain COMPLETED.
+BR-014 CANCELLED order status must remain CANCELLED.
+BR-015 order amount must be greater than zero.
+BR-016 every payment must reference an existing order.
+BR-017 payment amount must be greater than zero.
+BR-018 source data must remain read-only.
+BR-019 only validated records may proceed toward the DEV target.
+BR-020 Customers must be processed before Orders.
+BR-021 Orders must be processed before Payments.
+BR-022 source and target record counts must reconcile.
+BR-023 evidence must capture mappings, transformations, validation, load and reconciliation.

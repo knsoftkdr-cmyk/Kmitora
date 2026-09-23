@@ -1,0 +1,179 @@
+/* ===== KMITORA motion layer ===== */
+@keyframes km-fade-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes km-slide-in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+@keyframes km-pop{0%{transform:scale(.7);opacity:0}60%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+@keyframes km-pulse{0%,100%{box-shadow:0 0 0 0 rgba(47,107,255,.45)}50%{box-shadow:0 0 0 7px rgba(47,107,255,0)}}
+@keyframes km-shimmer{0%{background-position:-420px 0}100%{background-position:420px 0}}
+
+.ku-page > *{animation:km-fade-up .42s cubic-bezier(.22,.9,.3,1) both}
+.ku-page > *:nth-child(2){animation-delay:.05s}
+.ku-page > *:nth-child(3){animation-delay:.1s}
+.ku-page > *:nth-child(4){animation-delay:.15s}
+.ku-page > *:nth-child(5){animation-delay:.2s}
+
+.ku-strip > div > strong{transition:transform .22s cubic-bezier(.22,.9,.3,1),box-shadow .22s ease}
+.ku-strip > div:hover > strong{transform:scale(1.13)}
+.ku-strip > div:nth-of-type(1) > strong{animation:km-pop .45s .15s both}
+.ku-strip > div:nth-of-type(2) > strong{animation:km-pop .45s .25s both}
+.ku-strip > div:nth-of-type(3) > strong{animation:km-pop .45s .35s both,km-pulse 2.6s 1s infinite}
+.ku-strip > div:nth-of-type(4) > strong{animation:km-pop .45s .45s both}
+.ku-strip .ku-arrow{transition:transform .25s ease}
+.ku-strip > div:hover ~ .ku-arrow{transform:translateX(2px)}
+
+.ks-message.is-ok,.ks-message.is-err,.kt-message.is-ok,.kt-message.is-err{
+  animation:km-slide-in .34s cubic-bezier(.22,.9,.3,1) both}
+.ks-message.is-ok::before,.kt-message.is-ok::before{animation:km-pop .5s .12s both}
+
+.ks-card,.kt-card,.ku-section,.km-assistant-card{
+  transition:box-shadow .26s ease,transform .26s cubic-bezier(.22,.9,.3,1),border-color .26s ease}
+.ks-card:hover,.kt-card:hover,.km-assistant-card:hover{
+  transform:translateY(-2px);box-shadow:0 10px 26px rgba(15,23,42,.09)}
+
+button{transition:transform .14s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease}
+button:not(:disabled):hover{transform:translateY(-1px)}
+button:not(:disabled):active{transform:translateY(0) scale(.975)}
+button:disabled{transition:none}
+
+input,select,textarea{transition:border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px rgba(47,107,255,.16);outline:none}
+
+[class*="badge"],[class*="status"],[class*="chip"]{transition:background-color .22s ease,color .22s ease}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+/* ===== KMITORA sidebar theme ===== */
+.sidebar{
+  background:linear-gradient(175deg,#0b1220 0%,#111c34 45%,#0d1830 100%);
+  border-right:1px solid rgba(255,255,255,.07);
+  position:relative;
+}
+.sidebar::after{
+  content:"";position:absolute;top:0;right:0;width:1px;height:100%;
+  background:linear-gradient(180deg,transparent,rgba(47,107,255,.5),rgba(22,163,74,.4),transparent);
+}
+
+.sidebar .brand{border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:16px}
+.sidebar .brandMark{
+  background:linear-gradient(135deg,#2f6bff,#16a34a);color:#fff;
+  box-shadow:0 5px 16px rgba(47,107,255,.35);
+  transition:transform .3s cubic-bezier(.22,.9,.3,1),box-shadow .3s ease;
+}
+.sidebar .brand:hover .brandMark{transform:rotate(-7deg) scale(1.06);box-shadow:0 7px 22px rgba(47,107,255,.5)}
+.sidebar .brandName{color:#f8fafc;letter-spacing:.02em}
+.sidebar .brandSub{color:#7e8da8}
+
+.kmSidebarGroupTitle{
+  color:#5d6f90;font-size:10px;font-weight:800;letter-spacing:.14em;
+  padding:16px 14px 7px;
+}
+
+.sidebar .navItem{
+  position:relative;color:#9fb0cc;background:transparent;border:0;border-radius:10px;
+  width:100%;display:flex;align-items:center;gap:11px;padding:9px 12px;margin:1px 0;
+  font-size:13.5px;font-weight:600;cursor:pointer;overflow:hidden;
+  transition:color .22s ease,background-color .22s ease,transform .22s cubic-bezier(.22,.9,.3,1);
+}
+.sidebar .navItem::before{
+  content:"";position:absolute;left:0;top:50%;width:3px;height:0;border-radius:0 3px 3px 0;
+  background:linear-gradient(180deg,#2f6bff,#16a34a);
+  transform:translateY(-50%);transition:height .28s cubic-bezier(.22,.9,.3,1);
+}
+.sidebar .navItem:hover{background:rgba(255,255,255,.055);color:#e6edf8;transform:translateX(3px)}
+.sidebar .navItem:hover::before{height:52%}
+.sidebar .navItem svg{transition:transform .25s cubic-bezier(.22,.9,.3,1),color .22s ease;color:#7e93b5}
+.sidebar .navItem:hover svg{transform:scale(1.14);color:#4d86ff}
+
+.sidebar .navItem.active{
+  background:linear-gradient(90deg,rgba(47,107,255,.2),rgba(22,163,74,.09) 70%,transparent);
+  color:#fff;
+}
+.sidebar .navItem.active::before{height:66%}
+.sidebar .navItem.active svg{color:#5b95ff}
+
+.kmSidebarStageNo{
+  font-size:10px;font-weight:800;color:#5d6f90;min-width:17px;letter-spacing:.03em;
+  transition:color .22s ease;
+}
+.sidebar .navItem:hover .kmSidebarStageNo{color:#8ea6cc}
+.sidebar .navItem.active .kmSidebarStageNo{color:#16a34a}
+
+.sidebar nav{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.16) transparent}
+.sidebar nav::-webkit-scrollbar{width:7px}
+.sidebar nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:4px}
+.sidebar nav::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.26)}
+.sidebar nav::-webkit-scrollbar-track{background:transparent}
+
+.sidebar .navItem{animation:km-slide-in .34s both}
+.kmSidebarGroup .navItem:nth-child(2){animation-delay:.02s}
+.kmSidebarGroup .navItem:nth-child(3){animation-delay:.04s}
+.kmSidebarGroup .navItem:nth-child(4){animation-delay:.06s}
+.kmSidebarGroup .navItem:nth-child(5){animation-delay:.08s}
+.kmSidebarGroup .navItem:nth-child(6){animation-delay:.1s}
+.kmSidebarGroup .navItem:nth-child(7){animation-delay:.12s}
+.kmSidebarGroup .navItem:nth-child(8){animation-delay:.14s}
+.kmSidebarGroup .navItem:nth-child(n+9){animation-delay:.16s}
+/* ===== sidebar sticky rail ===== */
+.sidebar{
+  position:sticky;top:0;
+  height:100vh;max-height:100vh;
+  display:flex;flex-direction:column;
+  align-self:flex-start;flex:0 0 auto;
+  overflow:hidden;
+}
+.sidebar .brand{flex:0 0 auto}
+.sidebar nav{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;min-height:0;padding-bottom:18px}
+/* ===== sidebar sticky rail - box fix ===== */
+.sidebar{box-sizing:border-box;padding-bottom:0}
+.sidebar nav{margin-right:-8px;padding-right:8px}
+/* ===== assistant panel collapse ===== */
+.copilot{
+  position:relative;
+  transition:width .32s cubic-bezier(.22,.9,.3,1),min-width .32s cubic-bezier(.22,.9,.3,1),padding .32s ease;
+}
+.copilotHeader{position:relative}
+.copilotToggle{
+  position:absolute;top:0;right:0;z-index:3;
+  display:grid;place-items:center;width:30px;height:30px;
+  border:1px solid #e2e8f0;border-radius:8px;background:#fff;color:#64748b;cursor:pointer;
+  transition:background-color .2s ease,color .2s ease,transform .18s ease;
+}
+.copilotToggle:hover{background:#f1f5f9;color:#2f6bff;transform:translateY(-1px)}
+
+.copilot.is-collapsed{
+  width:52px!important;min-width:52px!important;max-width:52px!important;
+  flex:0 0 52px!important;padding-left:8px;padding-right:8px;overflow:hidden;
+}
+.copilot.is-collapsed > *:not(.copilotHeader){display:none}
+.copilot.is-collapsed .copilotHeader{
+  flex-direction:column;gap:12px;padding:12px 0 0;border:0;justify-content:flex-start;
+}
+.copilot.is-collapsed .copilotHeader > div{display:none}
+.copilot.is-collapsed .copilotHeader svg:first-of-type{color:#2f6bff}
+.copilot.is-collapsed .copilotToggle{position:static;margin:0 auto}
+/* ===== collapse resizes the shell grid ===== */
+.appShell{transition:grid-template-columns .32s cubic-bezier(.22,.9,.3,1)}
+.appShell.appShell--copilotCollapsed{grid-template-columns:240px minmax(0,1fr) 60px}
+.copilot.is-collapsed{width:auto!important;min-width:0!important;max-width:none!important;padding:18px 8px}
+/* ===== collapsed strip: clearer toggle ===== */
+.copilot.is-collapsed{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  padding-top:18px;border-left:1px solid var(--line);background:var(--surface);
+}
+.copilot.is-collapsed .copilotToggle,
+.copilot .copilotToggle{
+  width:34px;height:34px;border-radius:9px;
+  border:1px solid #dde5f0;background:#fff;color:#475569;
+  display:grid;place-items:center;
+}
+.copilot.is-collapsed .copilotToggle svg,
+.copilot .copilotToggle svg{width:19px;height:19px;stroke-width:1.9}
+.copilot.is-collapsed .copilotToggle:hover{background:#eef4ff;border-color:#9fc1ee;color:#2f6bff}
+
+.copilot.is-collapsed .copilotHeader{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  padding:0;margin:0;width:100%;
+}
+.copilot.is-collapsed .copilotHeader > svg{
+  width:24px;height:24px;color:#2f6bff;opacity:1;
+}

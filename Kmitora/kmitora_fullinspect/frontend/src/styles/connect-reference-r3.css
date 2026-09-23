@@ -1,0 +1,41 @@
+
+/* KMITORA Connect R3 - visual-only safe layer */
+.kmConnectReference{
+  --k-bg:#f7f9fd;--k-card:#fff;--k-line:#e3e9f3;--k-ink:#10203c;--k-muted:#6f7d96;
+  --k-blue:#3157f6;--k-violet:#6d49f6;--k-green:#16b879;--k-amber:#f5a524;--k-red:#ef4d5d;
+  width:100%;max-width:none!important;padding:18px 22px 36px!important;background:var(--k-bg);
+}
+.kmConnectReference .pageTitle{margin-bottom:12px!important}
+.kmConnectReference .pageTitle h1{font-size:27px!important;letter-spacing:-.035em!important;color:var(--k-ink)!important;margin:4px 0!important}
+.kmConnectReference .pageTitle p{font-size:10px!important;color:var(--k-muted)!important}
+.kmConnectReference .eyebrow{font-size:8px!important;font-weight:800!important;color:var(--k-blue)!important;letter-spacing:.06em!important}
+.kmConnectReference .kmr-tabs{display:flex;gap:28px;align-items:flex-end;height:40px;border-bottom:1px solid var(--k-line);margin-bottom:14px;padding-left:4px}
+.kmConnectReference .kmr-tab{font-size:9px;color:#53627b;padding-bottom:10px;font-weight:650}
+.kmConnectReference .kmr-tab.active{color:#263fc9;border-bottom:2px solid var(--k-blue)}
+.kmConnectReference .kmr-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.kmConnectReference .kmr-kpi{min-height:104px;background:#fff;border:1px solid var(--k-line);border-radius:11px;padding:14px 16px;box-shadow:0 5px 18px rgba(25,49,90,.045)}
+.kmConnectReference .kmr-kpi span{display:block;font-size:8px;font-weight:700;color:#283851}
+.kmConnectReference .kmr-kpi strong{display:block;font-size:24px;margin-top:10px;color:#0d1f3d}
+.kmConnectReference .kmr-kpi small{display:block;font-size:7px;color:var(--k-muted);margin-top:12px}
+.kmConnectReference .kmr-good{color:var(--k-green)!important}.kmConnectReference .kmr-warn{color:var(--k-amber)!important}.kmConnectReference .kmr-bad{color:var(--k-red)!important}
+.kmConnectReference .kmr-pipeline{background:#fff;border:1px solid var(--k-line);border-radius:11px;box-shadow:0 5px 18px rgba(25,49,90,.045);padding:14px 18px 18px;margin-bottom:14px}
+.kmConnectReference .kmr-pipeline-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.kmConnectReference .kmr-pipeline-head h3{font-size:12px!important;margin:0!important;color:#10203c!important}
+.kmConnectReference .kmr-pipeline-head p{font-size:8px!important;margin:3px 0 0!important;color:var(--k-muted)!important}
+.kmConnectReference .kmr-stages{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.kmConnectReference .kmr-stages:before{content:"";position:absolute;left:8%;right:8%;top:20px;height:2px;background:linear-gradient(90deg,#4e79ff,#6c8eff,#8d66f7,#52cddd,#25b879);opacity:.75}
+.kmConnectReference .kmr-stage{position:relative;z-index:1;text-align:center}
+.kmConnectReference .kmr-node{width:40px;height:40px;margin:0 auto 7px;border-radius:50%;background:#fff;border:2px solid #a9c4ff;display:grid;place-items:center;box-shadow:0 0 0 5px #fff;color:var(--k-blue);font-size:9px;font-weight:800}
+.kmConnectReference .kmr-stage.done .kmr-node{border-color:#36bf8a;color:#169a64;background:#f1fbf7}
+.kmConnectReference .kmr-stage b{display:block;font-size:8px}.kmConnectReference .kmr-stage small{display:block;font-size:7px;color:var(--k-muted);margin-top:3px}
+.kmConnectReference .panel{background:#fff!important;border:1px solid var(--k-line)!important;border-radius:11px!important;box-shadow:0 5px 18px rgba(25,49,90,.045)!important}
+.kmConnectReference .panelHeader h3{font-size:11px!important;color:#10203c!important}.kmConnectReference .panelHeader p{font-size:8px!important;color:var(--k-muted)!important}
+.kmConnectReference .twoCol.wideLeft{gap:14px!important;grid-template-columns:1fr 1fr!important}
+.kmConnectReference input,.kmConnectReference select,.kmConnectReference textarea{border:1px solid #dfe6f1!important;border-radius:7px!important;background:#fff!important;font-size:8px!important;min-height:34px!important}
+.kmConnectReference label>span{font-size:8px!important;color:#5a6981!important;font-weight:700!important}
+.kmConnectReference button{border-radius:7px!important;font-size:8px!important;font-weight:700!important}
+.kmConnectReference button.primary{background:linear-gradient(90deg,#3559f6,#5a46ef)!important;color:#fff!important;border-color:transparent!important}
+.kmConnectReference .checkRow{font-size:8px!important}.kmConnectReference .checkRow small{font-size:7px!important}
+.kmConnectReference table{font-size:8px!important}
+@media(max-width:1100px){.kmConnectReference .kmr-kpis{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:850px){.kmConnectReference .kmr-kpis{grid-template-columns:1fr 1fr}.kmConnectReference .twoCol.wideLeft{grid-template-columns:1fr!important}.kmConnectReference .kmr-stages{grid-template-columns:1fr}.kmConnectReference .kmr-stages:before{display:none}}

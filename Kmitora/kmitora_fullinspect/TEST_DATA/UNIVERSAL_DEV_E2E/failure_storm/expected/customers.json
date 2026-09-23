@@ -1,0 +1,9 @@
+[
+  {"customer_id":"C001","first_name":"Asha","last_name":"Rao","email":"asha.rao@example.test","status":"ACTIVE","region":"SOUTH"},
+  {"customer_id":"C002","first_name":"Ben","last_name":"Lee","email":"ben.lee@example.test","status":"ACTIVE","region":"WEST"},
+  {"customer_id":"C003","first_name":"Carla","last_name":"Diaz","email":"carla.diaz@example.test","status":"ACTIVE","region":"NORTH"},
+  {"customer_id":"C004","first_name":"Dev","last_name":"Shah","email":"dev.shah@example.test","status":"INACTIVE","region":"EAST"},
+  {"customer_id":"C005","first_name":"Ella","last_name":"Kim","email":"ella.kim@example.test","status":"ACTIVE","region":"WEST"},
+  {"customer_id":"C006","first_name":"Fault","last_name":"MissingEmail","email":"fault.missingemail@example.test","status":"ACTIVE","region":"WEST"},
+  {"customer_id":"C007","first_name":"Nora","last_name":"Patel","email":"nora.patel@example.test","status":"INACTIVE","region":"SOUTH"}
+]

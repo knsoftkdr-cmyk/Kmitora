@@ -1,0 +1,40 @@
+{
+  "id": "2d3b63a9-acc8-4cfb-8fd7-f9e700bebdc8",
+  "migration_id": "DEV-UNIFIED-20260921071426",
+  "status": "APPROVED",
+  "approved": true,
+  "rejected": false,
+  "superseded": false,
+  "requires_authoritative_approver": true,
+  "requested_at": "2026-09-21T07:15:51.286533+00:00",
+  "decision_at": "2026-09-21T07:16:10.981836+00:00",
+  "decision_by": "DEV_AUTHORIZED_REVIEWER",
+  "decision_reason": "Approved By Uday Kiran",
+  "production_action_executed": false,
+  "target_write_executed": false,
+  "input": {
+    "migration_id": "DEV-UNIFIED-20260921071426",
+    "requested_action": "MIGRATION_APPROVAL",
+    "environment": "DEV",
+    "execution_requested": false,
+    "target_write_requested": false,
+    "staging_snapshot": {
+      "total_planned_records": 3850,
+      "ready_records": 2250,
+      "blocked_records": 0,
+      "review_records": 1600,
+      "quarantine_records": 0,
+      "rejected_records": 0
+    },
+    "validation_snapshot": {
+      "quality_findings": 1706,
+      "blocking_findings": 0,
+      "validation_ready": true
+    },
+    "safety": {
+      "production_action_executed": false,
+      "target_write_detected": false
+    }
+  },
+  "persistence_version": "APPROVAL_CONTEXT_001"
+}

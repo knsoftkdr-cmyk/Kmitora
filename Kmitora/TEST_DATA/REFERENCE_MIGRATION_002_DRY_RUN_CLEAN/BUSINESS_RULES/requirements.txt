@@ -1,0 +1,22 @@
+﻿KMITORA REFERENCE MIGRATION 001
+
+SOURCE: F1 Legacy CRM
+TARGET: F2 Modern CRM
+
+BUSINESS RULES
+
+BR-001 Active customers shall be eligible for migration.
+BR-002 Duplicate customers shall be identified using normalized email and phone.
+BR-003 IN, IND and India shall normalize to INDIA.
+BR-004 A and ACTIVE shall normalize to ACTIVE.
+BR-005 Negative credit limits shall be rejected.
+BR-006 Invalid email addresses shall create a data-quality exception.
+BR-007 Unknown customer status shall require review.
+BR-008 Every order must reference an existing migrated customer.
+BR-009 COMPLETE and COMPLETED shall normalize to COMPLETED.
+BR-010 Negative order amounts shall be rejected.
+BR-011 Missing mandatory order dates shall be quarantined for review.
+BR-012 No rejected record may silently enter F2.
+BR-013 Every migration decision must generate traceable evidence.
+BR-014 Source records must remain unchanged.
+BR-015 Production activation is prohibited during this reference test.

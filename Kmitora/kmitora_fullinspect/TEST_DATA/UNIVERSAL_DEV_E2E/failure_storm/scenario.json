@@ -1,0 +1,27 @@
+{
+  "id": "UNIVERSAL_FAILURE_STORM_001",
+  "name": "Universal Deterministic Failure Storm",
+  "environment": "DEV",
+  "target_schema": "public",
+  "target_tables": ["customers", "orders", "order_items"],
+  "features": [
+    "whitespace normalization",
+    "identifier case normalization",
+    "email case normalization",
+    "status alias conversion",
+    "region normalization",
+    "duplicate primary-key collapse",
+    "deterministic missing-email derivation",
+    "multi-format date conversion",
+    "currency-symbol removal",
+    "order total recovery from child rows",
+    "duplicate item collapse",
+    "foreign-key validation",
+    "exact source-target reconciliation",
+    "SHA-256 evidence",
+    "production-write safety verification"
+  ],
+  "ambiguous_repairs_allowed": false,
+  "production_authorized": false,
+  "cutover_authorized": false
+}

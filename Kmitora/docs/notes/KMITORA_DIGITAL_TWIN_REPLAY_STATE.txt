@@ -1,0 +1,30 @@
+﻿=== FILES ===
+Core exists   : True
+Engine exists : False
+Tests exist   : False
+
+=== CORE ROUTES ===
+/v1/digital-twin-replay/status = 0
+/v1/digital-twin-replay/snapshot = 0
+/v1/digital-twin-replay/replay = 0
+/v1/digital-twin-replay/step = 0
+/v1/digital-twin-replay/compare = 0
+/v1/digital-twin-replay/branch = 0
+/v1/digital-twin-replay/predicted-vs-actual = 0
+/v1/digital-twin-replay/fidelity = 0
+
+=== PYTHON SYNTAX ===
+Core compile exit code   : 0
+Engine compile exit code : 1
+Tests compile exit code  : 1
+
+=== UNIT TESTS ===
+Unit test exit code      : -1
+
+=== LIVE HTTP STATUS ===
+Core health = HTTP 200
+What Breaks If = HTTP 200
+Business Rule DNA = HTTP 200
+Migration Autopilot = HTTP 200
+Cutover Simulator = HTTP 200
+Digital Twin Replay = HTTP 404

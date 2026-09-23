@@ -1,0 +1,20 @@
+﻿=== GET ROUTE ORDER ===
+LINE 1680: if path == "/v1/enterprise-xray/what-breaks-if/status":
+LINE 1669: if path == "/v1/business-rule-dna/status":
+LINE 1658: if path == "/v1/migration-autopilot/status":
+LINE 2245: {"message": "not found"},
+
+=== CUTOVER KEYWORD CHECK IN CORE ===
+LINE 5: cutover and destructive actions remain explicitly gated.
+LINE 80: "no autonomous production cutover",
+LINE 244: elif any(word in lower for word in ("migration", "cutover", "production", "prod")):
+LINE 245: reply = "I can prepare and validate migration work, but production migration or cutover requires an explicit authorized approval gate."
+LINE 1595: "detail": "cutover remains approval-gated",
+LINE 3592: "production_cutover_executed": False,
+
+=== EFFECTIVE DO_POST ROUTE ORDER ===
+LINE 2313: if path == "/v1/business-rule-dna/analyze":
+LINE 2257: if path == "/v1/migration-autopilot/plan":
+LINE 2280: if path == "/v1/migration-autopilot/simulate":
+LINE 2303: if path == "/v1/migration-autopilot/classify-failure":
+LINE 3678: if path not in allowed:

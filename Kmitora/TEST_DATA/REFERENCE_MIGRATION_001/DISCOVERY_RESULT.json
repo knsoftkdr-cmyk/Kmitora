@@ -1,0 +1,1615 @@
+﻿{
+    "product":  "KMITORA",
+    "agent":  "A000",
+    "version":  "0.2.0-a000",
+    "kind":  "discovery_result",
+    "trace_id":  "c4018d23-97af-488c-b86a-a4b5a4e4b4ce",
+    "timestamp":  "2026-08-21T14:26:49.304208+00:00",
+    "authoritative":  false,
+    "production_action_executed":  false,
+    "payload":  {
+                    "id":  "0ea1e592-527a-42ed-ad59-8da04e522de3",
+                    "migration_id":  "REFERENCE_MIGRATION_001",
+                    "status":  "DISCOVERED",
+                    "mode":  "DISCOVERY_ONLY",
+                    "production_action_executed":  false,
+                    "source":  {
+                                   "path":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\F1_SOURCE",
+                                   "entities":  [
+                                                    {
+                                                        "entity":  "customers",
+                                                        "file":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\F1_SOURCE\\customers.csv",
+                                                        "row_count":  7,
+                                                        "fields":  [
+                                                                       "Customer_ID",
+                                                                       "Customer_Name",
+                                                                       "Email",
+                                                                       "Phone",
+                                                                       "Country",
+                                                                       "Status",
+                                                                       "Credit_Limit"
+                                                                   ],
+                                                        "field_profiles":  [
+                                                                               {
+                                                                                   "name":  "Customer_ID",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  7,
+                                                                                   "sample_values":  [
+                                                                                                         "C1001",
+                                                                                                         "C1002",
+                                                                                                         "C1003",
+                                                                                                         "C1004",
+                                                                                                         "C1005"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Customer_Name",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  6,
+                                                                                   "sample_values":  [
+                                                                                                         "ABC Industries",
+                                                                                                         "Global Retail Ltd",
+                                                                                                         "Nova Systems",
+                                                                                                         "Alpha Technologies",
+                                                                                                         "ABC Industries"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Email",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  1,
+                                                                                   "distinct_count":  5,
+                                                                                   "sample_values":  [
+                                                                                                         "accounts@abc.com",
+                                                                                                         "sales@global.com",
+                                                                                                         "alpha@test.com",
+                                                                                                         "accounts@abc.com",
+                                                                                                         "invalid-email"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Phone",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  1,
+                                                                                   "distinct_count":  5,
+                                                                                   "sample_values":  [
+                                                                                                         "+919876543210",
+                                                                                                         "9876543211",
+                                                                                                         "+12125550198",
+                                                                                                         "9988776655",
+                                                                                                         "+919876543210"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Country",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  4,
+                                                                                   "sample_values":  [
+                                                                                                         "India",
+                                                                                                         "IN",
+                                                                                                         "USA",
+                                                                                                         "India",
+                                                                                                         "India"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Status",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  4,
+                                                                                   "sample_values":  [
+                                                                                                         "ACTIVE",
+                                                                                                         "A",
+                                                                                                         "ACTIVE",
+                                                                                                         "INACTIVE",
+                                                                                                         "ACTIVE"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Credit_Limit",
+                                                                                   "row_count":  7,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  6,
+                                                                                   "sample_values":  [
+                                                                                                         "500000",
+                                                                                                         "250000",
+                                                                                                         "100000",
+                                                                                                         "0",
+                                                                                                         "500000"
+                                                                                                     ]
+                                                                               }
+                                                                           ],
+                                                        "duplicate_rows":  [
+
+                                                                           ],
+                                                        "quality_findings":  [
+                                                                                 {
+                                                                                     "type":  "NULL_OR_EMPTY",
+                                                                                     "entity":  "customers",
+                                                                                     "field":  "Email",
+                                                                                     "row":  4,
+                                                                                     "severity":  "WARNING"
+                                                                                 },
+                                                                                 {
+                                                                                     "type":  "INVALID_EMAIL",
+                                                                                     "entity":  "customers",
+                                                                                     "field":  "Email",
+                                                                                     "row":  7,
+                                                                                     "value":  "invalid-email",
+                                                                                     "severity":  "ERROR"
+                                                                                 },
+                                                                                 {
+                                                                                     "type":  "NEGATIVE_NUMERIC_VALUE",
+                                                                                     "entity":  "customers",
+                                                                                     "field":  "Credit_Limit",
+                                                                                     "row":  7,
+                                                                                     "value":  "-10000",
+                                                                                     "severity":  "ERROR"
+                                                                                 },
+                                                                                 {
+                                                                                     "type":  "NULL_OR_EMPTY",
+                                                                                     "entity":  "customers",
+                                                                                     "field":  "Phone",
+                                                                                     "row":  8,
+                                                                                     "severity":  "WARNING"
+                                                                                 }
+                                                                             ]
+                                                    },
+                                                    {
+                                                        "entity":  "orders",
+                                                        "file":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\F1_SOURCE\\orders.csv",
+                                                        "row_count":  6,
+                                                        "fields":  [
+                                                                       "Order_ID",
+                                                                       "Customer_ID",
+                                                                       "Order_Date",
+                                                                       "Amount",
+                                                                       "Currency",
+                                                                       "Status"
+                                                                   ],
+                                                        "field_profiles":  [
+                                                                               {
+                                                                                   "name":  "Order_ID",
+                                                                                   "row_count":  6,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  6,
+                                                                                   "sample_values":  [
+                                                                                                         "O5001",
+                                                                                                         "O5002",
+                                                                                                         "O5003",
+                                                                                                         "O5004",
+                                                                                                         "O5005"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Customer_ID",
+                                                                                   "row_count":  6,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  5,
+                                                                                   "sample_values":  [
+                                                                                                         "C1001",
+                                                                                                         "C1002",
+                                                                                                         "C1003",
+                                                                                                         "C9999",
+                                                                                                         "C1004"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Order_Date",
+                                                                                   "row_count":  6,
+                                                                                   "null_count":  1,
+                                                                                   "distinct_count":  5,
+                                                                                   "sample_values":  [
+                                                                                                         "2026-07-01",
+                                                                                                         "2026-07-04",
+                                                                                                         "2026-07-08",
+                                                                                                         "2026-07-10",
+                                                                                                         "2026-07-12"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Amount",
+                                                                                   "row_count":  6,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  6,
+                                                                                   "sample_values":  [
+                                                                                                         "125000",
+                                                                                                         "75000",
+                                                                                                         "1500",
+                                                                                                         "25000",
+                                                                                                         "-5000"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Currency",
+                                                                                   "row_count":  6,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  2,
+                                                                                   "sample_values":  [
+                                                                                                         "INR",
+                                                                                                         "INR",
+                                                                                                         "USD",
+                                                                                                         "INR",
+                                                                                                         "INR"
+                                                                                                     ]
+                                                                               },
+                                                                               {
+                                                                                   "name":  "Status",
+                                                                                   "row_count":  6,
+                                                                                   "null_count":  0,
+                                                                                   "distinct_count":  4,
+                                                                                   "sample_values":  [
+                                                                                                         "COMPLETED",
+                                                                                                         "OPEN",
+                                                                                                         "COMPLETE",
+                                                                                                         "OPEN",
+                                                                                                         "COMPLETE"
+                                                                                                     ]
+                                                                               }
+                                                                           ],
+                                                        "duplicate_rows":  [
+
+                                                                           ],
+                                                        "quality_findings":  [
+                                                                                 {
+                                                                                     "type":  "NEGATIVE_NUMERIC_VALUE",
+                                                                                     "entity":  "orders",
+                                                                                     "field":  "Amount",
+                                                                                     "row":  6,
+                                                                                     "value":  "-5000",
+                                                                                     "severity":  "ERROR"
+                                                                                 },
+                                                                                 {
+                                                                                     "type":  "NULL_OR_EMPTY",
+                                                                                     "entity":  "orders",
+                                                                                     "field":  "Order_Date",
+                                                                                     "row":  7,
+                                                                                     "severity":  "WARNING"
+                                                                                 }
+                                                                             ]
+                                                    }
+                                                ]
+                               },
+                    "target":  {
+                                   "schema_files":  [
+                                                        "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\F2_TARGET\\target_schema.txt"
+                                                    ],
+                                   "entities":  [
+                                                    {
+                                                        "name":  "customer",
+                                                        "fields":  [
+                                                                       {
+                                                                           "name":  "customer_id",
+                                                                           "definition":  "customer_id VARCHAR(50) PRIMARY KEY"
+                                                                       },
+                                                                       {
+                                                                           "name":  "legal_name",
+                                                                           "definition":  "legal_name VARCHAR(200) NOT NULL"
+                                                                       },
+                                                                       {
+                                                                           "name":  "email",
+                                                                           "definition":  "email VARCHAR(200)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "phone",
+                                                                           "definition":  "phone VARCHAR(50)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "country_code",
+                                                                           "definition":  "country_code VARCHAR(50)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "customer_status",
+                                                                           "definition":  "customer_status VARCHAR(30)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "credit_limit",
+                                                                           "definition":  "credit_limit DECIMAL(18,2)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "migration_timestamp",
+                                                                           "definition":  "migration_timestamp TIMESTAMP"
+                                                                       }
+                                                                   ]
+                                                    },
+                                                    {
+                                                        "name":  "customer_order",
+                                                        "fields":  [
+                                                                       {
+                                                                           "name":  "order_id",
+                                                                           "definition":  "order_id VARCHAR(50) PRIMARY KEY"
+                                                                       },
+                                                                       {
+                                                                           "name":  "customer_id",
+                                                                           "definition":  "customer_id VARCHAR(50) NOT NULL"
+                                                                       },
+                                                                       {
+                                                                           "name":  "order_date",
+                                                                           "definition":  "order_date DATE"
+                                                                       },
+                                                                       {
+                                                                           "name":  "order_amount",
+                                                                           "definition":  "order_amount DECIMAL(18,2)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "currency_code",
+                                                                           "definition":  "currency_code VARCHAR(10)"
+                                                                       },
+                                                                       {
+                                                                           "name":  "order_status",
+                                                                           "definition":  "order_status VARCHAR(30)"
+                                                                       }
+                                                                   ]
+                                                    }
+                                                ],
+                                   "relationships":  [
+                                                         "customer_order.customer_id -\u003e customer.customer_id"
+                                                     ]
+                               },
+                    "business_rules":  [
+                                           {
+                                               "id":  "BR-001",
+                                               "rule":  "Active customers shall be eligible for migration.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-002",
+                                               "rule":  "Duplicate customers shall be identified using normalized email and phone.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-003",
+                                               "rule":  "IN, IND and India shall normalize to INDIA.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-004",
+                                               "rule":  "A and ACTIVE shall normalize to ACTIVE.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-005",
+                                               "rule":  "Negative credit limits shall be rejected.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-006",
+                                               "rule":  "Invalid email addresses shall create a data-quality exception.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-007",
+                                               "rule":  "Unknown customer status shall require review.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-008",
+                                               "rule":  "Every order must reference an existing migrated customer.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-009",
+                                               "rule":  "COMPLETE and COMPLETED shall normalize to COMPLETED.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-010",
+                                               "rule":  "Negative order amounts shall be rejected.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-011",
+                                               "rule":  "Missing mandatory order dates shall be quarantined for review.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-012",
+                                               "rule":  "No rejected record may silently enter F2.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-013",
+                                               "rule":  "Every migration decision must generate traceable evidence.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-014",
+                                               "rule":  "Source records must remain unchanged.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           },
+                                           {
+                                               "id":  "BR-015",
+                                               "rule":  "Production activation is prohibited during this reference test.",
+                                               "source":  "C:\\KMITORA\\TEST_DATA\\REFERENCE_MIGRATION_001\\BUSINESS_RULES\\requirements.txt"
+                                           }
+                                       ],
+                    "relationships":  [
+                                          {
+                                              "parent_entity":  "customers",
+                                              "parent_field":  "Customer_ID",
+                                              "child_entity":  "orders",
+                                              "child_field":  "Customer_ID",
+                                              "relationship_type":  "FOREIGN_KEY_REFERENCE",
+                                              "business_rule":  "BR-008",
+                                              "orphan_values":  [
+                                                                    "C9999"
+                                                                ],
+                                              "status":  "REFERENTIAL_RISK",
+                                              "reason":  "Every order must reference an existing migrated customer."
+                                          }
+                                      ],
+                    "quality_findings":  [
+                                             {
+                                                 "type":  "NULL_OR_EMPTY",
+                                                 "entity":  "customers",
+                                                 "field":  "Email",
+                                                 "row":  4,
+                                                 "severity":  "WARNING"
+                                             },
+                                             {
+                                                 "type":  "INVALID_EMAIL",
+                                                 "entity":  "customers",
+                                                 "field":  "Email",
+                                                 "row":  7,
+                                                 "value":  "invalid-email",
+                                                 "severity":  "ERROR"
+                                             },
+                                             {
+                                                 "type":  "NEGATIVE_NUMERIC_VALUE",
+                                                 "entity":  "customers",
+                                                 "field":  "Credit_Limit",
+                                                 "row":  7,
+                                                 "value":  "-10000",
+                                                 "severity":  "ERROR"
+                                             },
+                                             {
+                                                 "type":  "NULL_OR_EMPTY",
+                                                 "entity":  "customers",
+                                                 "field":  "Phone",
+                                                 "row":  8,
+                                                 "severity":  "WARNING"
+                                             },
+                                             {
+                                                 "type":  "NEGATIVE_NUMERIC_VALUE",
+                                                 "entity":  "orders",
+                                                 "field":  "Amount",
+                                                 "row":  6,
+                                                 "value":  "-5000",
+                                                 "severity":  "ERROR"
+                                             },
+                                             {
+                                                 "type":  "NULL_OR_EMPTY",
+                                                 "entity":  "orders",
+                                                 "field":  "Order_Date",
+                                                 "row":  7,
+                                                 "severity":  "WARNING"
+                                             },
+                                             {
+                                                 "type":  "ORPHAN_REFERENCE",
+                                                 "entity":  "orders",
+                                                 "field":  "Customer_ID",
+                                                 "value":  "C9999",
+                                                 "severity":  "ERROR"
+                                             }
+                                         ],
+                    "suggested_mappings":  [
+                                               {
+                                                   "source":  "customers.Customer_ID",
+                                                   "target":  "customer.customer_id",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Customer business key maps to target customer key.",
+                                                   "business_rules":  [
+                                                                          "BR-001",
+                                                                          "BR-008"
+                                                                      ],
+                                                   "relationship_role":  "PARENT_KEY",
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "customers.Customer_Name",
+                                                   "target":  "customer.legal_name",
+                                                   "confidence":  0.95,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Customer name is semantically equivalent to target legal name.",
+                                                   "business_rules":  [
+
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "customers.Email",
+                                                   "target":  "customer.email",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Direct customer email mapping.",
+                                                   "business_rules":  [
+                                                                          "BR-002",
+                                                                          "BR-006"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  true
+                                               },
+                                               {
+                                                   "source":  "customers.Phone",
+                                                   "target":  "customer.phone",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Direct customer phone mapping.",
+                                                   "business_rules":  [
+                                                                          "BR-002"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  true
+                                               },
+                                               {
+                                                   "source":  "customers.Country",
+                                                   "target":  "customer.country_code",
+                                                   "confidence":  0.95,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Country must be normalized before loading target country code.",
+                                                   "business_rules":  [
+                                                                          "BR-003"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  true
+                                               },
+                                               {
+                                                   "source":  "customers.Status",
+                                                   "target":  "customer.customer_status",
+                                                   "confidence":  0.99,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Customer status belongs to the customer entity.",
+                                                   "business_rules":  [
+                                                                          "BR-001",
+                                                                          "BR-004",
+                                                                          "BR-007"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  true
+                                               },
+                                               {
+                                                   "source":  "customers.Credit_Limit",
+                                                   "target":  "customer.credit_limit",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Direct customer credit limit mapping subject to rejection rule.",
+                                                   "business_rules":  [
+                                                                          "BR-005"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Order_ID",
+                                                   "target":  "customer_order.order_id",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Order identifier maps to target order identifier.",
+                                                   "business_rules":  [
+
+                                                                      ],
+                                                   "relationship_role":  "ORDER_KEY",
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Customer_ID",
+                                                   "target":  "customer_order.customer_id",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Order customer reference maps to target foreign key.",
+                                                   "business_rules":  [
+                                                                          "BR-008"
+                                                                      ],
+                                                   "relationship_role":  "FOREIGN_KEY",
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Order_Date",
+                                                   "target":  "customer_order.order_date",
+                                                   "confidence":  1.0,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Direct order date mapping subject to mandatory-date validation.",
+                                                   "business_rules":  [
+                                                                          "BR-011"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Amount",
+                                                   "target":  "customer_order.order_amount",
+                                                   "confidence":  0.99,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Order amount maps to target order amount.",
+                                                   "business_rules":  [
+                                                                          "BR-010"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Currency",
+                                                   "target":  "customer_order.currency_code",
+                                                   "confidence":  0.95,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Order currency maps to target currency code.",
+                                                   "business_rules":  [
+
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  true
+                                               },
+                                               {
+                                                   "source":  "orders.Status",
+                                                   "target":  "customer_order.order_status",
+                                                   "confidence":  0.99,
+                                                   "status":  "APPROVED_CANDIDATE",
+                                                   "decision":  "ACCEPT",
+                                                   "reason":  "Order status belongs to the order entity.",
+                                                   "business_rules":  [
+                                                                          "BR-009"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  true
+                                               },
+                                               {
+                                                   "source":  "customers.Status",
+                                                   "target":  "customer_order.order_status",
+                                                   "confidence":  0.0,
+                                                   "status":  "REJECTED",
+                                                   "decision":  "REJECT",
+                                                   "reason":  "Customer status cannot populate order status.",
+                                                   "business_rules":  [
+                                                                          "BR-004",
+                                                                          "BR-007"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Status",
+                                                   "target":  "customer.customer_status",
+                                                   "confidence":  0.0,
+                                                   "status":  "REJECTED",
+                                                   "decision":  "REJECT",
+                                                   "reason":  "Order status cannot populate customer status.",
+                                                   "business_rules":  [
+                                                                          "BR-009"
+                                                                      ],
+                                                   "relationship_role":  null,
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "customers.Customer_ID",
+                                                   "target":  "customer_order.customer_id",
+                                                   "confidence":  0.0,
+                                                   "status":  "RELATIONSHIP_ONLY",
+                                                   "decision":  "REJECT_DIRECT_MAPPING",
+                                                   "reason":  "Customer key participates in the parent-child relationship, but order customer_id must originate from orders.Customer_ID.",
+                                                   "business_rules":  [
+                                                                          "BR-008"
+                                                                      ],
+                                                   "relationship_role":  "PARENT_KEY",
+                                                   "requires_transformation":  false
+                                               },
+                                               {
+                                                   "source":  "orders.Customer_ID",
+                                                   "target":  "customer.customer_id",
+                                                   "confidence":  0.0,
+                                                   "status":  "RELATIONSHIP_ONLY",
+                                                   "decision":  "REJECT_DIRECT_MAPPING",
+                                                   "reason":  "Order customer reference validates against the migrated customer but does not create the customer master record.",
+                                                   "business_rules":  [
+                                                                          "BR-008"
+                                                                      ],
+                                                   "relationship_role":  "FOREIGN_KEY",
+                                                   "requires_transformation":  false
+                                               }
+                                           ],
+                    "transformation_plan":  [
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "customers.Customer_ID",
+                                                    "target":  "customer.customer_id",
+                                                    "business_rules":  [
+                                                                           "BR-001",
+                                                                           "BR-008"
+                                                                       ],
+                                                    "reason":  "Customer business key maps to target customer key.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "customers.Customer_Name",
+                                                    "target":  "customer.legal_name",
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Customer name is semantically equivalent to target legal name.",
+                                                    "confidence":  0.95,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "NORMALIZE",
+                                                    "source":  "customers.Email",
+                                                    "target":  "customer.email",
+                                                    "business_rules":  [
+                                                                           "BR-002",
+                                                                           "BR-006"
+                                                                       ],
+                                                    "reason":  "Direct customer email mapping.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "NORMALIZE",
+                                                    "source":  "customers.Phone",
+                                                    "target":  "customer.phone",
+                                                    "business_rules":  [
+                                                                           "BR-002"
+                                                                       ],
+                                                    "reason":  "Direct customer phone mapping.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "NORMALIZE",
+                                                    "source":  "customers.Country",
+                                                    "target":  "customer.country_code",
+                                                    "business_rules":  [
+                                                                           "BR-003"
+                                                                       ],
+                                                    "reason":  "Country must be normalized before loading target country code.",
+                                                    "confidence":  0.95,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "NORMALIZE",
+                                                    "source":  "customers.Status",
+                                                    "target":  "customer.customer_status",
+                                                    "business_rules":  [
+                                                                           "BR-001",
+                                                                           "BR-004",
+                                                                           "BR-007"
+                                                                       ],
+                                                    "reason":  "Customer status belongs to the customer entity.",
+                                                    "confidence":  0.99,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "customers.Credit_Limit",
+                                                    "target":  "customer.credit_limit",
+                                                    "business_rules":  [
+                                                                           "BR-005"
+                                                                       ],
+                                                    "reason":  "Direct customer credit limit mapping subject to rejection rule.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "orders.Order_ID",
+                                                    "target":  "customer_order.order_id",
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Order identifier maps to target order identifier.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "orders.Customer_ID",
+                                                    "target":  "customer_order.customer_id",
+                                                    "business_rules":  [
+                                                                           "BR-008"
+                                                                       ],
+                                                    "reason":  "Order customer reference maps to target foreign key.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "orders.Order_Date",
+                                                    "target":  "customer_order.order_date",
+                                                    "business_rules":  [
+                                                                           "BR-011"
+                                                                       ],
+                                                    "reason":  "Direct order date mapping subject to mandatory-date validation.",
+                                                    "confidence":  1.0,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "DIRECT_MAP",
+                                                    "source":  "orders.Amount",
+                                                    "target":  "customer_order.order_amount",
+                                                    "business_rules":  [
+                                                                           "BR-010"
+                                                                       ],
+                                                    "reason":  "Order amount maps to target order amount.",
+                                                    "confidence":  0.99,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "NORMALIZE",
+                                                    "source":  "orders.Currency",
+                                                    "target":  "customer_order.currency_code",
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Order currency maps to target currency code.",
+                                                    "confidence":  0.95,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "NORMALIZE",
+                                                    "source":  "orders.Status",
+                                                    "target":  "customer_order.order_status",
+                                                    "business_rules":  [
+                                                                           "BR-009"
+                                                                       ],
+                                                    "reason":  "Order status belongs to the order entity.",
+                                                    "confidence":  0.99,
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REVIEW",
+                                                    "entity":  "customers",
+                                                    "field":  "Email",
+                                                    "row":  4,
+                                                    "value":  null,
+                                                    "finding_type":  "NULL_OR_EMPTY",
+                                                    "severity":  "WARNING",
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REVIEW",
+                                                    "entity":  "customers",
+                                                    "field":  "Email",
+                                                    "row":  7,
+                                                    "value":  "invalid-email",
+                                                    "finding_type":  "INVALID_EMAIL",
+                                                    "severity":  "ERROR",
+                                                    "business_rules":  [
+                                                                           "BR-006"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding INVALID_EMAIL.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REJECT",
+                                                    "entity":  "customers",
+                                                    "field":  "Credit_Limit",
+                                                    "row":  7,
+                                                    "value":  "-10000",
+                                                    "finding_type":  "NEGATIVE_NUMERIC_VALUE",
+                                                    "severity":  "ERROR",
+                                                    "business_rules":  [
+                                                                           "BR-005",
+                                                                           "BR-012"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NEGATIVE_NUMERIC_VALUE.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REVIEW",
+                                                    "entity":  "customers",
+                                                    "field":  "Phone",
+                                                    "row":  8,
+                                                    "value":  null,
+                                                    "finding_type":  "NULL_OR_EMPTY",
+                                                    "severity":  "WARNING",
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REJECT",
+                                                    "entity":  "orders",
+                                                    "field":  "Amount",
+                                                    "row":  6,
+                                                    "value":  "-5000",
+                                                    "finding_type":  "NEGATIVE_NUMERIC_VALUE",
+                                                    "severity":  "ERROR",
+                                                    "business_rules":  [
+                                                                           "BR-010",
+                                                                           "BR-012"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NEGATIVE_NUMERIC_VALUE.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "QUARANTINE",
+                                                    "entity":  "orders",
+                                                    "field":  "Order_Date",
+                                                    "row":  7,
+                                                    "value":  null,
+                                                    "finding_type":  "NULL_OR_EMPTY",
+                                                    "severity":  "WARNING",
+                                                    "business_rules":  [
+                                                                           "BR-011"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REFERENTIAL_CHECK",
+                                                    "entity":  "orders",
+                                                    "field":  "Customer_ID",
+                                                    "row":  5,
+                                                    "value":  "C9999",
+                                                    "finding_type":  "ORPHAN_REFERENCE",
+                                                    "severity":  "ERROR",
+                                                    "business_rules":  [
+                                                                           "BR-008",
+                                                                           "BR-012"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding ORPHAN_REFERENCE.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "action":  "REFERENTIAL_CHECK",
+                                                    "source":  "orders.Customer_ID",
+                                                    "target":  "customers.Customer_ID",
+                                                    "business_rules":  [
+                                                                           "BR-008"
+                                                                       ],
+                                                    "orphan_values":  [
+                                                                          "C9999"
+                                                                      ],
+                                                    "reason":  "Every order must reference an existing migrated customer.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                }
+                                            ],
+                    "record_dispositions":  [
+                                                {
+                                                    "entity":  "customers",
+                                                    "row":  4,
+                                                    "final_disposition":  "REVIEW",
+                                                    "contributing_actions":  [
+                                                                                 "REVIEW"
+                                                                             ],
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "entity":  "customers",
+                                                    "row":  7,
+                                                    "final_disposition":  "REJECT",
+                                                    "contributing_actions":  [
+                                                                                 "REJECT",
+                                                                                 "REVIEW"
+                                                                             ],
+                                                    "business_rules":  [
+                                                                           "BR-005",
+                                                                           "BR-006",
+                                                                           "BR-012"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NEGATIVE_NUMERIC_VALUE.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "entity":  "customers",
+                                                    "row":  8,
+                                                    "final_disposition":  "REVIEW",
+                                                    "contributing_actions":  [
+                                                                                 "REVIEW"
+                                                                             ],
+                                                    "business_rules":  [
+
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "entity":  "orders",
+                                                    "row":  6,
+                                                    "final_disposition":  "REJECT",
+                                                    "contributing_actions":  [
+                                                                                 "REJECT"
+                                                                             ],
+                                                    "business_rules":  [
+                                                                           "BR-010",
+                                                                           "BR-012"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NEGATIVE_NUMERIC_VALUE.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                },
+                                                {
+                                                    "entity":  "orders",
+                                                    "row":  7,
+                                                    "final_disposition":  "QUARANTINE",
+                                                    "contributing_actions":  [
+                                                                                 "QUARANTINE"
+                                                                             ],
+                                                    "business_rules":  [
+                                                                           "BR-011"
+                                                                       ],
+                                                    "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                    "status":  "PLANNED",
+                                                    "execution_state":  "NOT_EXECUTED"
+                                                }
+                                            ],
+                    "target_staging_plan":  {
+                                                "status":  "PLANNED",
+                                                "execution_state":  "NOT_EXECUTED",
+                                                "target_write":  false,
+                                                "ready_records":  [
+                                                                      {
+                                                                          "entity":  "customers",
+                                                                          "row":  2,
+                                                                          "source_record":  {
+                                                                                                "Customer_ID":  "C1001",
+                                                                                                "Customer_Name":  "ABC Industries",
+                                                                                                "Email":  "accounts@abc.com",
+                                                                                                "Phone":  "+919876543210",
+                                                                                                "Country":  "India",
+                                                                                                "Status":  "ACTIVE",
+                                                                                                "Credit_Limit":  "500000"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "customers",
+                                                                          "row":  3,
+                                                                          "source_record":  {
+                                                                                                "Customer_ID":  "C1002",
+                                                                                                "Customer_Name":  "Global Retail Ltd",
+                                                                                                "Email":  "sales@global.com",
+                                                                                                "Phone":  "9876543211",
+                                                                                                "Country":  "IN",
+                                                                                                "Status":  "A",
+                                                                                                "Credit_Limit":  "250000"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "customers",
+                                                                          "row":  5,
+                                                                          "source_record":  {
+                                                                                                "Customer_ID":  "C1004",
+                                                                                                "Customer_Name":  "Alpha Technologies",
+                                                                                                "Email":  "alpha@test.com",
+                                                                                                "Phone":  "9988776655",
+                                                                                                "Country":  "India",
+                                                                                                "Status":  "INACTIVE",
+                                                                                                "Credit_Limit":  "0"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "customers",
+                                                                          "row":  6,
+                                                                          "source_record":  {
+                                                                                                "Customer_ID":  "C1005",
+                                                                                                "Customer_Name":  "ABC Industries",
+                                                                                                "Email":  "accounts@abc.com",
+                                                                                                "Phone":  "+919876543210",
+                                                                                                "Country":  "India",
+                                                                                                "Status":  "ACTIVE",
+                                                                                                "Credit_Limit":  "500000"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "orders",
+                                                                          "row":  2,
+                                                                          "source_record":  {
+                                                                                                "Order_ID":  "O5001",
+                                                                                                "Customer_ID":  "C1001",
+                                                                                                "Order_Date":  "2026-07-01",
+                                                                                                "Amount":  "125000",
+                                                                                                "Currency":  "INR",
+                                                                                                "Status":  "COMPLETED"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "orders",
+                                                                          "row":  3,
+                                                                          "source_record":  {
+                                                                                                "Order_ID":  "O5002",
+                                                                                                "Customer_ID":  "C1002",
+                                                                                                "Order_Date":  "2026-07-04",
+                                                                                                "Amount":  "75000",
+                                                                                                "Currency":  "INR",
+                                                                                                "Status":  "OPEN"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "orders",
+                                                                          "row":  4,
+                                                                          "source_record":  {
+                                                                                                "Order_ID":  "O5003",
+                                                                                                "Customer_ID":  "C1003",
+                                                                                                "Order_Date":  "2026-07-08",
+                                                                                                "Amount":  "1500",
+                                                                                                "Currency":  "USD",
+                                                                                                "Status":  "COMPLETE"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      },
+                                                                      {
+                                                                          "entity":  "orders",
+                                                                          "row":  5,
+                                                                          "source_record":  {
+                                                                                                "Order_ID":  "O5004",
+                                                                                                "Customer_ID":  "C9999",
+                                                                                                "Order_Date":  "2026-07-10",
+                                                                                                "Amount":  "25000",
+                                                                                                "Currency":  "INR",
+                                                                                                "Status":  "OPEN"
+                                                                                            },
+                                                                          "status":  "PLANNED",
+                                                                          "execution_state":  "NOT_EXECUTED",
+                                                                          "target_write":  false
+                                                                      }
+                                                                  ],
+                                                "review_records":  [
+                                                                       {
+                                                                           "entity":  "customers",
+                                                                           "row":  4,
+                                                                           "final_disposition":  "REVIEW",
+                                                                           "business_rules":  [
+
+                                                                                              ],
+                                                                           "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                                           "status":  "PLANNED",
+                                                                           "execution_state":  "NOT_EXECUTED",
+                                                                           "target_write":  false
+                                                                       },
+                                                                       {
+                                                                           "entity":  "customers",
+                                                                           "row":  8,
+                                                                           "final_disposition":  "REVIEW",
+                                                                           "business_rules":  [
+
+                                                                                              ],
+                                                                           "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                                           "status":  "PLANNED",
+                                                                           "execution_state":  "NOT_EXECUTED",
+                                                                           "target_write":  false
+                                                                       }
+                                                                   ],
+                                                "quarantine_records":  [
+                                                                           {
+                                                                               "entity":  "orders",
+                                                                               "row":  7,
+                                                                               "final_disposition":  "QUARANTINE",
+                                                                               "business_rules":  [
+                                                                                                      "BR-011"
+                                                                                                  ],
+                                                                               "reason":  "Migration disposition generated from discovery finding NULL_OR_EMPTY.",
+                                                                               "status":  "PLANNED",
+                                                                               "execution_state":  "NOT_EXECUTED",
+                                                                               "target_write":  false
+                                                                           }
+                                                                       ],
+                                                "rejected_records":  [
+                                                                         {
+                                                                             "entity":  "customers",
+                                                                             "row":  7,
+                                                                             "final_disposition":  "REJECT",
+                                                                             "business_rules":  [
+                                                                                                    "BR-005",
+                                                                                                    "BR-006",
+                                                                                                    "BR-012"
+                                                                                                ],
+                                                                             "reason":  "Migration disposition generated from discovery finding NEGATIVE_NUMERIC_VALUE.",
+                                                                             "status":  "PLANNED",
+                                                                             "execution_state":  "NOT_EXECUTED",
+                                                                             "target_write":  false
+                                                                         },
+                                                                         {
+                                                                             "entity":  "orders",
+                                                                             "row":  6,
+                                                                             "final_disposition":  "REJECT",
+                                                                             "business_rules":  [
+                                                                                                    "BR-010",
+                                                                                                    "BR-012"
+                                                                                                ],
+                                                                             "reason":  "Migration disposition generated from discovery finding NEGATIVE_NUMERIC_VALUE.",
+                                                                             "status":  "PLANNED",
+                                                                             "execution_state":  "NOT_EXECUTED",
+                                                                             "target_write":  false
+                                                                         }
+                                                                     ],
+                                                "referential_dependencies":  [
+                                                                                 {
+                                                                                     "source":  null,
+                                                                                     "target":  null,
+                                                                                     "entity":  "orders",
+                                                                                     "field":  "Customer_ID",
+                                                                                     "row":  5,
+                                                                                     "value":  "C9999",
+                                                                                     "business_rules":  [
+                                                                                                            "BR-008",
+                                                                                                            "BR-012"
+                                                                                                        ],
+                                                                                     "status":  "PLANNED",
+                                                                                     "execution_state":  "NOT_EXECUTED",
+                                                                                     "target_write":  false
+                                                                                 },
+                                                                                 {
+                                                                                     "source":  "orders.Customer_ID",
+                                                                                     "target":  "customers.Customer_ID",
+                                                                                     "entity":  null,
+                                                                                     "field":  null,
+                                                                                     "row":  null,
+                                                                                     "value":  null,
+                                                                                     "business_rules":  [
+                                                                                                            "BR-008"
+                                                                                                        ],
+                                                                                     "status":  "PLANNED",
+                                                                                     "execution_state":  "NOT_EXECUTED",
+                                                                                     "target_write":  false
+                                                                                 }
+                                                                             ],
+                                                "evidence":  [
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "customers.Customer_ID",
+                                                                     "target":  "customer.customer_id",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-001",
+                                                                                            "BR-008"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "customers.Customer_Name",
+                                                                     "target":  "customer.legal_name",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "NORMALIZE",
+                                                                     "source":  "customers.Email",
+                                                                     "target":  "customer.email",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-002",
+                                                                                            "BR-006"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "NORMALIZE",
+                                                                     "source":  "customers.Phone",
+                                                                     "target":  "customer.phone",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-002"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "NORMALIZE",
+                                                                     "source":  "customers.Country",
+                                                                     "target":  "customer.country_code",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-003"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "NORMALIZE",
+                                                                     "source":  "customers.Status",
+                                                                     "target":  "customer.customer_status",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-001",
+                                                                                            "BR-004",
+                                                                                            "BR-007"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "customers.Credit_Limit",
+                                                                     "target":  "customer.credit_limit",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-005"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "orders.Order_ID",
+                                                                     "target":  "customer_order.order_id",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "orders.Customer_ID",
+                                                                     "target":  "customer_order.customer_id",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-008"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "orders.Order_Date",
+                                                                     "target":  "customer_order.order_date",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-011"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "DIRECT_MAP",
+                                                                     "source":  "orders.Amount",
+                                                                     "target":  "customer_order.order_amount",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-010"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "NORMALIZE",
+                                                                     "source":  "orders.Currency",
+                                                                     "target":  "customer_order.currency_code",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "NORMALIZE",
+                                                                     "source":  "orders.Status",
+                                                                     "target":  "customer_order.order_status",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-009"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REVIEW",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "customers",
+                                                                     "field":  "Email",
+                                                                     "row":  4,
+                                                                     "business_rules":  [
+
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REVIEW",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "customers",
+                                                                     "field":  "Email",
+                                                                     "row":  7,
+                                                                     "business_rules":  [
+                                                                                            "BR-006"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REJECT",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "customers",
+                                                                     "field":  "Credit_Limit",
+                                                                     "row":  7,
+                                                                     "business_rules":  [
+                                                                                            "BR-005",
+                                                                                            "BR-012"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REVIEW",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "customers",
+                                                                     "field":  "Phone",
+                                                                     "row":  8,
+                                                                     "business_rules":  [
+
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REJECT",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "orders",
+                                                                     "field":  "Amount",
+                                                                     "row":  6,
+                                                                     "business_rules":  [
+                                                                                            "BR-010",
+                                                                                            "BR-012"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "QUARANTINE",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "orders",
+                                                                     "field":  "Order_Date",
+                                                                     "row":  7,
+                                                                     "business_rules":  [
+                                                                                            "BR-011"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REFERENTIAL_CHECK",
+                                                                     "source":  null,
+                                                                     "target":  null,
+                                                                     "entity":  "orders",
+                                                                     "field":  "Customer_ID",
+                                                                     "row":  5,
+                                                                     "business_rules":  [
+                                                                                            "BR-008",
+                                                                                            "BR-012"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 },
+                                                                 {
+                                                                     "action":  "REFERENTIAL_CHECK",
+                                                                     "source":  "orders.Customer_ID",
+                                                                     "target":  "customers.Customer_ID",
+                                                                     "entity":  null,
+                                                                     "field":  null,
+                                                                     "row":  null,
+                                                                     "business_rules":  [
+                                                                                            "BR-008"
+                                                                                        ],
+                                                                     "status":  "PLANNED",
+                                                                     "execution_state":  "NOT_EXECUTED"
+                                                                 }
+                                                             ]
+                                            },
+                    "summary":  {
+                                    "source_entity_count":  2,
+                                    "target_entity_count":  2,
+                                    "business_rule_count":  15,
+                                    "relationship_count":  1,
+                                    "quality_finding_count":  7,
+                                    "mapping_candidate_count":  17,
+                                    "transformation_plan_count":  21,
+                                    "record_disposition_count":  5,
+                                    "staging_ready_count":  8,
+                                    "staging_review_count":  2,
+                                    "staging_quarantine_count":  1,
+                                    "staging_rejected_count":  2,
+                                    "staging_referential_dependency_count":  2
+                                }
+                }
+}

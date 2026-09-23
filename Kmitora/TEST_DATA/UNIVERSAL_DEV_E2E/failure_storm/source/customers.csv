@@ -1,0 +1,9 @@
+customer_id,first_name,last_name,email,status,region
+ C001 ,Asha,Rao,ASHA.RAO@EXAMPLE.TEST,active,south
+C002,Ben,Lee,ben.lee@example.test,ENABLED,west
+C003,Carla,Diaz,carla.diaz@example.test,ACTIVE,NORTH
+C003,Carla,Diaz,carla.diaz@example.test,ACTIVE,NORTH
+C004,Dev,Shah,dev.shah@example.test,disabled,east
+C005,Ella,Kim,ella.kim@example.test,ACTIVE, WEST 
+C006,Fault,MissingEmail,,ACTIVE,WEST
+C007,Nora,Patel,nora.patel@example.test,INACTIVE,south

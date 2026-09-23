@@ -1,0 +1,74 @@
+{
+  "banking": {
+    "id": "banking-modernization",
+    "industry": "Banking & Financial Services",
+    "focus": [
+      "Core Banking",
+      "Payments",
+      "AML/KYC",
+      "CRM",
+      "Regulatory Data"
+    ],
+    "primaryOutcome": "Governed modernization across customer, payment and compliance dependencies."
+  },
+  "insurance": {
+    "id": "insurance-core-transformation",
+    "industry": "Insurance",
+    "focus": [
+      "Policy",
+      "Claims",
+      "Underwriting",
+      "Billing",
+      "Documents"
+    ],
+    "primaryOutcome": "Traceable policy and claims transformation assurance."
+  },
+  "telecom": {
+    "id": "telecom-bss-oss",
+    "industry": "Telecommunications",
+    "focus": [
+      "CRM",
+      "Billing",
+      "Order Management",
+      "Network",
+      "Provisioning"
+    ],
+    "primaryOutcome": "BSS/OSS modernization with cross-domain dependency assurance."
+  },
+  "healthcare": {
+    "id": "healthcare-platform",
+    "industry": "Healthcare & Life Sciences",
+    "focus": [
+      "EHR",
+      "Patients",
+      "Scheduling",
+      "Laboratory",
+      "Integration"
+    ],
+    "primaryOutcome": "Interoperability and migration assurance with privacy controls."
+  },
+  "manufacturing": {
+    "id": "manufacturing-digital-core",
+    "industry": "Manufacturing",
+    "focus": [
+      "ERP",
+      "MES",
+      "Supply Chain",
+      "Plant",
+      "IoT"
+    ],
+    "primaryOutcome": "Digital-core transformation without losing operational control."
+  },
+  "government": {
+    "id": "government-modernization",
+    "industry": "Government / Public Sector",
+    "focus": [
+      "Citizen Services",
+      "Case Management",
+      "Identity",
+      "Finance",
+      "Records"
+    ],
+    "primaryOutcome": "Transparent legacy modernization with explicit governance."
+  }
+}

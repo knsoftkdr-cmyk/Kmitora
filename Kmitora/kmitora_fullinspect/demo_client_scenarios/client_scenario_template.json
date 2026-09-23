@@ -1,0 +1,52 @@
+{
+  "id": "client-industry-program",
+  "name": "Client Transformation Program",
+  "industry": "Replace with client industry",
+  "executiveTheme": "Replace with one-sentence executive transformation theme.",
+  "clientProfile": "Describe the client's scale, estate, transformation program and constraints.",
+  "primaryOutcome": "Describe the measurable transformation outcome the demo should emphasize.",
+  "systems": [
+    "System A",
+    "System B",
+    "System C"
+  ],
+  "processes": [
+    "Business Process A",
+    "Business Process B"
+  ],
+  "risks": [
+    "Risk A",
+    "Risk B"
+  ],
+  "kpis": [
+    {
+      "label": "Example KPI",
+      "before": "Current state",
+      "after": "Target state",
+      "note": "How KMITORA contributes"
+    }
+  ],
+  "specialistAgents": [
+    "KDOM",
+    "KDATA",
+    "KAPP",
+    "KMIG",
+    "KQA",
+    "KEVD"
+  ],
+  "digitalTwinFocus": [
+    "Applications",
+    "Data",
+    "Processes",
+    "Controls",
+    "Evidence"
+  ],
+  "demoNarrative": [
+    "Understand client context.",
+    "Map dependencies.",
+    "Simulate change.",
+    "Validate transformation.",
+    "Reconcile and evidence outcome."
+  ],
+  "safetyStatement": "Reference demonstration only. Production authority remains explicitly governed."
+}

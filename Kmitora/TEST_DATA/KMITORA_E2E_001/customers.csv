@@ -1,0 +1,6 @@
+customer_id,customer_name,status,region,email,balance
+1001,ABC Industries,ACTIVE,SOUTH,ACCOUNTS@abc.com,125000
+1002,XYZ Enterprises,ACTIVE,NORTH,FINANACE@xyz.com,238500
+1003,Delta Systems,INACTIVE,WEST,OPS@delta.com,78000
+1004,Nova Retail,ACTIVE,EAST,ADMIN@nova.com,415000
+1005,Omega Manufacturing,ACTIVE,SOUTH,FINANCE@OMEGA.COM,92500

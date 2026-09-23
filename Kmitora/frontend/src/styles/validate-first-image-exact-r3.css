@@ -1,0 +1,276 @@
+/* KMITORA Validate R3 - visual parity correction for approved first image */
+/* Typography is intentionally explicit instead of inheriting the tiny legacy page scale. */
+.validatePremiumR2,
+.validatePremiumR2 *,
+.validatePremiumR2 button,
+.validatePremiumR2 input,
+.validatePremiumR2 select {
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+/* When the premium Overview / Intelligence is active, fully suppress the old
+   Validate presentation below it. The old React logic remains mounted. */
+.page:has(> .validatePremiumR2:not(.showLegacyValidate)) >
+.validatePremiumR2 ~ * {
+  display: none !important;
+}
+
+.page:has(> .validatePremiumR2) {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #f7f9fc !important;
+  font-size: 13px !important;
+}
+
+.validatePremiumR2 {
+  width: 100%;
+  min-width: 0;
+  background: #f7f9fc;
+  color: #14213a;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+.validatePremiumR2 .v2Header {
+  padding: 22px 26px 16px !important;
+  min-height: 120px;
+  background: #f7f9fc !important;
+}
+
+.validatePremiumR2 .v2Eyebrow {
+  font-size: 11px !important;
+  letter-spacing: .055em !important;
+  font-weight: 700 !important;
+}
+
+.validatePremiumR2 .v2TitleRow h1 {
+  font-size: 30px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  letter-spacing: -.02em !important;
+}
+
+.validatePremiumR2 .v2Header p {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  margin-top: 7px !important;
+}
+
+.validatePremiumR2 .v2Safety {
+  margin-top: 11px !important;
+  gap: 18px !important;
+  font-size: 11px !important;
+}
+
+.validatePremiumR2 .v2Plan small,
+.validatePremiumR2 .v2Plan strong {
+  font-size: 11px !important;
+}
+
+.validatePremiumR2 .v2HeaderRight button,
+.validatePremiumR2 .v2Outline,
+.validatePremiumR2 .v2ButtonRow button {
+  min-height: 36px !important;
+  font-size: 11.5px !important;
+  border-radius: 7px !important;
+}
+
+.validatePremiumR2 .v2Kpis {
+  margin: 0 22px !important;
+  border-radius: 10px !important;
+  min-height: 116px;
+}
+
+.validatePremiumR2 .v2Kpis article {
+  min-height: 116px !important;
+  padding: 16px 15px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.validatePremiumR2 .v2Kpis article > span {
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+}
+
+.validatePremiumR2 .v2Kpis article > strong {
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+  margin: 8px 0 5px !important;
+  font-weight: 700 !important;
+}
+
+.validatePremiumR2 .v2Kpis article > small {
+  font-size: 10px !important;
+}
+
+.validatePremiumR2 .v2ScoreKpi {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+}
+
+.validatePremiumR2 .v2Ring {
+  width: 58px !important;
+  height: 58px !important;
+}
+
+.validatePremiumR2 .v2Ring strong {
+  font-size: 12px !important;
+}
+
+.validatePremiumR2 .v2Tabs {
+  padding: 10px 22px 0 !important;
+  min-height: 50px;
+}
+
+.validatePremiumR2 .v2Tabs button {
+  font-size: 11px !important;
+  min-height: 40px !important;
+  padding: 0 14px 10px !important;
+}
+
+.validatePremiumR2 .v2Body,
+.validatePremiumR2 .v2Intelligence {
+  padding: 14px 22px 34px !important;
+}
+
+.validatePremiumR2 .v2TopGrid {
+  grid-template-columns: 1fr 1.08fr 1.28fr .82fr !important;
+  gap: 12px !important;
+}
+
+.validatePremiumR2 .v2TopGrid > section,
+.validatePremiumR2 .v2MiddleGrid > section,
+.validatePremiumR2 .v2BottomGrid > section,
+.validatePremiumR2 .v2IntelHero,
+.validatePremiumR2 .v2IntelCards article,
+.validatePremiumR2 .v2SafetyBanner {
+  border-radius: 9px !important;
+  padding: 15px !important;
+  box-shadow: 0 4px 16px rgba(33, 55, 90, .05) !important;
+}
+
+.validatePremiumR2 .v2PanelHead span {
+  font-size: 10px !important;
+  letter-spacing: .02em;
+}
+
+.validatePremiumR2 .v2PanelHead h2 {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  margin-top: 4px !important;
+}
+
+.validatePremiumR2 .v2ActionList button {
+  min-height: 60px;
+  padding: 10px 4px !important;
+}
+
+.validatePremiumR2 .v2ActionList strong {
+  font-size: 11.5px !important;
+}
+
+.validatePremiumR2 .v2ActionList small {
+  font-size: 9.5px !important;
+  line-height: 1.35 !important;
+}
+
+.validatePremiumR2 .v2Checklist > div,
+.validatePremiumR2 .v2IssueList > div {
+  min-height: 35px;
+  font-size: 10.5px !important;
+  padding: 8px 0 !important;
+}
+
+.validatePremiumR2 .v2HealthHero {
+  min-height: 184px;
+  grid-template-columns: 132px 1fr !important;
+}
+
+.validatePremiumR2 .v2LargeRing {
+  width: 112px !important;
+  height: 112px !important;
+}
+
+.validatePremiumR2 .v2LargeRing strong {
+  font-size: 22px !important;
+}
+
+.validatePremiumR2 .v2HealthBars > div {
+  font-size: 10px !important;
+  margin: 11px 0 !important;
+}
+
+.validatePremiumR2 .v2MiddleGrid {
+  grid-template-columns: .9fr 2.1fr !important;
+  gap: 12px !important;
+  margin-top: 12px !important;
+}
+
+.validatePremiumR2 .v2Note {
+  font-size: 10.5px !important;
+}
+
+.validatePremiumR2 .v2WorkCards {
+  gap: 9px !important;
+}
+
+.validatePremiumR2 .v2WorkCards article {
+  min-height: 108px;
+  padding: 12px !important;
+}
+
+.validatePremiumR2 .v2WorkCards span {
+  font-size: 10.5px !important;
+}
+
+.validatePremiumR2 .v2WorkCards strong {
+  font-size: 15px !important;
+}
+
+.validatePremiumR2 .v2WorkCards small,
+.validatePremiumR2 .v2WorkCards em {
+  font-size: 9px !important;
+}
+
+.validatePremiumR2 .v2BottomGrid {
+  grid-template-columns: 1.3fr .9fr .9fr !important;
+  gap: 12px !important;
+  margin-top: 12px !important;
+}
+
+.validatePremiumR2 .v2EvidenceRows > div,
+.validatePremiumR2 .v2DecisionRows > div,
+.validatePremiumR2 .v2SafetyRows > div,
+.validatePremiumR2 .v2Severity p {
+  font-size: 10.5px !important;
+  min-height: 31px;
+}
+
+.validatePremiumR2 .v2SafeBanner {
+  font-size: 10px !important;
+  min-height: 34px;
+}
+
+.validatePremiumR2 .v2Status,
+.validatePremiumR2 .v2Badge {
+  font-size: 9px !important;
+}
+
+@media (max-width: 1360px) {
+  .validatePremiumR2 .v2Kpis { grid-template-columns: repeat(4, 1fr) !important; }
+  .validatePremiumR2 .v2TopGrid { grid-template-columns: 1fr 1fr !important; }
+}
+
+@media (max-width: 900px) {
+  .validatePremiumR2 .v2Header { flex-direction: column; }
+  .validatePremiumR2 .v2Kpis,
+  .validatePremiumR2 .v2TopGrid,
+  .validatePremiumR2 .v2MiddleGrid,
+  .validatePremiumR2 .v2BottomGrid { grid-template-columns: 1fr !important; }
+  .validatePremiumR2 .v2WorkCards { grid-template-columns: 1fr !important; }
+}

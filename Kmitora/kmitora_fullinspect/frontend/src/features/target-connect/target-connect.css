@@ -1,0 +1,51 @@
+.kt-wrap{max-width:1280px;margin:0 auto 18px;font-family:Inter,"Segoe UI",Arial,sans-serif}
+.kt-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.kt-card{background:#fff;border:1px solid #dfe6ee;border-radius:10px;padding:18px;box-shadow:0 6px 24px rgba(18,38,63,.06)}
+.kt-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.kt-head h2{font-size:17px;margin:4px 0}
+.kt-head p{font-size:12px;color:#64748b;margin:3px 0 0}
+.kt-eyebrow{font-size:10px;font-weight:800;letter-spacing:.1em;color:#0f766e}
+.kt-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:15px}
+.kt-form-grid label{font-size:11px;font-weight:700;color:#42526a;display:flex;flex-direction:column;gap:6px}
+.kt-form-grid input,.kt-form-grid select{height:38px;border:1px solid #dfe6ee;border-radius:8px;padding:0 10px;font-size:12px;background:#fff}
+.kt-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:15px}
+.kt-primary,.kt-secondary,.kt-ghost{min-height:36px;border-radius:8px;padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer}
+.kt-primary{background:#0f766e;color:#fff;border:1px solid #0f766e}
+.kt-secondary{background:#eefbf8;color:#0f766e;border:1px solid #b7e8df}
+.kt-ghost{background:#fff;color:#172033;border:1px solid #dfe6ee}
+.kt-message,.kt-warning{margin-top:12px;padding:9px 10px;border-radius:7px;border:1px solid #dfe6ee;font-size:11px}
+.kt-warning{background:#fff7ed;border-color:#fed7aa;color:#9a3412}
+.kt-target-list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.kt-target-row{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left;border:1px solid #dfe6ee;background:#fff;border-radius:8px;padding:11px;cursor:pointer}
+.kt-target-row.active{border-color:#99d5cc;background:#eefbf8}
+.kt-target-row strong{display:block;font-size:12px}
+.kt-target-row span{display:block;color:#64748b;font-size:10px;margin-top:3px}
+.kt-pills{display:flex;align-items:center;gap:6px}
+.kt-pill,.kt-env{font-size:9px!important;text-transform:uppercase;font-weight:800;padding:4px 7px;border-radius:999px;border:1px solid #dfe6ee}
+.kt-pill.connected{color:#168f52}
+.kt-env{color:#0f766e}
+.kt-browser{margin-top:16px}
+.kt-browser-grid{display:grid;grid-template-columns:280px 1fr;gap:14px;margin-top:15px;min-height:390px}
+.kt-object-list{border:1px solid #dfe6ee;border-radius:8px;overflow:auto;max-height:500px}
+.kt-object-row{display:grid;grid-template-columns:minmax(0,1fr) auto;border-bottom:1px solid #dfe6ee}
+.kt-object-row.active{background:#eefbf8}
+.kt-object-main{min-width:0;text-align:left;border:0;background:transparent;padding:10px;cursor:pointer;overflow:hidden}
+.kt-object-main strong{display:block;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kt-object-main span{display:block;font-size:10px;color:#64748b;margin-top:3px}
+.kt-view-data{align-self:center;margin-right:8px;border:1px solid #b7e8df;background:#eefbf8;color:#0f766e;border-radius:7px;padding:6px 8px;font-size:10px;font-weight:800;cursor:pointer}
+.kt-preview{min-width:0;border:1px solid #dfe6ee;border-radius:8px;overflow:hidden;background:#fff}
+.kt-preview-head{display:flex;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #dfe6ee;font-size:11px}
+.kt-table-wrap{overflow:auto;max-height:460px}
+.kt-table-wrap table{border-collapse:collapse;width:max-content;min-width:100%;font-size:11px}
+.kt-table-wrap th,.kt-table-wrap td{border-bottom:1px solid #edf1f5;border-right:1px solid #edf1f5;padding:7px 9px;white-space:nowrap;text-align:left}
+.kt-table-wrap th{position:sticky;top:0;background:#eef3f8;font-size:9px;text-transform:uppercase;z-index:1}
+.kt-empty{padding:28px;color:#64748b;font-size:12px}
+.kt-preview-error{display:flex;flex-direction:column;gap:8px;padding:22px;color:#9f1239;font-size:12px}
+@media(max-width:900px){.kt-grid,.kt-browser-grid{grid-template-columns:1fr}.kt-form-grid{grid-template-columns:1fr}}
+
+/* UI-004 R2 target management */
+.kt-target-row { width: 100%; }
+.kt-target-row .kt-object-main { flex: 1; text-align: left; background: transparent; border: 0; padding: 0; min-width: 0; }
+.kt-target-row .kt-object-main strong, .kt-target-row .kt-object-main span { display: block; }
+.kt-target-row .kt-object-main span { margin-top: 4px; color: #64748b; font-size: 11px; }
+.kt-form-grid input:disabled, .kt-form-grid select:disabled { background: #f8fafc; color: #475569; cursor: default; }

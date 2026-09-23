@@ -1,0 +1,9 @@
+﻿Customer_ID,Customer_Name,Email,Phone,Country,Status,Credit_Limit
+C2001,Ravi Kumar,ravi.kumar2001@example.com,+919876500001,IN,A,500000
+C2002,Priya Reddy,priya.reddy2002@example.com,+919876500002,IN,A,350000
+C2003,Arjun Rao,arjun.rao2003@example.com,+919876500003,IN,A,275000
+C2004,Meera Shah,meera.shah2004@example.com,+919876500004,IN,A,450000
+C2005,John Smith,john.smith2005@example.com,+14155550101,US,A,250000
+C2006,Maria Lopez,maria.lopez2006@example.com,+34910000006,ES,A,300000
+C2007,Ananya Gupta,ananya.gupta2007@example.com,+919876500007,IND,A,600000
+C2008,David Wilson,david.wilson2008@example.com,+442071000008,GB,A,400000

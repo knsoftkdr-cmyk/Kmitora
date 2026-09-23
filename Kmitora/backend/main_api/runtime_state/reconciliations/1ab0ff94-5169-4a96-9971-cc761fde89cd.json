@@ -1,0 +1,28 @@
+{
+  "reconciliation_id": "1ab0ff94-5169-4a96-9971-cc761fde89cd",
+  "execution_id": "ee2ea3ea-d790-4a91-baf8-60b6a979ebc6",
+  "migration_id": "DEV-UNIFIED-20260920092859",
+  "approval_id": "2bc9a825-73a2-4a07-9e12-646dc334654b",
+  "status": "PASS",
+  "reconciled_at": "2026-09-20T11:34:02.985188+00:00",
+  "input_record_count": 2250,
+  "simulated_record_count": 2250,
+  "matched_records": 2250,
+  "unmatched_source": 0,
+  "unexpected_simulated": 0,
+  "failed_records": 0,
+  "count_variance": 0,
+  "target_write_count": 2250,
+  "production_action_count": 0,
+  "production_executed": false,
+  "production_action_executed": false,
+  "target_write_executed": true,
+  "reconciliation_mode": "POST_LOAD_DEV",
+  "held_records": {
+    "ready": 2250,
+    "review": 1600,
+    "quarantine": 0,
+    "rejected": 0
+  },
+  "persistence_version": "RECONCILIATION_EVIDENCE_STORAGE_001"
+}

@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,status,region
+C001,Asha,Rao,asha.rao@example.test,ACTIVE,SOUTH
+C002,Ben,Lee,ben.lee@example.test,ACTIVE,WEST
+C003,Carla,Diaz,carla.diaz@example.test,ACTIVE,NORTH
+C004,Dev,Shah,dev.shah@example.test,INACTIVE,EAST
+C005,Ella,Kim,ella.kim@example.test,ACTIVE,WEST

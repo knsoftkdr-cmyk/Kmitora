@@ -1,0 +1,12 @@
+[
+  {"item_id":"I001","order_id":"O1001","product_code":"P-RED","quantity":"2","unit_price":"50.00"},
+  {"item_id":"I002","order_id":"O1001","product_code":"P-BLUE","quantity":"1","unit_price":"20.50"},
+  {"item_id":"I003","order_id":"O1002","product_code":"P-GREEN","quantity":"3","unit_price":"25.00"},
+  {"item_id":"I004","order_id":"O1003","product_code":"P-BLACK","quantity":"2","unit_price":"20.00"},
+  {"item_id":"I005","order_id":"O1004","product_code":"P-WHITE","quantity":"5","unit_price":"50.00"},
+  {"item_id":"I006","order_id":"O1004","product_code":"P-GOLD","quantity":"1","unit_price":"60.25"},
+  {"item_id":"I007","order_id":"O1005","product_code":"P-SILVER","quantity":"1","unit_price":"18.75"},
+  {"item_id":"I008","order_id":"O1006","product_code":"P-RED","quantity":"1","unit_price":"55.00"},
+  {"item_id":"I9001","order_id":"O9001","product_code":"P-BAD","quantity":"1","unit_price":"99.99"},
+  {"item_id":"I9002","order_id":"O9002","product_code":"P-FIX","quantity":"2","unit_price":"15.00"}
+]

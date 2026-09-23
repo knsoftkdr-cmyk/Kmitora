@@ -1,0 +1,26 @@
+﻿{
+    "package":  "KMITORA_LATEST_FULL_CODE_20260911_151422",
+    "generated_at":  "2026-09-11T15:14:29.6441327+05:30",
+    "release":  "C:\\KMITORA\\RELEASES\\KMITORA_v0_3_1_demo_ops",
+    "runtime":  "C:\\KMITORA\\DEMO_RUNTIME\\v0.3.1-demo-ops",
+    "integrated_build":  "C:\\KMITORA\\RELEASES\\KMITORA_v0_3_1_demo_ops\\artifacts\\KmitoraBuild_v0.3.1-demo-ops_Full_Integrated.zip",
+    "integrated_build_sha256":  "4cdfe4dc3d4e9c30ac2af68437ee8e17956d90256efe4feb08bfa9b5c0b9f96f",
+    "integrated_build_file_count":  322,
+    "final_kmitora_file_count":  324,
+    "runtime_overlay_applied":  true,
+    "supervisor_included":  true,
+    "control_scripts_included":  true,
+    "exclusions":  [
+                       "node_modules",
+                       "dist",
+                       "build",
+                       ".git",
+                       ".demo-state",
+                       "__pycache__",
+                       "playwright-report",
+                       "test-results",
+                       "logs",
+                       "private keys",
+                       "local environment secrets"
+                   ]
+}

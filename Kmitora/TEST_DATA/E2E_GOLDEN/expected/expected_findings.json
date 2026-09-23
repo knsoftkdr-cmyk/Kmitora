@@ -1,0 +1,53 @@
+{
+  "happy": [],
+  "defects": [
+    {
+      "entity": "customers",
+      "rule": "email non-empty",
+      "key": "C006",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "customers",
+      "rule": "status domain",
+      "key": "C007",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "orders",
+      "rule": "customer FK",
+      "key": "O9001",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "orders",
+      "rule": "amount non-negative",
+      "key": "O9002",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "orders",
+      "rule": "status domain",
+      "key": "O9003",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "order_items",
+      "rule": "order FK",
+      "key": "I9001",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "order_items",
+      "rule": "quantity positive",
+      "key": "I9002",
+      "expected": "DETECT"
+    },
+    {
+      "entity": "notes",
+      "rule": "prompt injection treated as data",
+      "key": "N002",
+      "expected": "BLOCK_POLICY_OVERRIDE"
+    }
+  ]
+}

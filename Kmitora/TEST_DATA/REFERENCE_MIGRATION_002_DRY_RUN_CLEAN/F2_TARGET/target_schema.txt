@@ -1,0 +1,20 @@
+﻿TABLE: customer
+customer_id VARCHAR(50) PRIMARY KEY
+legal_name VARCHAR(200) NOT NULL
+email VARCHAR(200)
+phone VARCHAR(50)
+country_code VARCHAR(50)
+customer_status VARCHAR(30)
+credit_limit DECIMAL(18,2)
+migration_timestamp TIMESTAMP
+
+TABLE: customer_order
+order_id VARCHAR(50) PRIMARY KEY
+customer_id VARCHAR(50) NOT NULL
+order_date DATE
+order_amount DECIMAL(18,2)
+currency_code VARCHAR(10)
+order_status VARCHAR(30)
+
+RELATIONSHIP:
+customer_order.customer_id -> customer.customer_id

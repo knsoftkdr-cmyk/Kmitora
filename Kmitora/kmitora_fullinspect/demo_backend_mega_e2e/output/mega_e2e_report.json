@@ -1,0 +1,2464 @@
+{
+  "scenario_id": "KMITORA-MEGA-E2E-001",
+  "scenario_name": "KMITORA Global Enterprise Transformation Mega Demo",
+  "started_at": "2026-09-19T04:48:35.276604+00:00",
+  "finished_at": "2026-09-19T04:48:40.579839+00:00",
+  "total_checks": 121,
+  "passed": 121,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "hard_safety": {
+    "production_write_allowed": false,
+    "production_cutover_allowed": false,
+    "destructive_action_allowed": false,
+    "policy_bypass_allowed": false
+  },
+  "artifacts": {
+    "domain_catalog_counts": {
+      "industry_count": 120,
+      "enterprise_function_count": 50,
+      "total_seeded_domains": 170
+    },
+    "domain_inference": {
+      "kind": "kmitora_domain_inference",
+      "industries": [
+        {
+          "id": "D097",
+          "name": "Technology",
+          "kind": "INDUSTRY",
+          "score": 4,
+          "confidence": 75
+        },
+        {
+          "id": "D103",
+          "name": "AI / ML",
+          "kind": "INDUSTRY",
+          "score": 2,
+          "confidence": 65
+        },
+        {
+          "id": "D009",
+          "name": "Audit",
+          "kind": "INDUSTRY",
+          "score": 2,
+          "confidence": 65
+        },
+        {
+          "id": "D099",
+          "name": "Cloud Computing",
+          "kind": "INDUSTRY",
+          "score": 2,
+          "confidence": 65
+        },
+        {
+          "id": "D104",
+          "name": "Cybersecurity",
+          "kind": "INDUSTRY",
+          "score": 2,
+          "confidence": 65
+        }
+      ],
+      "functions": [
+        {
+          "id": "E047",
+          "name": "Integration",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 25,
+          "confidence": 99
+        },
+        {
+          "id": "E026",
+          "name": "Data",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 24,
+          "confidence": 99
+        },
+        {
+          "id": "E037",
+          "name": "SRE",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 17,
+          "confidence": 99
+        },
+        {
+          "id": "E038",
+          "name": "Quality Engineering",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 14,
+          "confidence": 99
+        },
+        {
+          "id": "E029",
+          "name": "Security",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 14,
+          "confidence": 99
+        },
+        {
+          "id": "E010",
+          "name": "Compliance",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 13,
+          "confidence": 99
+        },
+        {
+          "id": "E002",
+          "name": "Enterprise Architecture",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 12,
+          "confidence": 99
+        },
+        {
+          "id": "E011",
+          "name": "Risk",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 11,
+          "confidence": 99
+        },
+        {
+          "id": "E050",
+          "name": "Data Governance",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 9,
+          "confidence": 99
+        },
+        {
+          "id": "E036",
+          "name": "Platform Engineering",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 9,
+          "confidence": 99
+        },
+        {
+          "id": "E039",
+          "name": "Testing",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 9,
+          "confidence": 99
+        },
+        {
+          "id": "E017",
+          "name": "CRM",
+          "kind": "ENTERPRISE_FUNCTION",
+          "score": 7,
+          "confidence": 90
+        }
+      ],
+      "needs_human_confirmation": false,
+      "inference_truth": "DETERMINISTIC_KEYWORD_AND_CONTEXT_RANKING",
+      "production_action_executed": false,
+      "authoritative": false,
+      "source_write_executed": false,
+      "target_write_executed": false,
+      "infrastructure_change_executed": false,
+      "network_change_executed": false,
+      "security_change_executed": false
+    },
+    "client_context": {
+      "context_id": "KCTX-6BC3AE1D30F2DAFF",
+      "domain": "Technology",
+      "functions": [
+        "Integration",
+        "Data",
+        "SRE",
+        "Quality Engineering",
+        "Security",
+        "Compliance",
+        "Enterprise Architecture",
+        "Risk",
+        "Data Governance",
+        "Platform Engineering",
+        "Testing",
+        "CRM"
+      ],
+      "systems": [
+        "Oracle Database",
+        "Salesforce CRM",
+        "SAP ERP",
+        "REST APIs",
+        "Kafka",
+        "Kubernetes",
+        "Legacy Mainframe",
+        "Data Warehouse",
+        "ETL Platform",
+        "Identity Provider"
+      ],
+      "processes": [
+        "customer onboarding",
+        "payments",
+        "order to cash",
+        "record to report",
+        "incident management",
+        "regulatory reporting"
+      ],
+      "issues": [
+        "API errors",
+        "schema mismatches",
+        "data defects",
+        "duplicate records",
+        "performance incidents",
+        "privacy risk",
+        "integration failures",
+        "technical debt"
+      ],
+      "technologies": [
+        "SQL",
+        "Python",
+        "Java",
+        "REST API",
+        "Kafka",
+        "Kubernetes",
+        "cloud",
+        "microservices",
+        "ETL"
+      ],
+      "client_extensions": {},
+      "learning_policy": "VERIFIED_EVIDENCE_ONLY",
+      "customization": {
+        "configuration": true,
+        "generated_adapters": "SANDBOX_AND_TEST_ONLY",
+        "generated_code": "SANDBOX_AND_TEST_ONLY",
+        "production_change": "EXPLICIT_APPROVAL_REQUIRED"
+      },
+      "production_action_executed": false,
+      "authoritative": false,
+      "source_write_executed": false,
+      "target_write_executed": false,
+      "infrastructure_change_executed": false,
+      "network_change_executed": false,
+      "security_change_executed": false
+    },
+    "agent_allocation": {
+      "kind": "kmitora_dynamic_agent_allocation",
+      "orchestrator": "A000",
+      "domain": "Technology",
+      "functions": [
+        "Integration",
+        "Data",
+        "SRE",
+        "Quality Engineering",
+        "Security",
+        "Compliance",
+        "Enterprise Architecture",
+        "Risk",
+        "Data Governance",
+        "Platform Engineering",
+        "Testing",
+        "CRM"
+      ],
+      "agents": [
+        {
+          "agent_id": "A000",
+          "title": "Master Orchestrator",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "routing, governance, evidence and lifecycle state",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KDOM-002",
+          "title": "Technology Business Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "business semantics, policies, processes and terminology",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KPROC-003",
+          "title": "Process Intelligence Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "process discovery, variants, controls and optimization",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KDATA-004",
+          "title": "Data & Schema Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "models, lineage, quality, mappings and reconciliation",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KAPP-005",
+          "title": "Application & Integration Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "code, APIs, dependencies and interfaces",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KDEF-006",
+          "title": "Defect & Problem Intelligence Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "errors, defects, RCA, functional and technical problems",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KSEC-007",
+          "title": "Security & Compliance Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "security, privacy, identity and regulatory controls",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KMIG-008",
+          "title": "Transformation & Migration Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "migration design, adapters, transforms and rollback",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KSRE-009",
+          "title": "Reliability & Performance Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "runtime, incidents, performance and resilience",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KQA-010",
+          "title": "Autonomous QA & Assurance Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "tests, invariants, regression and certification",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        },
+        {
+          "agent_id": "KEVD-011",
+          "title": "Evidence & Governance Specialist",
+          "domain": "Technology",
+          "functions": [
+            "Integration",
+            "Data",
+            "SRE",
+            "Quality Engineering",
+            "Security",
+            "Compliance",
+            "Enterprise Architecture",
+            "Risk",
+            "Data Governance",
+            "Platform Engineering",
+            "Testing",
+            "CRM"
+          ],
+          "purpose": "approvals, provenance, validation and audit evidence",
+          "technologies": [
+            "SQL",
+            "Python",
+            "Java",
+            "REST API",
+            "Kafka",
+            "Kubernetes",
+            "cloud",
+            "microservices",
+            "ETL"
+          ],
+          "issue_context": [
+            "API errors",
+            "schema mismatches",
+            "data defects",
+            "duplicate records",
+            "performance incidents",
+            "privacy risk",
+            "integration failures",
+            "technical debt"
+          ],
+          "authority": "GOVERNED",
+          "production_write_allowed": false,
+          "destructive_action_allowed": false
+        }
+      ],
+      "agent_count": 11,
+      "customization_mode": "RUNTIME_CONTEXT_COMPOSITION",
+      "production_action_executed": false,
+      "authoritative": false,
+      "source_write_executed": false,
+      "target_write_executed": false,
+      "infrastructure_change_executed": false,
+      "network_change_executed": false,
+      "security_change_executed": false
+    },
+    "dynamic_scenario_count": 104,
+    "representative_capability_executions": 36,
+    "migration_id": "MEGA-DEMO-1789793316",
+    "discovery_summary": {
+      "source_entity_count": 2,
+      "target_entity_count": 2,
+      "business_rule_count": 15,
+      "relationship_count": 1,
+      "quality_finding_count": 0,
+      "transformation_plan_count": 5,
+      "record_disposition_count": 0,
+      "staging_ready_count": 15,
+      "staging_review_count": 0,
+      "staging_quarantine_count": 0,
+      "staging_rejected_count": 0,
+      "staging_referential_dependency_count": 1
+    },
+    "approval_id": "fd75d353-b5a2-4eee-adee-e7e0e26dc602",
+    "execution_id": "7214931c-11de-40b0-b25d-b14356a408b2",
+    "reconciliation_id": "21d81243-4baa-46b6-9cca-009051826071",
+    "evidence_id": "43fc3e3c-2a53-4007-ab8d-2b5157162461"
+  },
+  "checks": [
+    {
+      "name": "Health",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/health",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 134,
+      "detail": "status matched",
+      "response_kind": "health"
+    },
+    {
+      "name": "Capabilities",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/capabilities",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 18,
+      "detail": "status matched",
+      "response_kind": "capabilities"
+    },
+    {
+      "name": "Environments",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/environments",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 29,
+      "detail": "status matched",
+      "response_kind": "environments"
+    },
+    {
+      "name": "A000 status",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/a000/status",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 78,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_status"
+    },
+    {
+      "name": "A000 intelligence status",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/a000/intelligence/status",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 10,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_intelligence_status"
+    },
+    {
+      "name": "A000 intelligence capabilities",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/a000/intelligence/capabilities",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 28,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_intelligence_capabilities"
+    },
+    {
+      "name": "A000 self-test",
+      "phase": "Platform",
+      "method": "POST",
+      "path": "/v1/a000/self-test",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 9,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_self_test"
+    },
+    {
+      "name": "Universal domain catalog",
+      "phase": "Understand",
+      "method": "GET",
+      "path": "/v1/a000/domains",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "kmitora_universal_domain_catalog"
+    },
+    {
+      "name": "Smart domain inference",
+      "phase": "Understand",
+      "method": "POST",
+      "path": "/v1/a000/domains/infer",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 40,
+      "detail": "status + assertions passed",
+      "response_kind": "kmitora_domain_inference"
+    },
+    {
+      "name": "Client business context",
+      "phase": "Understand",
+      "method": "POST",
+      "path": "/v1/a000/domains/context",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 10,
+      "detail": "status + assertions passed",
+      "response_kind": "kmitora_domain_client_context"
+    },
+    {
+      "name": "Dynamic A000 agent allocation",
+      "phase": "Understand",
+      "method": "POST",
+      "path": "/v1/a000/domains/allocate",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 6,
+      "detail": "status + assertions passed",
+      "response_kind": "kmitora_domain_agent_allocation"
+    },
+    {
+      "name": "Dynamic 13-stage scenario synthesis",
+      "phase": "Understand",
+      "method": "POST",
+      "path": "/v1/a000/domains/scenarios",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 11,
+      "detail": "status + assertions passed",
+      "response_kind": "kmitora_domain_scenarios"
+    },
+    {
+      "name": "Deep enterprise discovery plan",
+      "phase": "Discover",
+      "method": "POST",
+      "path": "/v1/a000/deep-discovery",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_deep_discovery"
+    },
+    {
+      "name": "Process mining",
+      "phase": "Discover",
+      "method": "POST",
+      "path": "/v1/a000/process-mine",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 53,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_process_mining"
+    },
+    {
+      "name": "Business-rule mining",
+      "phase": "Discover",
+      "method": "POST",
+      "path": "/v1/a000/rule-mine",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 25,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_rule_mining"
+    },
+    {
+      "name": "Entity resolution",
+      "phase": "Detect",
+      "method": "POST",
+      "path": "/v1/a000/entity-resolve",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 32,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_entity_resolution"
+    },
+    {
+      "name": "Privacy classification",
+      "phase": "Detect",
+      "method": "POST",
+      "path": "/v1/a000/privacy-assess",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 26,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_privacy_assessment"
+    },
+    {
+      "name": "Data observability",
+      "phase": "Detect",
+      "method": "POST",
+      "path": "/v1/a000/data-observe",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 24,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_data_observability"
+    },
+    {
+      "name": "Root-cause ranking",
+      "phase": "Diagnose",
+      "method": "POST",
+      "path": "/v1/a000/root-cause",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 20,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_root_cause"
+    },
+    {
+      "name": "What-if simulation",
+      "phase": "Simulate",
+      "method": "POST",
+      "path": "/v1/a000/simulate",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 18,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_simulation"
+    },
+    {
+      "name": "Dependency optimization",
+      "phase": "Recommend",
+      "method": "POST",
+      "path": "/v1/a000/optimize",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 14,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_optimization"
+    },
+    {
+      "name": "Dynamic specialist plan",
+      "phase": "Recommend",
+      "method": "POST",
+      "path": "/v1/a000/agent-plan",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 19,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_dynamic_agent"
+    },
+    {
+      "name": "DEV policy evaluation",
+      "phase": "Governance",
+      "method": "POST",
+      "path": "/v1/a000/policy-evaluate",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 28,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_policy_evaluation"
+    },
+    {
+      "name": "PROD destructive request governed",
+      "phase": "Governance",
+      "method": "POST",
+      "path": "/v1/a000/policy-evaluate",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 14,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_policy_evaluation"
+    },
+    {
+      "name": "Invalid capability serial rejected",
+      "phase": "Governance",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        400
+      ],
+      "actual_status": 400,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status matched",
+      "response_kind": "a000_master_capability_run_error"
+    },
+    {
+      "name": "Oversized HTTP batch rejected",
+      "phase": "Governance",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        400
+      ],
+      "actual_status": 400,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status matched",
+      "response_kind": "a000_master_capability_run_error"
+    },
+    {
+      "name": "Direct PROD migration blocked",
+      "phase": "Governance",
+      "method": "POST",
+      "path": "/v1/migrations",
+      "expected_status": [
+        403
+      ],
+      "actual_status": 403,
+      "passed": true,
+      "elapsed_ms": 7,
+      "detail": "status matched",
+      "response_kind": "migration_gate_blocked"
+    },
+    {
+      "name": "Live Digital Twin graph",
+      "phase": "DigitalTwin",
+      "method": "GET",
+      "path": "/v1/a000/digital-twin/graph?temporal_state=CURRENT",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_digital_twin_graph"
+    },
+    {
+      "name": "Digital Twin blast radius",
+      "phase": "DigitalTwin",
+      "method": "POST",
+      "path": "/v1/a000/digital-twin/impact",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 6,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_digital_twin_impact"
+    },
+    {
+      "name": "Digital Twin RCA path",
+      "phase": "DigitalTwin",
+      "method": "POST",
+      "path": "/v1/a000/digital-twin/rca",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 20,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_digital_twin_rca"
+    },
+    {
+      "name": "Digital Twin future simulation",
+      "phase": "DigitalTwin",
+      "method": "POST",
+      "path": "/v1/a000/digital-twin/simulate",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 8,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_digital_twin_simulation"
+    },
+    {
+      "name": "1M capability catalog summary",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 27,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capabilities"
+    },
+    {
+      "name": "Capability descriptor 1",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/1",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 1",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 21,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Learning classification 1",
+      "phase": "Learn",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/learn",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_learning_decision"
+    },
+    {
+      "name": "Capability descriptor 250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 14,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 100250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/100250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 100250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 100251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/100251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 13,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 100251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 200250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/200250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 200250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 200251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/200251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 2,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 200251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 250250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/250250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 2,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 250250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 250251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/250251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 2,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 250251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 275250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/275250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 275250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 275251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/275251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 2,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 275251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 21,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 375250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/375250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 375250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 375251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/375251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 9,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 375251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 425250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/425250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 2,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 425250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 425251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/425251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 425251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 525250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/525250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 14,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 525250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 17,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 525251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/525251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 4,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 525251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 24,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 625250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/625250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 625250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 625251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/625251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 11,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 625251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 825250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/825250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 825250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 825251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/825251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 4,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 825251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 24,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Learning classification 825251",
+      "phase": "Learn",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/learn",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_learning_decision"
+    },
+    {
+      "name": "Capability descriptor 850250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/850250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 12,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 850250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 850251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/850251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 850251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 28,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 875250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/875250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 14,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 875250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 875251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/875251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 11,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 875251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 900250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/900250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 28,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 900250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 6,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 900251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/900251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 4,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 900251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 6,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 925250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/925250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 13,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 925250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 6,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 925251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/925251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 25,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 925251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 950250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/950250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 950250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 950251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/950251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 14,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 950251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 975250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/975250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 4,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 975250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 25,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 975251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/975251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 975251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 990250",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/990250",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 15,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 990250",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 4,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 990251",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/990251",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 990251",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Capability descriptor 1000000",
+      "phase": "1M Universe",
+      "method": "GET",
+      "path": "/v1/a000/master-capabilities/1000000",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability"
+    },
+    {
+      "name": "Capability execution 1000000",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run-one",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Learning classification 1000000",
+      "phase": "Learn",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/learn",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_learning_decision"
+    },
+    {
+      "name": "Safe batch 1-25",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 7,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Safe batch 100251-100275",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 6,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Safe batch 250251-250275",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 30,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Safe batch 525251-525275",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 30,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Safe batch 825251-825275",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 7,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Safe batch 975251-975275",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 24,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Safe batch 999976-1000000",
+      "phase": "1M Universe",
+      "method": "POST",
+      "path": "/v1/a000/master-capabilities/run",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 19,
+      "detail": "status + assertions passed",
+      "response_kind": "a000_master_capability_run"
+    },
+    {
+      "name": "Clean enterprise source discovery",
+      "phase": "Discover",
+      "method": "POST",
+      "path": "/v1/discovery/jobs",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 3513,
+      "detail": "status + assertions passed",
+      "response_kind": "discovery_result"
+    },
+    {
+      "name": "Governed migration validation",
+      "phase": "Validate",
+      "method": "POST",
+      "path": "/v1/validations/resolve-governed",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 18,
+      "detail": "status + assertions passed",
+      "response_kind": "governed_validation"
+    },
+    {
+      "name": "Authoritative approval request",
+      "phase": "Approval",
+      "method": "POST",
+      "path": "/v1/approvals",
+      "expected_status": [
+        202
+      ],
+      "actual_status": 202,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "approval_request"
+    },
+    {
+      "name": "Authoritative approval decision",
+      "phase": "Approval",
+      "method": "PATCH",
+      "path": "/v1/approvals/fd75d353-b5a2-4eee-adee-e7e0e26dc602",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 28,
+      "detail": "status + assertions passed",
+      "response_kind": "approval_decision"
+    },
+    {
+      "name": "Governed DEV dry-run execution",
+      "phase": "Execute",
+      "method": "POST",
+      "path": "/v1/migrations",
+      "expected_status": [
+        202
+      ],
+      "actual_status": 202,
+      "passed": true,
+      "elapsed_ms": 16,
+      "detail": "status + assertions passed",
+      "response_kind": "migration_candidate"
+    },
+    {
+      "name": "Exact dry-run reconciliation",
+      "phase": "Reconcile",
+      "method": "POST",
+      "path": "/v1/reconciliations",
+      "expected_status": [
+        202
+      ],
+      "actual_status": 202,
+      "passed": true,
+      "elapsed_ms": 3,
+      "detail": "status + assertions passed",
+      "response_kind": "reconciliation"
+    },
+    {
+      "name": "Evidence package generation",
+      "phase": "Evidence",
+      "method": "POST",
+      "path": "/v1/evidence",
+      "expected_status": [
+        202
+      ],
+      "actual_status": 202,
+      "passed": true,
+      "elapsed_ms": 5,
+      "detail": "status + assertions passed",
+      "response_kind": "evidence_candidate"
+    }
+  ],
+  "report_sha256": "f25c81e987694728e622b9d33d39cc77fc34426544ede702fbc330d8472ccd52"
+}

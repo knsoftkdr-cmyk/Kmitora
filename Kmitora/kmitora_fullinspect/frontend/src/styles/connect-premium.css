@@ -1,0 +1,295 @@
+
+/* KMITORA Connect Premium UI
+   PRESENTATION ONLY. No API, state, validation, orchestration, migration,
+   reconciliation, connector, evidence, approval, or persistence logic. */
+
+.kmConnectPremium{
+  --km-navy:#081a3a;
+  --km-navy-2:#0e2a58;
+  --km-blue:#2563eb;
+  --km-blue-2:#60a5fa;
+  --km-cyan:#06b6d4;
+  --km-violet:#7c3aed;
+  --km-green:#10b981;
+  --km-amber:#f59e0b;
+  --km-red:#ef4444;
+  --km-bg:#f6f9ff;
+  --km-card:#ffffff;
+  --km-line:#e3eaf5;
+  --km-text:#10213e;
+  --km-muted:#73809a;
+  --km-shadow:0 10px 30px rgba(22,48,92,.07);
+  --km-shadow-hover:0 16px 38px rgba(22,48,92,.11);
+  width:100%;
+  max-width:none!important;
+  padding:20px 22px 40px!important;
+  background:
+    radial-gradient(circle at 12% 0%,rgba(37,99,235,.055),transparent 28%),
+    radial-gradient(circle at 88% 8%,rgba(124,58,237,.045),transparent 24%),
+    var(--km-bg);
+  color:var(--km-text);
+}
+
+.kmConnectPremium .pageTitle{
+  margin:0 0 16px!important;
+  padding:0!important;
+}
+.kmConnectPremium .pageTitle h1{
+  margin:5px 0 5px!important;
+  font-size:28px!important;
+  line-height:1.12!important;
+  letter-spacing:-.03em;
+  color:var(--km-navy);
+}
+.kmConnectPremium .pageTitle p{
+  margin:0!important;
+  max-width:850px;
+  color:var(--km-muted)!important;
+  font-size:12px!important;
+  line-height:1.55!important;
+}
+.kmConnectPremium .eyebrow{
+  color:var(--km-blue)!important;
+  font-weight:800!important;
+  letter-spacing:.08em!important;
+  font-size:9px!important;
+}
+
+/* premium summary */
+.km-connect-hero{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  margin:0 0 14px;
+}
+.km-connect-stat{
+  position:relative;
+  min-height:108px;
+  border:1px solid var(--km-line);
+  border-radius:12px;
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  box-shadow:var(--km-shadow);
+  padding:15px 16px;
+  overflow:hidden;
+}
+.km-connect-stat:after{
+  content:"";
+  position:absolute;
+  width:70px;height:70px;border-radius:50%;
+  right:-18px;bottom:-24px;
+  background:rgba(37,99,235,.055);
+}
+.km-connect-stat:nth-child(2):after{background:rgba(16,185,129,.07)}
+.km-connect-stat:nth-child(3):after{background:rgba(124,58,237,.07)}
+.km-connect-stat:nth-child(4):after{background:rgba(6,182,212,.07)}
+.km-connect-stat:nth-child(5):after{background:rgba(245,158,11,.07)}
+.km-connect-stat .label{
+  display:block;color:var(--km-muted);font-size:10px;font-weight:700;
+}
+.km-connect-stat strong{
+  display:block;margin:9px 0 6px;font-size:24px;letter-spacing:-.03em;color:var(--km-navy);
+}
+.km-connect-stat small{font-size:9px;color:var(--km-muted)}
+.km-connect-stat .good{color:var(--km-green)}
+.km-connect-stat .warn{color:var(--km-amber)}
+.km-connect-stat .blue{color:var(--km-blue)}
+
+.km-connect-pipeline{
+  border:1px solid var(--km-line);
+  background:#fff;
+  border-radius:13px;
+  padding:15px 18px 18px;
+  margin:0 0 16px;
+  box-shadow:var(--km-shadow);
+}
+.km-connect-pipeline-head{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;
+}
+.km-connect-pipeline-head h3{
+  margin:0!important;font-size:13px!important;color:var(--km-navy)!important;
+}
+.km-connect-pipeline-head span{font-size:9px;color:var(--km-muted)}
+.km-connect-steps{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+.km-connect-steps:before{
+  content:"";
+  position:absolute;left:7%;right:7%;top:17px;height:2px;
+  background:linear-gradient(90deg,var(--km-blue),var(--km-cyan),var(--km-violet),var(--km-green));
+  opacity:.45;
+}
+.km-connect-step{
+  position:relative;z-index:1;text-align:center;
+}
+.km-connect-step .node{
+  width:36px;height:36px;margin:0 auto 7px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#fff;border:2px solid #c8d8f6;
+  color:var(--km-blue);font-size:12px;font-weight:800;
+  box-shadow:0 0 0 5px #fff;
+}
+.km-connect-step.complete .node{
+  border-color:rgba(16,185,129,.4);
+  background:#effcf6;color:var(--km-green);
+}
+.km-connect-step.active .node{
+  border-color:rgba(37,99,235,.55);
+  background:#eff6ff;color:var(--km-blue);
+  box-shadow:0 0 0 5px #fff,0 0 0 9px rgba(37,99,235,.07);
+}
+.km-connect-step strong{display:block;font-size:9px;color:var(--km-text)}
+.km-connect-step small{display:block;margin-top:2px;font-size:8px;color:var(--km-muted)}
+
+/* Current Connect content */
+.kmConnectPremium .panel{
+  border:1px solid var(--km-line)!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  box-shadow:var(--km-shadow)!important;
+  transition:box-shadow .2s ease,border-color .2s ease,transform .2s ease;
+}
+.kmConnectPremium .panel:hover{
+  border-color:#d5e0f0!important;
+  box-shadow:var(--km-shadow-hover)!important;
+}
+.kmConnectPremium .panelHeader{
+  gap:14px!important;
+  align-items:flex-start!important;
+}
+.kmConnectPremium .panelHeader h3{
+  color:var(--km-navy)!important;
+  font-size:13px!important;
+  margin:3px 0!important;
+}
+.kmConnectPremium .panelHeader p{
+  color:var(--km-muted)!important;
+  font-size:9px!important;
+  line-height:1.45!important;
+}
+.kmConnectPremium .twoCol.wideLeft{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  gap:14px!important;
+}
+.kmConnectPremium .formGrid{gap:10px!important}
+.kmConnectPremium label>span{
+  color:#52617a!important;
+  font-size:9px!important;
+  font-weight:700!important;
+}
+.kmConnectPremium input,
+.kmConnectPremium select,
+.kmConnectPremium textarea{
+  min-height:36px!important;
+  border:1px solid #dce5f2!important;
+  border-radius:7px!important;
+  background:#fbfdff!important;
+  color:var(--km-text)!important;
+  font-size:10px!important;
+  outline:none!important;
+  transition:border-color .15s ease,box-shadow .15s ease,background .15s ease;
+}
+.kmConnectPremium textarea{min-height:92px!important}
+.kmConnectPremium input:focus,
+.kmConnectPremium select:focus,
+.kmConnectPremium textarea:focus{
+  border-color:#8ab5ff!important;
+  background:#fff!important;
+  box-shadow:0 0 0 3px rgba(37,99,235,.08)!important;
+}
+.kmConnectPremium button{
+  border-radius:7px!important;
+  font-size:9px!important;
+  font-weight:700!important;
+  min-height:33px!important;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+}
+.kmConnectPremium button:not(:disabled):hover{transform:translateY(-1px)}
+.kmConnectPremium button.primary{
+  border-color:var(--km-blue)!important;
+  background:linear-gradient(180deg,#347cf7,#1e63dd)!important;
+  color:#fff!important;
+  box-shadow:0 6px 14px rgba(37,99,235,.18)!important;
+}
+.kmConnectPremium .buttonRow{gap:8px!important}
+.kmConnectPremium .statusPill{
+  border-radius:999px!important;
+  font-size:8px!important;
+  font-weight:800!important;
+  letter-spacing:.02em!important;
+  padding:5px 8px!important;
+}
+.kmConnectPremium .statusPill.success{background:#eaf9f2!important;color:#087d4b!important}
+.kmConnectPremium .statusPill.review{background:#fff7e8!important;color:#a96608!important}
+.kmConnectPremium .statusPill.reject{background:#fff0f1!important;color:#b72b36!important}
+.kmConnectPremium .checkList{
+  border:1px solid #edf1f7!important;
+  border-radius:9px!important;
+  overflow:hidden!important;
+  background:#fbfdff!important;
+}
+.kmConnectPremium .checkRow{
+  min-height:34px!important;
+  border-bottom:1px solid #edf1f7!important;
+  padding:7px 10px!important;
+  font-size:9px!important;
+}
+.kmConnectPremium .checkRow:last-child{border-bottom:0!important}
+.kmConnectPremium .checkRow small{
+  color:#7b879b!important;
+  font-size:8px!important;
+  font-weight:700!important;
+}
+.kmConnectPremium .progressBlock{
+  margin-top:12px!important;
+  padding:12px!important;
+  border:1px solid #edf1f7!important;
+  border-radius:9px!important;
+  background:#fbfdff!important;
+}
+.kmConnectPremium .bar{
+  height:6px!important;
+  background:#e9eef6!important;
+  border-radius:99px!important;
+}
+.kmConnectPremium .bar span{
+  background:linear-gradient(90deg,var(--km-blue),var(--km-cyan))!important;
+  border-radius:99px!important;
+}
+.kmConnectPremium table{
+  border:1px solid var(--km-line);
+  border-radius:9px;
+  overflow:hidden;
+  background:#fff;
+}
+.kmConnectPremium th{
+  background:#f4f7fb!important;color:#53627b!important;
+  text-transform:uppercase;font-size:8px!important;letter-spacing:.04em;
+}
+.kmConnectPremium td{font-size:9px!important;color:#31415e!important}
+
+/* visually distinguish source/target columns without changing functionality */
+.kmConnectPremium .twoCol.wideLeft>div:first-child>.panelHeader{
+  padding:10px 12px;border-radius:9px;background:linear-gradient(90deg,#eff6ff,#f8fbff);
+  border:1px solid #dbeafe;
+}
+.kmConnectPremium .twoCol.wideLeft>div:last-child>.panelHeader{
+  padding:10px 12px;border-radius:9px;background:linear-gradient(90deg,#f5f3ff,#fbfaff);
+  border:1px solid #e9ddff;
+}
+
+@media(max-width:1200px){
+  .km-connect-hero{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:920px){
+  .kmConnectPremium{padding:14px!important}
+  .km-connect-hero{grid-template-columns:repeat(2,1fr)}
+  .kmConnectPremium .twoCol.wideLeft{grid-template-columns:1fr!important}
+}
+@media(max-width:600px){
+  .km-connect-hero{grid-template-columns:1fr}
+  .km-connect-steps{grid-template-columns:1fr}
+  .km-connect-steps:before{display:none}
+}

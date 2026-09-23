@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KMITORA Client Demo Scenario",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "industry",
+    "executiveTheme",
+    "clientProfile",
+    "primaryOutcome",
+    "systems",
+    "processes",
+    "risks",
+    "kpis",
+    "specialistAgents",
+    "digitalTwinFocus",
+    "demoNarrative",
+    "safetyStatement"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "industry": {
+      "type": "string",
+      "minLength": 1
+    },
+    "executiveTheme": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clientProfile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primaryOutcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "systems": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "processes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "kpis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "before",
+          "after",
+          "note"
+        ],
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "before": {
+            "type": "string"
+          },
+          "after": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "specialistAgents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "digitalTwinFocus": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "demoNarrative": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "safetyStatement": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

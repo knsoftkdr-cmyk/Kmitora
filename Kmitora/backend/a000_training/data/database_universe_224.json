@@ -1,0 +1,1798 @@
+{
+  "version": "012",
+  "count": 224,
+  "items": [
+    {
+      "source_no": 1,
+      "name": "PostgreSQL",
+      "category": "Relational / Object-Relational",
+      "distinctive_capability": "Highly extensible open-source database, custom types, extensions, PostGIS ecosystem",
+      "database_id": "KDB-519968CBED",
+      "canonical_key": "postgresql"
+    },
+    {
+      "source_no": 2,
+      "name": "MySQL",
+      "category": "Relational",
+      "distinctive_capability": "Large web/application ecosystem, lightweight operational deployments",
+      "database_id": "KDB-F460C882A1",
+      "canonical_key": "mysql"
+    },
+    {
+      "source_no": 3,
+      "name": "MariaDB",
+      "category": "Relational",
+      "distinctive_capability": "MySQL-compatible open-source ecosystem with alternative storage engines",
+      "database_id": "KDB-378E3BCAC6",
+      "canonical_key": "mariadb"
+    },
+    {
+      "source_no": 4,
+      "name": "Microsoft SQL Server",
+      "category": "Enterprise Relational",
+      "distinctive_capability": "Deep Microsoft/.NET/Power BI/Windows/Azure integration",
+      "database_id": "KDB-E4CA7E2B83",
+      "canonical_key": "microsoft-sql-server"
+    },
+    {
+      "source_no": 5,
+      "name": "IBM Db2",
+      "category": "Enterprise Relational",
+      "distinctive_capability": "Mainframe and IBM enterprise ecosystem integration",
+      "database_id": "KDB-267F26EEFF",
+      "canonical_key": "ibm-db2"
+    },
+    {
+      "source_no": 6,
+      "name": "SAP HANA",
+      "category": "In-Memory Database",
+      "distinctive_capability": "Columnar in-memory processing designed for SAP transactional + analytical workloads",
+      "database_id": "KDB-EFC9F040D3",
+      "canonical_key": "sap-hana"
+    },
+    {
+      "source_no": 7,
+      "name": "Teradata Vantage",
+      "category": "MPP Analytics",
+      "distinctive_capability": "Large-scale parallel enterprise analytical processing",
+      "database_id": "KDB-574FFB958A",
+      "canonical_key": "teradata-vantage"
+    },
+    {
+      "source_no": 8,
+      "name": "Amazon Aurora",
+      "category": "Cloud-Native Relational",
+      "distinctive_capability": "Distributed cloud storage layer compatible with PostgreSQL/MySQL",
+      "database_id": "KDB-43B3BD51E4",
+      "canonical_key": "amazon-aurora"
+    },
+    {
+      "source_no": 9,
+      "name": "Amazon RDS",
+      "category": "Managed Database Platform",
+      "distinctive_capability": "Managed hosting across several database engines",
+      "database_id": "KDB-25DCC71BCA",
+      "canonical_key": "amazon-rds"
+    },
+    {
+      "source_no": 10,
+      "name": "Azure SQL Database",
+      "category": "Cloud Relational",
+      "distinctive_capability": "Microsoft-managed SQL platform with Azure-native capabilities",
+      "database_id": "KDB-B98DB722E5",
+      "canonical_key": "azure-sql-database"
+    },
+    {
+      "source_no": 11,
+      "name": "Azure SQL Managed Instance",
+      "category": "Managed Enterprise SQL",
+      "distinctive_capability": "SQL Server compatibility with managed cloud operations",
+      "database_id": "KDB-C70580FE6F",
+      "canonical_key": "azure-sql-managed-instance"
+    },
+    {
+      "source_no": 12,
+      "name": "Google Cloud SQL",
+      "category": "Managed Relational",
+      "distinctive_capability": "Managed PostgreSQL/MySQL/SQL Server",
+      "database_id": "KDB-B9796B2A55",
+      "canonical_key": "google-cloud-sql"
+    },
+    {
+      "source_no": 13,
+      "name": "Google AlloyDB",
+      "category": "Cloud PostgreSQL",
+      "distinctive_capability": "PostgreSQL-compatible distributed architecture optimized for cloud workloads",
+      "database_id": "KDB-52F3D29D8D",
+      "canonical_key": "google-alloydb"
+    },
+    {
+      "source_no": 14,
+      "name": "CockroachDB",
+      "category": "Distributed SQL",
+      "distinctive_capability": "Strong consistency with horizontal distribution and survivability",
+      "database_id": "KDB-8CA04A8A80",
+      "canonical_key": "cockroachdb"
+    },
+    {
+      "source_no": 15,
+      "name": "YugabyteDB",
+      "category": "Distributed SQL",
+      "distinctive_capability": "PostgreSQL-compatible geographically distributed transactional database",
+      "database_id": "KDB-8E210B1158",
+      "canonical_key": "yugabytedb"
+    },
+    {
+      "source_no": 16,
+      "name": "TiDB",
+      "category": "Distributed SQL",
+      "distinctive_capability": "MySQL-compatible HTAP and horizontal scaling",
+      "database_id": "KDB-4DF56FC09A",
+      "canonical_key": "tidb"
+    },
+    {
+      "source_no": 17,
+      "name": "SingleStore",
+      "category": "Distributed SQL",
+      "distinctive_capability": "Distributed memory-optimized transactional + analytical processing",
+      "database_id": "KDB-3B20D9EADB",
+      "canonical_key": "singlestore"
+    },
+    {
+      "source_no": 18,
+      "name": "VoltDB",
+      "category": "Distributed Transactional",
+      "distinctive_capability": "High-throughput low-latency transaction processing",
+      "database_id": "KDB-20E3AAE7FC",
+      "canonical_key": "voltdb"
+    },
+    {
+      "source_no": 19,
+      "name": "NuoDB",
+      "category": "Distributed SQL",
+      "distinctive_capability": "Elastic distributed transactional architecture",
+      "database_id": "KDB-4B679DF499",
+      "canonical_key": "nuodb"
+    },
+    {
+      "source_no": 20,
+      "name": "PlanetScale",
+      "category": "Distributed MySQL",
+      "distinctive_capability": "Vitess-based horizontally scalable MySQL service",
+      "database_id": "KDB-D1A7B46EAE",
+      "canonical_key": "planetscale"
+    },
+    {
+      "source_no": 21,
+      "name": "Vitess",
+      "category": "Database Scaling Layer",
+      "distinctive_capability": "Horizontal sharding and orchestration for MySQL",
+      "database_id": "KDB-98E25649BC",
+      "canonical_key": "vitess"
+    },
+    {
+      "source_no": 22,
+      "name": "MongoDB",
+      "category": "Document Database",
+      "distinctive_capability": "Flexible BSON documents and application-oriented schema model",
+      "database_id": "KDB-7F1C982E83",
+      "canonical_key": "mongodb"
+    },
+    {
+      "source_no": 23,
+      "name": "Couchbase",
+      "category": "Document / Key-Value",
+      "distinctive_capability": "Distributed JSON document storage with caching architecture",
+      "database_id": "KDB-B666D7E6B5",
+      "canonical_key": "couchbase"
+    },
+    {
+      "source_no": 24,
+      "name": "Apache CouchDB",
+      "category": "Document Database",
+      "distinctive_capability": "Offline-first replication and synchronization model",
+      "database_id": "KDB-9A5AA3B56C",
+      "canonical_key": "apache-couchdb"
+    },
+    {
+      "source_no": 25,
+      "name": "Amazon DocumentDB",
+      "category": "Document Database",
+      "distinctive_capability": "AWS-managed MongoDB-compatible document service",
+      "database_id": "KDB-0E4A8BFE7C",
+      "canonical_key": "amazon-documentdb"
+    },
+    {
+      "source_no": 26,
+      "name": "Azure Cosmos DB",
+      "category": "Multi-Model Distributed DB",
+      "distinctive_capability": "Globally distributed database with multiple consistency models",
+      "database_id": "KDB-97801611F9",
+      "canonical_key": "azure-cosmos-db"
+    },
+    {
+      "source_no": 27,
+      "name": "Firebase Firestore",
+      "category": "Serverless Document DB",
+      "distinctive_capability": "Real-time application synchronization and mobile/web backend",
+      "database_id": "KDB-C576E0CDC5",
+      "canonical_key": "firebase-firestore"
+    },
+    {
+      "source_no": 28,
+      "name": "Firebase Realtime Database",
+      "category": "Realtime NoSQL",
+      "distinctive_capability": "Event-driven synchronization for mobile and web",
+      "database_id": "KDB-9EB3EEE487",
+      "canonical_key": "firebase-realtime-database"
+    },
+    {
+      "source_no": 29,
+      "name": "DynamoDB",
+      "category": "Key-Value / Document",
+      "distinctive_capability": "Serverless massive-scale low-latency AWS database",
+      "database_id": "KDB-7C515E2517",
+      "canonical_key": "dynamodb"
+    },
+    {
+      "source_no": 30,
+      "name": "Redis",
+      "category": "In-Memory Key-Value",
+      "distinctive_capability": "Extremely low-latency cache, session, queue and realtime data structures",
+      "database_id": "KDB-B840FC02D5",
+      "canonical_key": "redis"
+    },
+    {
+      "source_no": 31,
+      "name": "Valkey",
+      "category": "In-Memory Key-Value",
+      "distinctive_capability": "Open-source Redis-compatible high-speed datastore",
+      "database_id": "KDB-60A6FFD7C2",
+      "canonical_key": "valkey"
+    },
+    {
+      "source_no": 32,
+      "name": "Memcached",
+      "category": "Distributed Cache",
+      "distinctive_capability": "Simple high-speed distributed caching",
+      "database_id": "KDB-EBF4A2FB4C",
+      "canonical_key": "memcached"
+    },
+    {
+      "source_no": 33,
+      "name": "Aerospike",
+      "category": "Key-Value",
+      "distinctive_capability": "Very high-throughput low-latency distributed operational workloads",
+      "database_id": "KDB-AF76F2E115",
+      "canonical_key": "aerospike"
+    },
+    {
+      "source_no": 34,
+      "name": "Riak KV",
+      "category": "Distributed Key-Value",
+      "distinctive_capability": "Highly available eventually consistent distributed storage",
+      "database_id": "KDB-F4416FAB15",
+      "canonical_key": "riak-kv"
+    },
+    {
+      "source_no": 35,
+      "name": "etcd",
+      "category": "Distributed Key-Value",
+      "distinctive_capability": "Strongly consistent configuration/state storage for distributed systems",
+      "database_id": "KDB-68B23659FF",
+      "canonical_key": "etcd"
+    },
+    {
+      "source_no": 36,
+      "name": "Consul KV",
+      "category": "Distributed Configuration DB",
+      "distinctive_capability": "Service discovery and distributed configuration",
+      "database_id": "KDB-494D1CD443",
+      "canonical_key": "consul-kv"
+    },
+    {
+      "source_no": 37,
+      "name": "Apache Cassandra",
+      "category": "Wide-Column",
+      "distinctive_capability": "Massive distributed writes and high availability",
+      "database_id": "KDB-B88FD182DC",
+      "canonical_key": "apache-cassandra"
+    },
+    {
+      "source_no": 38,
+      "name": "ScyllaDB",
+      "category": "Wide-Column",
+      "distinctive_capability": "High-performance Cassandra-compatible distributed database",
+      "database_id": "KDB-6DEE82320F",
+      "canonical_key": "scylladb"
+    },
+    {
+      "source_no": 39,
+      "name": "HBase",
+      "category": "Wide-Column",
+      "distinctive_capability": "Hadoop-oriented large sparse-table database",
+      "database_id": "KDB-9D0F0EB8F6",
+      "canonical_key": "hbase"
+    },
+    {
+      "source_no": 40,
+      "name": "Google Bigtable",
+      "category": "Wide-Column",
+      "distinctive_capability": "Planet-scale distributed sparse-table storage",
+      "database_id": "KDB-39C026623E",
+      "canonical_key": "google-bigtable"
+    },
+    {
+      "source_no": 41,
+      "name": "Amazon Keyspaces",
+      "category": "Managed Cassandra",
+      "distinctive_capability": "Serverless Cassandra-compatible AWS service",
+      "database_id": "KDB-7AEDCF53F5",
+      "canonical_key": "amazon-keyspaces"
+    },
+    {
+      "source_no": 42,
+      "name": "Apache Accumulo",
+      "category": "Wide-Column",
+      "distinctive_capability": "Fine-grained security controls on distributed big-data tables",
+      "database_id": "KDB-F0C1861F25",
+      "canonical_key": "apache-accumulo"
+    },
+    {
+      "source_no": 43,
+      "name": "Neo4j",
+      "category": "Graph Database",
+      "distinctive_capability": "Property-graph traversal and relationship-centric applications",
+      "database_id": "KDB-57F2A6A751",
+      "canonical_key": "neo4j"
+    },
+    {
+      "source_no": 44,
+      "name": "TigerGraph",
+      "category": "Graph Analytics",
+      "distinctive_capability": "Large-scale parallel graph analysis",
+      "database_id": "KDB-373E3A5609",
+      "canonical_key": "tigergraph"
+    },
+    {
+      "source_no": 45,
+      "name": "Amazon Neptune",
+      "category": "Graph Database",
+      "distinctive_capability": "Managed property graph + RDF graph workloads",
+      "database_id": "KDB-1C189F58D0",
+      "canonical_key": "amazon-neptune"
+    },
+    {
+      "source_no": 46,
+      "name": "JanusGraph",
+      "category": "Distributed Graph",
+      "distinctive_capability": "Graph database over Cassandra/HBase-style storage",
+      "database_id": "KDB-73CD644FB0",
+      "canonical_key": "janusgraph"
+    },
+    {
+      "source_no": 47,
+      "name": "ArangoDB",
+      "category": "Multi-Model",
+      "distinctive_capability": "Document + graph + key-value in one engine",
+      "database_id": "KDB-1F9AA65771",
+      "canonical_key": "arangodb"
+    },
+    {
+      "source_no": 48,
+      "name": "OrientDB",
+      "category": "Multi-Model",
+      "distinctive_capability": "Graph/document/object database",
+      "database_id": "KDB-755B8CFDA1",
+      "canonical_key": "orientdb"
+    },
+    {
+      "source_no": 49,
+      "name": "Dgraph",
+      "category": "Distributed Graph",
+      "distinctive_capability": "Horizontally scalable native graph database",
+      "database_id": "KDB-943C3578B4",
+      "canonical_key": "dgraph"
+    },
+    {
+      "source_no": 50,
+      "name": "Memgraph",
+      "category": "Streaming Graph",
+      "distinctive_capability": "Real-time graph analytics",
+      "database_id": "KDB-2B4F253DDD",
+      "canonical_key": "memgraph"
+    },
+    {
+      "source_no": 51,
+      "name": "Stardog",
+      "category": "Knowledge Graph",
+      "distinctive_capability": "Semantic knowledge graphs and reasoning",
+      "database_id": "KDB-0AA07502F6",
+      "canonical_key": "stardog"
+    },
+    {
+      "source_no": 52,
+      "name": "Ontotext GraphDB",
+      "category": "RDF / Semantic",
+      "distinctive_capability": "RDF, ontology, SPARQL and semantic reasoning",
+      "database_id": "KDB-BB0CADE5D5",
+      "canonical_key": "ontotext-graphdb"
+    },
+    {
+      "source_no": 53,
+      "name": "AllegroGraph",
+      "category": "RDF Graph",
+      "distinctive_capability": "Semantic graph and knowledge representation",
+      "database_id": "KDB-EE42EF0A34",
+      "canonical_key": "allegrograph"
+    },
+    {
+      "source_no": 54,
+      "name": "Virtuoso",
+      "category": "RDF / Multi-Model",
+      "distinctive_capability": "Semantic web and linked-data database",
+      "database_id": "KDB-AD427779D5",
+      "canonical_key": "virtuoso"
+    },
+    {
+      "source_no": 55,
+      "name": "Apache Jena TDB",
+      "category": "RDF Store",
+      "distinctive_capability": "RDF/SPARQL semantic data storage",
+      "database_id": "KDB-33D51132B4",
+      "canonical_key": "apache-jena-tdb"
+    },
+    {
+      "source_no": 56,
+      "name": "InfluxDB",
+      "category": "Time-Series",
+      "distinctive_capability": "Metrics, IoT and timestamped event storage",
+      "database_id": "KDB-5E1E914CBA",
+      "canonical_key": "influxdb"
+    },
+    {
+      "source_no": 57,
+      "name": "TimescaleDB",
+      "category": "Time-Series PostgreSQL",
+      "distinctive_capability": "PostgreSQL-based hypertables and time-series analytics",
+      "database_id": "KDB-F48C84C093",
+      "canonical_key": "timescaledb"
+    },
+    {
+      "source_no": 58,
+      "name": "QuestDB",
+      "category": "Time-Series",
+      "distinctive_capability": "High-performance SQL time-series analytics",
+      "database_id": "KDB-99168135AE",
+      "canonical_key": "questdb"
+    },
+    {
+      "source_no": 59,
+      "name": "VictoriaMetrics",
+      "category": "Time-Series",
+      "distinctive_capability": "Massive-scale monitoring metrics storage",
+      "database_id": "KDB-6EA5D79AB0",
+      "canonical_key": "victoriametrics"
+    },
+    {
+      "source_no": 60,
+      "name": "Prometheus TSDB",
+      "category": "Metrics Database",
+      "distinctive_capability": "Monitoring-centric time-series database",
+      "database_id": "KDB-5A695469E6",
+      "canonical_key": "prometheus-tsdb"
+    },
+    {
+      "source_no": 61,
+      "name": "OpenTSDB",
+      "category": "Time-Series",
+      "distinctive_capability": "Distributed monitoring data built on HBase",
+      "database_id": "KDB-FA64973A33",
+      "canonical_key": "opentsdb"
+    },
+    {
+      "source_no": 62,
+      "name": "TDengine",
+      "category": "IoT / Time-Series",
+      "distinctive_capability": "Industrial IoT and telemetry workloads",
+      "database_id": "KDB-8D77CCDFA6",
+      "canonical_key": "tdengine"
+    },
+    {
+      "source_no": 63,
+      "name": "Kdb+",
+      "category": "Time-Series / Financial",
+      "distinctive_capability": "Extremely fast financial tick and market-data analysis",
+      "database_id": "KDB-80F22E1C61",
+      "canonical_key": "kdb"
+    },
+    {
+      "source_no": 64,
+      "name": "ClickHouse",
+      "category": "Columnar Analytics",
+      "distinctive_capability": "Extremely fast OLAP analytical queries",
+      "database_id": "KDB-CE66B7447D",
+      "canonical_key": "clickhouse"
+    },
+    {
+      "source_no": 65,
+      "name": "Apache Druid",
+      "category": "Realtime OLAP",
+      "distinctive_capability": "Low-latency analytics on streaming/event data",
+      "database_id": "KDB-C57DF66C96",
+      "canonical_key": "apache-druid"
+    },
+    {
+      "source_no": 66,
+      "name": "Apache Pinot",
+      "category": "Realtime OLAP",
+      "distinctive_capability": "User-facing realtime analytics",
+      "database_id": "KDB-DB29B74D66",
+      "canonical_key": "apache-pinot"
+    },
+    {
+      "source_no": 67,
+      "name": "DuckDB",
+      "category": "Embedded Analytical DB",
+      "distinctive_capability": "In-process OLAP analytics, especially over files",
+      "database_id": "KDB-30C6F21AB9",
+      "canonical_key": "duckdb"
+    },
+    {
+      "source_no": 68,
+      "name": "MotherDuck",
+      "category": "Cloud DuckDB",
+      "distinctive_capability": "Cloud/serverless collaborative DuckDB analytics",
+      "database_id": "KDB-E7FC5EE996",
+      "canonical_key": "motherduck"
+    },
+    {
+      "source_no": 69,
+      "name": "Snowflake",
+      "category": "Cloud Data Platform",
+      "distinctive_capability": "Separation of compute/storage and elastic analytical warehouses",
+      "database_id": "KDB-B0C5516F28",
+      "canonical_key": "snowflake"
+    },
+    {
+      "source_no": 70,
+      "name": "Google BigQuery",
+      "category": "Serverless Warehouse",
+      "distinctive_capability": "Massive-scale serverless analytical SQL",
+      "database_id": "KDB-1194594D8D",
+      "canonical_key": "google-bigquery"
+    },
+    {
+      "source_no": 71,
+      "name": "Amazon Redshift",
+      "category": "Cloud Warehouse",
+      "distinctive_capability": "MPP analytical warehouse integrated with AWS",
+      "database_id": "KDB-3A86A8A8E5",
+      "canonical_key": "amazon-redshift"
+    },
+    {
+      "source_no": 72,
+      "name": "Azure Synapse Analytics",
+      "category": "Analytics Platform",
+      "distinctive_capability": "Data warehouse + distributed analytics",
+      "database_id": "KDB-C64DB1E82B",
+      "canonical_key": "azure-synapse-analytics"
+    },
+    {
+      "source_no": 73,
+      "name": "Databricks SQL Warehouse",
+      "category": "Lakehouse SQL",
+      "distinctive_capability": "SQL processing over Delta Lake",
+      "database_id": "KDB-7A154109C8",
+      "canonical_key": "databricks-sql-warehouse"
+    },
+    {
+      "source_no": 74,
+      "name": "StarRocks",
+      "category": "OLAP Database",
+      "distinctive_capability": "MPP realtime analytics",
+      "database_id": "KDB-59CA4F1191",
+      "canonical_key": "starrocks"
+    },
+    {
+      "source_no": 75,
+      "name": "Apache Doris",
+      "category": "OLAP Database",
+      "distinctive_capability": "High-concurrency realtime analytical workloads",
+      "database_id": "KDB-2D237D4B4B",
+      "canonical_key": "apache-doris"
+    },
+    {
+      "source_no": 76,
+      "name": "Greenplum",
+      "category": "MPP PostgreSQL",
+      "distinctive_capability": "Distributed PostgreSQL analytics",
+      "database_id": "KDB-F797EEB507",
+      "canonical_key": "greenplum"
+    },
+    {
+      "source_no": 77,
+      "name": "Vertica",
+      "category": "Columnar MPP",
+      "distinctive_capability": "Large-scale analytical warehouse",
+      "database_id": "KDB-9FF7EC2A4B",
+      "canonical_key": "vertica"
+    },
+    {
+      "source_no": 78,
+      "name": "MonetDB",
+      "category": "Columnar Database",
+      "distinctive_capability": "Column-oriented analytical research/database engine",
+      "database_id": "KDB-4751FC28D9",
+      "canonical_key": "monetdb"
+    },
+    {
+      "source_no": 79,
+      "name": "Apache Kudu",
+      "category": "Columnar Storage",
+      "distinctive_capability": "Fast-changing analytical datasets in Hadoop ecosystems",
+      "database_id": "KDB-57843F3F03",
+      "canonical_key": "apache-kudu"
+    },
+    {
+      "source_no": 80,
+      "name": "Elasticsearch",
+      "category": "Search Engine / Database",
+      "distinctive_capability": "Full-text search and distributed document indexing",
+      "database_id": "KDB-916E8B4BC5",
+      "canonical_key": "elasticsearch"
+    },
+    {
+      "source_no": 81,
+      "name": "OpenSearch",
+      "category": "Search / Analytics",
+      "distinctive_capability": "Open-source distributed search and log analytics",
+      "database_id": "KDB-E96D460874",
+      "canonical_key": "opensearch"
+    },
+    {
+      "source_no": 82,
+      "name": "Apache Solr",
+      "category": "Search Platform",
+      "distinctive_capability": "Lucene-based enterprise search",
+      "database_id": "KDB-635BEB6078",
+      "canonical_key": "apache-solr"
+    },
+    {
+      "source_no": 83,
+      "name": "Meilisearch",
+      "category": "Search Database",
+      "distinctive_capability": "Fast application search",
+      "database_id": "KDB-46005C7D19",
+      "canonical_key": "meilisearch"
+    },
+    {
+      "source_no": 84,
+      "name": "Typesense",
+      "category": "Search Engine",
+      "distinctive_capability": "Typo-tolerant realtime application search",
+      "database_id": "KDB-9E8502FAA6",
+      "canonical_key": "typesense"
+    },
+    {
+      "source_no": 85,
+      "name": "Vespa",
+      "category": "Search / Serving Engine",
+      "distinctive_capability": "Search, ranking and machine-learning serving",
+      "database_id": "KDB-2B83212BC2",
+      "canonical_key": "vespa"
+    },
+    {
+      "source_no": 86,
+      "name": "Pinecone",
+      "category": "Vector Database",
+      "distinctive_capability": "Managed vector retrieval for AI applications",
+      "database_id": "KDB-79458AD4C2",
+      "canonical_key": "pinecone"
+    },
+    {
+      "source_no": 87,
+      "name": "Weaviate",
+      "category": "Vector Database",
+      "distinctive_capability": "Vector + semantic object search",
+      "database_id": "KDB-9823AE94C2",
+      "canonical_key": "weaviate"
+    },
+    {
+      "source_no": 88,
+      "name": "Milvus",
+      "category": "Vector Database",
+      "distinctive_capability": "Large-scale open-source vector similarity search",
+      "database_id": "KDB-AFD84DD061",
+      "canonical_key": "milvus"
+    },
+    {
+      "source_no": 89,
+      "name": "Qdrant",
+      "category": "Vector Database",
+      "distinctive_capability": "High-performance vector search and metadata filtering",
+      "database_id": "KDB-F69FBDF9BA",
+      "canonical_key": "qdrant"
+    },
+    {
+      "source_no": 90,
+      "name": "Chroma",
+      "category": "Vector Store",
+      "distinctive_capability": "Developer-focused embedding storage for LLM applications",
+      "database_id": "KDB-EA330038E9",
+      "canonical_key": "chroma"
+    },
+    {
+      "source_no": 91,
+      "name": "FAISS",
+      "category": "Vector Index Library",
+      "distinctive_capability": "High-performance nearest-neighbour vector indexing",
+      "database_id": "KDB-50BED05949",
+      "canonical_key": "faiss"
+    },
+    {
+      "source_no": 92,
+      "name": "LanceDB",
+      "category": "Vector / Multimodal DB",
+      "distinctive_capability": "Vector and multimodal AI datasets",
+      "database_id": "KDB-16384844FE",
+      "canonical_key": "lancedb"
+    },
+    {
+      "source_no": 93,
+      "name": "Vespa Vector Search",
+      "category": "AI Retrieval",
+      "distinctive_capability": "Combined ranking, search and vector retrieval",
+      "database_id": "KDB-DCA37DD83A",
+      "canonical_key": "vespa-vector-search"
+    },
+    {
+      "source_no": 94,
+      "name": "pgvector",
+      "category": "PostgreSQL Extension",
+      "distinctive_capability": "Vector search inside PostgreSQL",
+      "database_id": "KDB-6DB6087420",
+      "canonical_key": "pgvector"
+    },
+    {
+      "source_no": 95,
+      "name": "Redis Vector Search",
+      "category": "In-Memory Vector",
+      "distinctive_capability": "Realtime vector retrieval combined with cache/data structures",
+      "database_id": "KDB-FC52476CB4",
+      "canonical_key": "redis-vector-search"
+    },
+    {
+      "source_no": 96,
+      "name": "SQLite",
+      "category": "Embedded Relational",
+      "distinctive_capability": "Serverless embedded database inside applications/devices",
+      "database_id": "KDB-6D64A5EE3D",
+      "canonical_key": "sqlite"
+    },
+    {
+      "source_no": 97,
+      "name": "DuckDB Embedded",
+      "category": "Embedded Analytics",
+      "distinctive_capability": "Local analytical processing without external DB server",
+      "database_id": "KDB-F08B0D0811",
+      "canonical_key": "duckdb-embedded"
+    },
+    {
+      "source_no": 98,
+      "name": "RocksDB",
+      "category": "Embedded Key-Value",
+      "distinctive_capability": "High-performance LSM-tree storage engine",
+      "database_id": "KDB-059BA956E7",
+      "canonical_key": "rocksdb"
+    },
+    {
+      "source_no": 99,
+      "name": "LevelDB",
+      "category": "Embedded Key-Value",
+      "distinctive_capability": "Lightweight local key-value storage",
+      "database_id": "KDB-07314439E3",
+      "canonical_key": "leveldb"
+    },
+    {
+      "source_no": 100,
+      "name": "Berkeley DB",
+      "category": "Embedded KV",
+      "distinctive_capability": "Embedded transactional storage library",
+      "database_id": "KDB-66F3749BCB",
+      "canonical_key": "berkeley-db"
+    },
+    {
+      "source_no": 101,
+      "name": "Realm",
+      "category": "Mobile Database",
+      "distinctive_capability": "Local object database and mobile synchronization",
+      "database_id": "KDB-5BEE6642BB",
+      "canonical_key": "realm"
+    },
+    {
+      "source_no": 102,
+      "name": "PouchDB",
+      "category": "Browser Database",
+      "distinctive_capability": "Client-side offline databases with CouchDB replication",
+      "database_id": "KDB-5D32B2D20A",
+      "canonical_key": "pouchdb"
+    },
+    {
+      "source_no": 103,
+      "name": "IndexedDB",
+      "category": "Browser Database",
+      "distinctive_capability": "Native structured web-browser persistence",
+      "database_id": "KDB-9D7BC2C57F",
+      "canonical_key": "indexeddb"
+    },
+    {
+      "source_no": 104,
+      "name": "ObjectBox",
+      "category": "Edge / Embedded DB",
+      "distinctive_capability": "Mobile/IoT object database",
+      "database_id": "KDB-FA7570B690",
+      "canonical_key": "objectbox"
+    },
+    {
+      "source_no": 105,
+      "name": "LiteDB",
+      "category": "Embedded .NET DB",
+      "distinctive_capability": "Document database for .NET applications",
+      "database_id": "KDB-F7C9F5214F",
+      "canonical_key": "litedb"
+    },
+    {
+      "source_no": 106,
+      "name": "Apache Derby",
+      "category": "Embedded Java DB",
+      "distinctive_capability": "Java-embedded relational database",
+      "database_id": "KDB-F86937316B",
+      "canonical_key": "apache-derby"
+    },
+    {
+      "source_no": 107,
+      "name": "H2 Database",
+      "category": "Embedded Java DB",
+      "distinctive_capability": "Lightweight development/testing database",
+      "database_id": "KDB-153198D187",
+      "canonical_key": "h2-database"
+    },
+    {
+      "source_no": 108,
+      "name": "Hyperledger Fabric Ledger",
+      "category": "Distributed Ledger",
+      "distinctive_capability": "Permissioned enterprise blockchain state storage",
+      "database_id": "KDB-BCA6DD3FD9",
+      "canonical_key": "hyperledger-fabric-ledger"
+    },
+    {
+      "source_no": 109,
+      "name": "Hyperledger Besu",
+      "category": "Blockchain Ledger",
+      "distinctive_capability": "Enterprise Ethereum-compatible ledger",
+      "database_id": "KDB-7AE97DFE0E",
+      "canonical_key": "hyperledger-besu"
+    },
+    {
+      "source_no": 110,
+      "name": "Ethereum State Database",
+      "category": "Blockchain Data",
+      "distinctive_capability": "Smart-contract state and decentralized transaction history",
+      "database_id": "KDB-67040ABD17",
+      "canonical_key": "ethereum-state-database"
+    },
+    {
+      "source_no": 111,
+      "name": "BigchainDB",
+      "category": "Blockchain Database",
+      "distinctive_capability": "Database-like querying combined with blockchain properties",
+      "database_id": "KDB-1CA92D53F4",
+      "canonical_key": "bigchaindb"
+    },
+    {
+      "source_no": 112,
+      "name": "immudb",
+      "category": "Immutable Database",
+      "distinctive_capability": "Cryptographically verifiable append-only data",
+      "database_id": "KDB-29A09CD6DA",
+      "canonical_key": "immudb"
+    },
+    {
+      "source_no": 113,
+      "name": "ProvenDB",
+      "category": "Immutable Ledger DB",
+      "distinctive_capability": "Tamper-evident database records",
+      "database_id": "KDB-D61B45E695",
+      "canonical_key": "provendb"
+    },
+    {
+      "source_no": 114,
+      "name": "TerminusDB",
+      "category": "Versioned Database",
+      "distinctive_capability": "Version control concepts applied to structured data",
+      "database_id": "KDB-AFD612ABCA",
+      "canonical_key": "terminusdb"
+    },
+    {
+      "source_no": 115,
+      "name": "Dolt",
+      "category": "Version-Controlled SQL",
+      "distinctive_capability": "Git-like branches, commits and merges for SQL databases",
+      "database_id": "KDB-A2CDB5C7E7",
+      "canonical_key": "dolt"
+    },
+    {
+      "source_no": 116,
+      "name": "EdgeDB / Gel",
+      "category": "Object-Relational",
+      "distinctive_capability": "Strong schema and modern query language above PostgreSQL",
+      "database_id": "KDB-54E2C35CCB",
+      "canonical_key": "edgedb-gel"
+    },
+    {
+      "source_no": 117,
+      "name": "SurrealDB",
+      "category": "Multi-Model",
+      "distinctive_capability": "Document, graph and relational-style capabilities",
+      "database_id": "KDB-744BB5CFCA",
+      "canonical_key": "surrealdb"
+    },
+    {
+      "source_no": 118,
+      "name": "Fauna",
+      "category": "Distributed Document DB",
+      "distinctive_capability": "Serverless globally distributed transactional data",
+      "database_id": "KDB-4BE337562D",
+      "canonical_key": "fauna"
+    },
+    {
+      "source_no": 119,
+      "name": "FoundationDB",
+      "category": "Distributed KV",
+      "distinctive_capability": "Strongly consistent ordered key-value transactional core",
+      "database_id": "KDB-63236A5B72",
+      "canonical_key": "foundationdb"
+    },
+    {
+      "source_no": 120,
+      "name": "FoundationDB Record Layer",
+      "category": "Distributed Record DB",
+      "distinctive_capability": "Structured record model above FoundationDB",
+      "database_id": "KDB-CD8B6A9ED5",
+      "canonical_key": "foundationdb-record-layer"
+    },
+    {
+      "source_no": 121,
+      "name": "CockroachDB Serverless",
+      "category": "Distributed SQL",
+      "distinctive_capability": "Elastic global SQL without manual node administration",
+      "database_id": "KDB-85E2FB753F",
+      "canonical_key": "cockroachdb-serverless"
+    },
+    {
+      "source_no": 122,
+      "name": "Spanner",
+      "category": "Globally Distributed SQL",
+      "distinctive_capability": "Globally distributed strongly consistent relational transactions",
+      "database_id": "KDB-E58047273F",
+      "canonical_key": "spanner"
+    },
+    {
+      "source_no": 123,
+      "name": "YDB",
+      "category": "Distributed SQL",
+      "distinctive_capability": "Fault-tolerant distributed transactional database",
+      "database_id": "KDB-4A3623C2A5",
+      "canonical_key": "ydb"
+    },
+    {
+      "source_no": 124,
+      "name": "OceanBase",
+      "category": "Distributed SQL",
+      "distinctive_capability": "Large-scale distributed financial-grade transactions",
+      "database_id": "KDB-F629331E70",
+      "canonical_key": "oceanbase"
+    },
+    {
+      "source_no": 125,
+      "name": "Apache Ignite",
+      "category": "In-Memory Data Grid",
+      "distinctive_capability": "Distributed compute + in-memory persistence",
+      "database_id": "KDB-346440285F",
+      "canonical_key": "apache-ignite"
+    },
+    {
+      "source_no": 126,
+      "name": "Hazelcast",
+      "category": "In-Memory Data Grid",
+      "distinctive_capability": "Distributed state and streaming computation",
+      "database_id": "KDB-18C3523ADD",
+      "canonical_key": "hazelcast"
+    },
+    {
+      "source_no": 127,
+      "name": "GridGain",
+      "category": "In-Memory Platform",
+      "distinctive_capability": "Enterprise Apache Ignite platform",
+      "database_id": "KDB-90F6D11296",
+      "canonical_key": "gridgain"
+    },
+    {
+      "source_no": 128,
+      "name": "GemFire / Tanzu GemFire",
+      "category": "Distributed In-Memory",
+      "distinctive_capability": "Distributed low-latency application data",
+      "database_id": "KDB-7A52E40097",
+      "canonical_key": "gemfire-tanzu-gemfire"
+    },
+    {
+      "source_no": 129,
+      "name": "SAP ASE",
+      "category": "Enterprise Relational",
+      "distinctive_capability": "Legacy/enterprise Sybase transactional systems",
+      "database_id": "KDB-68E36BA564",
+      "canonical_key": "sap-ase"
+    },
+    {
+      "source_no": 130,
+      "name": "SAP IQ",
+      "category": "Columnar Analytics",
+      "distinctive_capability": "Large-scale analytical columnar storage",
+      "database_id": "KDB-E24C6E1FB6",
+      "canonical_key": "sap-iq"
+    },
+    {
+      "source_no": 131,
+      "name": "Sybase SQL Anywhere",
+      "category": "Embedded/Mobile DB",
+      "distinctive_capability": "Remote and occasionally connected enterprise applications",
+      "database_id": "KDB-6E2E2D5B55",
+      "canonical_key": "sybase-sql-anywhere"
+    },
+    {
+      "source_no": 132,
+      "name": "Informix",
+      "category": "Relational / IoT",
+      "distinctive_capability": "Embedded, industrial and edge workloads",
+      "database_id": "KDB-0ACDD939D2",
+      "canonical_key": "informix"
+    },
+    {
+      "source_no": 133,
+      "name": "Progress OpenEdge",
+      "category": "Application Database",
+      "distinctive_capability": "Database tightly integrated with enterprise application platform",
+      "database_id": "KDB-001107FD8A",
+      "canonical_key": "progress-openedge"
+    },
+    {
+      "source_no": 134,
+      "name": "InterSystems IRIS",
+      "category": "Multi-Model Data Platform",
+      "distinctive_capability": "Object, SQL, document, interoperability and healthcare workloads",
+      "database_id": "KDB-1F06E8BD76",
+      "canonical_key": "intersystems-iris"
+    },
+    {
+      "source_no": 135,
+      "name": "InterSystems Caché",
+      "category": "Multi-Model Legacy",
+      "distinctive_capability": "High-performance object/database systems, especially healthcare",
+      "database_id": "KDB-B3112ED8A8",
+      "canonical_key": "intersystems-cach"
+    },
+    {
+      "source_no": 136,
+      "name": "MUMPS / M",
+      "category": "Hierarchical Database",
+      "distinctive_capability": "Healthcare systems such as legacy clinical applications",
+      "database_id": "KDB-A9FEF91A68",
+      "canonical_key": "mumps-m"
+    },
+    {
+      "source_no": 137,
+      "name": "IMS DB",
+      "category": "Hierarchical Mainframe",
+      "distinctive_capability": "IBM mainframe hierarchical transaction processing",
+      "database_id": "KDB-E7EEBE773A",
+      "canonical_key": "ims-db"
+    },
+    {
+      "source_no": 138,
+      "name": "IDMS",
+      "category": "Network Database",
+      "distinctive_capability": "Legacy network-model enterprise systems",
+      "database_id": "KDB-8BF66C721E",
+      "canonical_key": "idms"
+    },
+    {
+      "source_no": 139,
+      "name": "Adabas",
+      "category": "Mainframe Database",
+      "distinctive_capability": "High-performance legacy enterprise environments",
+      "database_id": "KDB-9D12B784BF",
+      "canonical_key": "adabas"
+    },
+    {
+      "source_no": 140,
+      "name": "VSAM",
+      "category": "Mainframe Data Store",
+      "distinctive_capability": "Indexed/sequential mainframe records",
+      "database_id": "KDB-ABAA35C4B1",
+      "canonical_key": "vsam"
+    },
+    {
+      "source_no": 141,
+      "name": "ISAM",
+      "category": "Indexed File Store",
+      "distinctive_capability": "Indexed sequential storage legacy applications",
+      "database_id": "KDB-34D4E6FF96",
+      "canonical_key": "isam"
+    },
+    {
+      "source_no": 142,
+      "name": "dBase / DBF",
+      "category": "File Database",
+      "distinctive_capability": "Legacy desktop/database applications",
+      "database_id": "KDB-888431CD63",
+      "canonical_key": "dbase-dbf"
+    },
+    {
+      "source_no": 143,
+      "name": "Microsoft Access",
+      "category": "Desktop Database",
+      "distinctive_capability": "Departmental and end-user database applications",
+      "database_id": "KDB-DCE6AA45DA",
+      "canonical_key": "microsoft-access"
+    },
+    {
+      "source_no": 144,
+      "name": "FileMaker",
+      "category": "Low-Code Database",
+      "distinctive_capability": "Business database and rapid application creation",
+      "database_id": "KDB-D10EED59CF",
+      "canonical_key": "filemaker"
+    },
+    {
+      "source_no": 145,
+      "name": "Apache Hive",
+      "category": "Hadoop SQL Metadata/Warehouse",
+      "distinctive_capability": "SQL abstraction over distributed Hadoop data",
+      "database_id": "KDB-CFB4D645B7",
+      "canonical_key": "apache-hive"
+    },
+    {
+      "source_no": 146,
+      "name": "Apache Hudi",
+      "category": "Lakehouse Table Format",
+      "distinctive_capability": "Incremental processing and record-level lake updates",
+      "database_id": "KDB-9A2B49D5B8",
+      "canonical_key": "apache-hudi"
+    },
+    {
+      "source_no": 147,
+      "name": "Delta Lake",
+      "category": "Lakehouse Table Format",
+      "distinctive_capability": "ACID transactions over cloud object storage",
+      "database_id": "KDB-33D90458F0",
+      "canonical_key": "delta-lake"
+    },
+    {
+      "source_no": 148,
+      "name": "Apache Iceberg",
+      "category": "Open Table Format",
+      "distinctive_capability": "Open analytical table format and schema evolution",
+      "database_id": "KDB-07EF652576",
+      "canonical_key": "apache-iceberg"
+    },
+    {
+      "source_no": 149,
+      "name": "Apache Paimon",
+      "category": "Streaming Lakehouse",
+      "distinctive_capability": "Streaming updates over lakehouse storage",
+      "database_id": "KDB-A2268AD294",
+      "canonical_key": "apache-paimon"
+    },
+    {
+      "source_no": 150,
+      "name": "Nessie",
+      "category": "Data Version Catalog",
+      "distinctive_capability": "Git-like branching/version control for data lakes",
+      "database_id": "KDB-FEC927E4F6",
+      "canonical_key": "nessie"
+    },
+    {
+      "source_no": 151,
+      "name": "Trino",
+      "category": "Federated SQL Engine",
+      "distinctive_capability": "Query many heterogeneous databases without moving all data",
+      "database_id": "KDB-464773603F",
+      "canonical_key": "trino"
+    },
+    {
+      "source_no": 152,
+      "name": "Presto",
+      "category": "Distributed Query Engine",
+      "distinctive_capability": "Federated analytics across distributed data",
+      "database_id": "KDB-9F68E33470",
+      "canonical_key": "presto"
+    },
+    {
+      "source_no": 153,
+      "name": "Apache Drill",
+      "category": "Schema-on-Read Query",
+      "distinctive_capability": "SQL querying of heterogeneous semi-structured data",
+      "database_id": "KDB-E7403FF607",
+      "canonical_key": "apache-drill"
+    },
+    {
+      "source_no": 154,
+      "name": "Dremio",
+      "category": "Data Lake Query Platform",
+      "distinctive_capability": "SQL semantic layer and accelerated lake queries",
+      "database_id": "KDB-BE5F5A600A",
+      "canonical_key": "dremio"
+    },
+    {
+      "source_no": 155,
+      "name": "Starburst",
+      "category": "Enterprise Federated SQL",
+      "distinctive_capability": "Enterprise Trino-based data federation",
+      "database_id": "KDB-13FD93AFDD",
+      "canonical_key": "starburst"
+    },
+    {
+      "source_no": 156,
+      "name": "Denodo",
+      "category": "Data Virtualization",
+      "distinctive_capability": "Logical data layer across heterogeneous databases",
+      "database_id": "KDB-2A83F34992",
+      "canonical_key": "denodo"
+    },
+    {
+      "source_no": 157,
+      "name": "Teiid",
+      "category": "Data Virtualization",
+      "distinctive_capability": "Federated virtual databases",
+      "database_id": "KDB-241F09EA2A",
+      "canonical_key": "teiid"
+    },
+    {
+      "source_no": 158,
+      "name": "Apache Kafka",
+      "category": "Distributed Event Log",
+      "distinctive_capability": "Durable ordered stream/event storage rather than traditional tables",
+      "database_id": "KDB-E899A1E65A",
+      "canonical_key": "apache-kafka"
+    },
+    {
+      "source_no": 159,
+      "name": "Redpanda",
+      "category": "Streaming Data Store",
+      "distinctive_capability": "Kafka-compatible event streaming with simplified architecture",
+      "database_id": "KDB-5451F1C8C4",
+      "canonical_key": "redpanda"
+    },
+    {
+      "source_no": 160,
+      "name": "Apache Pulsar",
+      "category": "Distributed Messaging Storage",
+      "distinctive_capability": "Multi-tenant event and stream persistence",
+      "database_id": "KDB-BAC442D210",
+      "canonical_key": "apache-pulsar"
+    },
+    {
+      "source_no": 161,
+      "name": "Materialize",
+      "category": "Streaming SQL DB",
+      "distinctive_capability": "Incrementally maintained SQL views over streams",
+      "database_id": "KDB-BA290E45F0",
+      "canonical_key": "materialize"
+    },
+    {
+      "source_no": 162,
+      "name": "RisingWave",
+      "category": "Streaming Database",
+      "distinctive_capability": "PostgreSQL-compatible realtime streaming SQL",
+      "database_id": "KDB-48D3478F83",
+      "canonical_key": "risingwave"
+    },
+    {
+      "source_no": 163,
+      "name": "ksqlDB",
+      "category": "Streaming SQL",
+      "distinctive_capability": "SQL processing directly over Kafka streams",
+      "database_id": "KDB-CBCB431E20",
+      "canonical_key": "ksqldb"
+    },
+    {
+      "source_no": 164,
+      "name": "Flink State Backend",
+      "category": "Streaming State Store",
+      "distinctive_capability": "Stateful distributed streaming computation",
+      "database_id": "KDB-01874ADC5E",
+      "canonical_key": "flink-state-backend"
+    },
+    {
+      "source_no": 165,
+      "name": "Temporal Persistence",
+      "category": "Workflow State",
+      "distinctive_capability": "Durable workflow execution/state rather than general database usage",
+      "database_id": "KDB-9BBA814AF2",
+      "canonical_key": "temporal-persistence"
+    },
+    {
+      "source_no": 166,
+      "name": "EventStoreDB",
+      "category": "Event-Sourced Database",
+      "distinctive_capability": "Events become the authoritative application state",
+      "database_id": "KDB-C132896AFE",
+      "canonical_key": "eventstoredb"
+    },
+    {
+      "source_no": 167,
+      "name": "Marten",
+      "category": "Event Store / Document",
+      "distinctive_capability": "Event sourcing and documents built on PostgreSQL",
+      "database_id": "KDB-2D3E0BFC6C",
+      "canonical_key": "marten"
+    },
+    {
+      "source_no": 168,
+      "name": "Apache Geode",
+      "category": "Distributed In-Memory",
+      "distinctive_capability": "Distributed realtime data fabric",
+      "database_id": "KDB-FE20805592",
+      "canonical_key": "apache-geode"
+    },
+    {
+      "source_no": 169,
+      "name": "Tile38",
+      "category": "Geospatial Database",
+      "distinctive_capability": "Realtime geofencing and geospatial indexing",
+      "database_id": "KDB-09423B7DE8",
+      "canonical_key": "tile38"
+    },
+    {
+      "source_no": 170,
+      "name": "PostGIS",
+      "category": "Spatial Database Extension",
+      "distinctive_capability": "Rich GIS geometry/geography processing",
+      "database_id": "KDB-B762E95F05",
+      "canonical_key": "postgis"
+    },
+    {
+      "source_no": 171,
+      "name": "GeoMesa",
+      "category": "Geospatial Big Data",
+      "distinctive_capability": "Distributed geospatial analytics",
+      "database_id": "KDB-B72221BCC1",
+      "canonical_key": "geomesa"
+    },
+    {
+      "source_no": 172,
+      "name": "GeoWave",
+      "category": "Spatial Big Data",
+      "distinctive_capability": "Geospatial indexing over distributed databases",
+      "database_id": "KDB-9C7F46F969",
+      "canonical_key": "geowave"
+    },
+    {
+      "source_no": 173,
+      "name": "MongoDB Geospatial",
+      "category": "Document + Spatial",
+      "distinctive_capability": "Location-aware queries over document structures",
+      "database_id": "KDB-1E93724AAC",
+      "canonical_key": "mongodb-geospatial"
+    },
+    {
+      "source_no": 174,
+      "name": "CrateDB",
+      "category": "Distributed SQL / IoT",
+      "distinctive_capability": "Time-series and machine-data workloads using SQL",
+      "database_id": "KDB-27B47531D6",
+      "canonical_key": "cratedb"
+    },
+    {
+      "source_no": 175,
+      "name": "Apache IoTDB",
+      "category": "Industrial Time-Series",
+      "distinctive_capability": "Native hierarchical time-series for industrial IoT",
+      "database_id": "KDB-BF953D6505",
+      "canonical_key": "apache-iotdb"
+    },
+    {
+      "source_no": 176,
+      "name": "Machbase",
+      "category": "Industrial Time-Series",
+      "distinctive_capability": "High-speed machine and sensor data",
+      "database_id": "KDB-B8BB2A4468",
+      "canonical_key": "machbase"
+    },
+    {
+      "source_no": 177,
+      "name": "OpenMLDB",
+      "category": "Feature Database",
+      "distinctive_capability": "Realtime machine-learning feature computation",
+      "database_id": "KDB-AF5AACC2DF",
+      "canonical_key": "openmldb"
+    },
+    {
+      "source_no": 178,
+      "name": "Feast",
+      "category": "Feature Store",
+      "distinctive_capability": "ML feature registry and online/offline serving",
+      "database_id": "KDB-F37A74D828",
+      "canonical_key": "feast"
+    },
+    {
+      "source_no": 179,
+      "name": "Tecton",
+      "category": "Managed Feature Platform",
+      "distinctive_capability": "Production AI feature management",
+      "database_id": "KDB-EDC7F2A45B",
+      "canonical_key": "tecton"
+    },
+    {
+      "source_no": 180,
+      "name": "Hopsworks Feature Store",
+      "category": "ML Data Platform",
+      "distinctive_capability": "Feature engineering and AI lifecycle integration",
+      "database_id": "KDB-C13285BF37",
+      "canonical_key": "hopsworks-feature-store"
+    },
+    {
+      "source_no": 181,
+      "name": "Pinecone Serverless",
+      "category": "AI Retrieval DB",
+      "distinctive_capability": "Elastic managed retrieval for GenAI systems",
+      "database_id": "KDB-6B6E90ED45",
+      "canonical_key": "pinecone-serverless"
+    },
+    {
+      "source_no": 182,
+      "name": "Weaviate Hybrid Search",
+      "category": "AI Knowledge DB",
+      "distinctive_capability": "BM25 + vector hybrid retrieval",
+      "database_id": "KDB-73A7CBE0F0",
+      "canonical_key": "weaviate-hybrid-search"
+    },
+    {
+      "source_no": 183,
+      "name": "Milvus/Zilliz Cloud",
+      "category": "Large-Scale Vector",
+      "distinctive_capability": "Billion-vector-scale AI retrieval",
+      "database_id": "KDB-18EEA67F8C",
+      "canonical_key": "milvus-zilliz-cloud"
+    },
+    {
+      "source_no": 184,
+      "name": "Qdrant Distributed",
+      "category": "Vector Search",
+      "distinctive_capability": "Distributed semantic retrieval",
+      "database_id": "KDB-CA714710A7",
+      "canonical_key": "qdrant-distributed"
+    },
+    {
+      "source_no": 185,
+      "name": "Neo4j GraphRAG",
+      "category": "Graph + GenAI",
+      "distinctive_capability": "Graph-grounded retrieval for LLM systems",
+      "database_id": "KDB-2578484028",
+      "canonical_key": "neo4j-graphrag"
+    },
+    {
+      "source_no": 186,
+      "name": "Kuzu",
+      "category": "Embedded Graph DB",
+      "distinctive_capability": "Local analytical property-graph processing",
+      "database_id": "KDB-5A85EE5A21",
+      "canonical_key": "kuzu"
+    },
+    {
+      "source_no": 187,
+      "name": "DuckDB Spatial",
+      "category": "Embedded Geospatial",
+      "distinctive_capability": "Analytical GIS processing in-process",
+      "database_id": "KDB-F24BCEDD94",
+      "canonical_key": "duckdb-spatial"
+    },
+    {
+      "source_no": 188,
+      "name": "Object Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Direct persistence of application objects",
+      "database_id": "KDB-F8612AB1A2",
+      "canonical_key": "object-databases"
+    },
+    {
+      "source_no": 189,
+      "name": "Object-Relational Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Relational model enhanced with objects/types",
+      "database_id": "KDB-7E52CBF904",
+      "canonical_key": "object-relational-databases"
+    },
+    {
+      "source_no": 190,
+      "name": "Hierarchical Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Parent-child tree representation",
+      "database_id": "KDB-2E9D32B210",
+      "canonical_key": "hierarchical-databases"
+    },
+    {
+      "source_no": 191,
+      "name": "Network Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Record relationships represented as network links",
+      "database_id": "KDB-5A59AE5248",
+      "canonical_key": "network-databases"
+    },
+    {
+      "source_no": 192,
+      "name": "Document Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Semi-structured document-oriented persistence",
+      "database_id": "KDB-D92316B373",
+      "canonical_key": "document-databases"
+    },
+    {
+      "source_no": 193,
+      "name": "Key-Value Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Key-based high-speed access",
+      "database_id": "KDB-0E7046C13D",
+      "canonical_key": "key-value-databases"
+    },
+    {
+      "source_no": 194,
+      "name": "Wide-Column Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Sparse scalable column-family architecture",
+      "database_id": "KDB-934857A9BE",
+      "canonical_key": "wide-column-databases"
+    },
+    {
+      "source_no": 195,
+      "name": "Graph Databases",
+      "category": "Database Model",
+      "distinctive_capability": "Nodes, edges and relationships",
+      "database_id": "KDB-B940D0188E",
+      "canonical_key": "graph-databases"
+    },
+    {
+      "source_no": 196,
+      "name": "RDF Triple Stores",
+      "category": "Semantic Database",
+      "distinctive_capability": "Subject-predicate-object knowledge representation",
+      "database_id": "KDB-2BFBAA6111",
+      "canonical_key": "rdf-triple-stores"
+    },
+    {
+      "source_no": 197,
+      "name": "Vector Databases",
+      "category": "AI Database",
+      "distinctive_capability": "Embedding similarity and semantic retrieval",
+      "database_id": "KDB-753FC1ECE4",
+      "canonical_key": "vector-databases"
+    },
+    {
+      "source_no": 198,
+      "name": "Time-Series Databases",
+      "category": "Specialized DB",
+      "distinctive_capability": "Timestamp-optimized storage and aggregation",
+      "database_id": "KDB-AC84E4130E",
+      "canonical_key": "time-series-databases"
+    },
+    {
+      "source_no": 199,
+      "name": "Spatial Databases",
+      "category": "Specialized DB",
+      "distinctive_capability": "Geometry, geography and location relationships",
+      "database_id": "KDB-91E6466255",
+      "canonical_key": "spatial-databases"
+    },
+    {
+      "source_no": 200,
+      "name": "Search Databases",
+      "category": "Specialized DB",
+      "distinctive_capability": "Inverted indexes, ranking and text retrieval",
+      "database_id": "KDB-BE153400DE",
+      "canonical_key": "search-databases"
+    },
+    {
+      "source_no": 201,
+      "name": "Event Stores",
+      "category": "Specialized DB",
+      "distinctive_capability": "Event sourcing and immutable event history",
+      "database_id": "KDB-CD052AC295",
+      "canonical_key": "event-stores"
+    },
+    {
+      "source_no": 202,
+      "name": "Ledger Databases",
+      "category": "Specialized DB",
+      "distinctive_capability": "Tamper-evident auditable transactions",
+      "database_id": "KDB-4620D9DA4A",
+      "canonical_key": "ledger-databases"
+    },
+    {
+      "source_no": 203,
+      "name": "Streaming Databases",
+      "category": "Specialized DB",
+      "distinctive_capability": "Continuous queries over live events",
+      "database_id": "KDB-2DC5DADB55",
+      "canonical_key": "streaming-databases"
+    },
+    {
+      "source_no": 204,
+      "name": "Feature Stores",
+      "category": "AI Data Layer",
+      "distinctive_capability": "Machine-learning training/serving feature consistency",
+      "database_id": "KDB-9AF32DA9E6",
+      "canonical_key": "feature-stores"
+    },
+    {
+      "source_no": 205,
+      "name": "Metadata Databases",
+      "category": "Governance",
+      "distinctive_capability": "Catalogs, schema, lineage and metadata graphs",
+      "database_id": "KDB-E225EF7A46",
+      "canonical_key": "metadata-databases"
+    },
+    {
+      "source_no": 206,
+      "name": "Configuration Databases",
+      "category": "Infrastructure",
+      "distinctive_capability": "Distributed configuration and coordination",
+      "database_id": "KDB-F49E72A824",
+      "canonical_key": "configuration-databases"
+    },
+    {
+      "source_no": 207,
+      "name": "Embedded Databases",
+      "category": "Edge",
+      "distinctive_capability": "Application-local persistence",
+      "database_id": "KDB-679AF754AB",
+      "canonical_key": "embedded-databases"
+    },
+    {
+      "source_no": 208,
+      "name": "Mobile Databases",
+      "category": "Edge/Mobile",
+      "distinctive_capability": "Offline synchronization and device-local data",
+      "database_id": "KDB-E16718388C",
+      "canonical_key": "mobile-databases"
+    },
+    {
+      "source_no": 209,
+      "name": "Browser Databases",
+      "category": "Web",
+      "distinctive_capability": "Local persistence inside browsers",
+      "database_id": "KDB-74604CB7DC",
+      "canonical_key": "browser-databases"
+    },
+    {
+      "source_no": 210,
+      "name": "Edge Databases",
+      "category": "Edge/IoT",
+      "distinctive_capability": "Distributed data close to devices/users",
+      "database_id": "KDB-A335F29974",
+      "canonical_key": "edge-databases"
+    },
+    {
+      "source_no": 211,
+      "name": "Cloud-Native Databases",
+      "category": "Architecture",
+      "distinctive_capability": "Built around distributed cloud infrastructure",
+      "database_id": "KDB-B416A6099C",
+      "canonical_key": "cloud-native-databases"
+    },
+    {
+      "source_no": 212,
+      "name": "Serverless Databases",
+      "category": "Architecture",
+      "distinctive_capability": "Automatic provisioning/scaling and usage-based execution",
+      "database_id": "KDB-56AD43F93D",
+      "canonical_key": "serverless-databases"
+    },
+    {
+      "source_no": 213,
+      "name": "Multi-Model Databases",
+      "category": "Architecture",
+      "distinctive_capability": "Multiple data models within one database",
+      "database_id": "KDB-AC13C5CD90",
+      "canonical_key": "multi-model-databases"
+    },
+    {
+      "source_no": 214,
+      "name": "Distributed SQL Databases",
+      "category": "Architecture",
+      "distinctive_capability": "SQL + ACID + horizontal distribution",
+      "database_id": "KDB-E50593F5D6",
+      "canonical_key": "distributed-sql-databases"
+    },
+    {
+      "source_no": 215,
+      "name": "NewSQL Databases",
+      "category": "Architecture",
+      "distinctive_capability": "Relational ACID with distributed-scale architecture",
+      "database_id": "KDB-327F82DB50",
+      "canonical_key": "newsql-databases"
+    },
+    {
+      "source_no": 216,
+      "name": "HTAP Databases",
+      "category": "Architecture",
+      "distinctive_capability": "Transactional and analytical processing together",
+      "database_id": "KDB-128E686977",
+      "canonical_key": "htap-databases"
+    },
+    {
+      "source_no": 217,
+      "name": "MPP Databases",
+      "category": "Analytics",
+      "distinctive_capability": "Massively parallel distributed query execution",
+      "database_id": "KDB-3F90E173F8",
+      "canonical_key": "mpp-databases"
+    },
+    {
+      "source_no": 218,
+      "name": "Columnar Databases",
+      "category": "Analytics",
+      "distinctive_capability": "Column-oriented storage optimized for scans",
+      "database_id": "KDB-A3D60A853C",
+      "canonical_key": "columnar-databases"
+    },
+    {
+      "source_no": 219,
+      "name": "In-Memory Databases",
+      "category": "Performance",
+      "distinctive_capability": "Memory-first low-latency processing",
+      "database_id": "KDB-2FDCB406E1",
+      "canonical_key": "in-memory-databases"
+    },
+    {
+      "source_no": 220,
+      "name": "Immutable Databases",
+      "category": "Governance",
+      "distinctive_capability": "Append-only/verifiable data",
+      "database_id": "KDB-723CE6648B",
+      "canonical_key": "immutable-databases"
+    },
+    {
+      "source_no": 221,
+      "name": "Versioned Databases",
+      "category": "Data Engineering",
+      "distinctive_capability": "Branch/commit/merge data histories",
+      "database_id": "KDB-C72DB59C7C",
+      "canonical_key": "versioned-databases"
+    },
+    {
+      "source_no": 222,
+      "name": "Federated Databases",
+      "category": "Integration",
+      "distinctive_capability": "Logical querying across several databases",
+      "database_id": "KDB-441F251F6D",
+      "canonical_key": "federated-databases"
+    },
+    {
+      "source_no": 223,
+      "name": "Virtual Databases",
+      "category": "Integration",
+      "distinctive_capability": "Unified data access without physical consolidation",
+      "database_id": "KDB-718CAD1BE4",
+      "canonical_key": "virtual-databases"
+    },
+    {
+      "source_no": 224,
+      "name": "Polyglot Persistence",
+      "category": "Architecture Pattern",
+      "distinctive_capability": "Different databases selected for different workload needs",
+      "database_id": "KDB-8DB8A943FD",
+      "canonical_key": "polyglot-persistence"
+    }
+  ]
+}

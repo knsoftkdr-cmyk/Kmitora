@@ -1,0 +1,149 @@
+/* KMITORA Discover Typography Sync R1
+   Presentation-only patch.
+   Goal: force Discover to inherit the exact application / Control Tower typeface.
+   No business logic, handlers, APIs, data contracts, safety gates, or JSX are changed.
+*/
+
+.page:has(> .discoverPremium),
+.page:has(> .discoverPremium) *,
+.page:has(> .discoverPremium) button,
+.page:has(> .discoverPremium) input,
+.page:has(> .discoverPremium) select,
+.page:has(> .discoverPremium) textarea,
+.page:has(> .discoverPremium) table,
+.page:has(> .discoverPremium) th,
+.page:has(> .discoverPremium) td,
+.page:has(> .discoverPremium) label,
+.page:has(> .discoverPremium) small,
+.page:has(> .discoverPremium) strong,
+.page:has(> .discoverPremium) span,
+.page:has(> .discoverPremium) p,
+.page:has(> .discoverPremium) h1,
+.page:has(> .discoverPremium) h2,
+.page:has(> .discoverPremium) h3,
+.page:has(> .discoverPremium) h4,
+.page:has(> .discoverPremium) h5,
+.page:has(> .discoverPremium) h6 {
+  font-family: inherit !important;
+}
+
+/* Keep the Discover hierarchy aligned with the dense Control Tower scale. */
+.page:has(> .discoverPremium) {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page:has(> .discoverPremium) .discoverPremiumHeader h1 {
+  font-size: 32px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.page:has(> .discoverPremium) .discoverPremiumHeader p {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+}
+
+.page:has(> .discoverPremium) .discoverPremiumEyebrow,
+.page:has(> .discoverPremium) .discoverPremiumTabs button,
+.page:has(> .discoverPremium) .discoverReadOnly,
+.page:has(> .discoverPremium) .discoverStatus,
+.page:has(> .discoverPremium) .discoverPremiumHeaderMeta span,
+.page:has(> .discoverPremium) .discoverPremiumHeaderMeta small {
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+}
+
+.page:has(> .discoverPremium) .discoverPremiumTabs button,
+.page:has(> .discoverPremium) .discoverReadOnly,
+.page:has(> .discoverPremium) .discoverStatus {
+  font-weight: 600 !important;
+}
+
+.page:has(> .discoverPremium) .discoverSectionTitle h2,
+.page:has(> .discoverPremium) .discoverTwinIntro h2,
+.page:has(> .discoverPremium) .panelHeader h3 {
+  font-size: 17px !important;
+  line-height: 1.3 !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.page:has(> .discoverPremium) .discoverSectionTitle p,
+.page:has(> .discoverPremium) .discoverTwinIntro p,
+.page:has(> .discoverPremium) .panelHeader p {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+}
+
+.page:has(> .discoverPremium) .discoverResultsStrip span,
+.page:has(> .discoverPremium) .discoverResultsStrip small,
+.page:has(> .discoverPremium) .discoverMetricGrid span,
+.page:has(> .discoverPremium) .discoverBottomKpis span,
+.page:has(> .discoverPremium) .discoverActivityList,
+.page:has(> .discoverPremium) .discoverTrace,
+.page:has(> .discoverPremium) .graphColumn small,
+.page:has(> .discoverPremium) .discoverProgressRow {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+}
+
+.page:has(> .discoverPremium) .discoverResultsStrip strong {
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+}
+
+.page:has(> .discoverPremium) .discoverMetricGrid strong,
+.page:has(> .discoverPremium) .discoverBottomKpis strong {
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+}
+
+.page:has(> .discoverPremium) .graphNode {
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  font-weight: 650 !important;
+}
+
+.page:has(> .discoverPremium) .discoverProgressRow strong {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  font-weight: 650 !important;
+}
+
+.page:has(> .discoverPremium) button,
+.page:has(> .discoverPremium) input,
+.page:has(> .discoverPremium) select,
+.page:has(> .discoverPremium) textarea {
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+
+/* Existing legacy Discover panels shown under subpages also inherit the same
+   Control Tower typography rather than their previous custom scale. */
+.page:has(> .discoverPremium) .panel,
+.page:has(> .discoverPremium) .panel *,
+.page:has(> .discoverPremium) .metricStrip,
+.page:has(> .discoverPremium) .metricStrip *,
+.page:has(> .discoverPremium) .checkList,
+.page:has(> .discoverPremium) .checkList *,
+.page:has(> .discoverPremium) .checkRow,
+.page:has(> .discoverPremium) .checkRow * {
+  font-family: inherit !important;
+}
+
+.page:has(> .discoverPremium) .checkRow,
+.page:has(> .discoverPremium) .checkRow span {
+  font-size: 12px !important;
+}
+
+.page:has(> .discoverPremium) .checkRow small {
+  font-size: 11px !important;
+}

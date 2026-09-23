@@ -1,0 +1,20 @@
+/* KMITORA AGENTS_CAPABILITIES_INTEGRATION_010B */
+.ac010b-shell { display: grid; gap: 14px; min-width: 0; }
+.ac010b-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; padding: 18px 20px; border: 1px solid #dbe7f5; border-radius: 14px; background: linear-gradient(135deg,#f8fbff 0%,#f7fffb 100%); box-shadow: 0 8px 24px rgba(15,23,42,.05); }
+.ac010b-header h1 { margin: 4px 0 6px; font-size: 24px; letter-spacing: -.02em; color: #0f172a; }
+.ac010b-header p { margin: 0; max-width: 780px; color: #64748b; line-height: 1.5; }
+.ac010b-eyebrow { color: #2563eb; font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+.ac010b-principles { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; max-width: 480px; }
+.ac010b-principles span { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid #dbe7f5; border-radius: 999px; background: #fff; color: #334155; font-size: 12px; font-weight: 650; }
+.ac010b-tabs { display: flex; gap: 8px; padding: 6px; width: fit-content; border: 1px solid #dbe7f5; border-radius: 12px; background: #fff; box-shadow: 0 4px 12px rgba(15,23,42,.04); }
+.ac010b-tabs button { display: inline-flex; align-items: center; gap: 7px; border: 0; border-radius: 8px; padding: 9px 13px; background: transparent; color: #475569; font-weight: 700; cursor: pointer; }
+.ac010b-tabs button.active { background: #0f5bd7; color: #fff; box-shadow: 0 3px 10px rgba(15,91,215,.2); }
+.ac010b-context { display: flex; gap: 10px; align-items: baseline; padding: 10px 14px; border-left: 3px solid #3b82f6; border-radius: 8px; background: #f8fafc; }
+.ac010b-context strong { color: #0f172a; }
+.ac010b-context span { color: #64748b; font-size: 13px; }
+.ac010b-content { min-width: 0; }
+@media (max-width: 900px) {
+  .ac010b-header { flex-direction: column; }
+  .ac010b-principles { justify-content: flex-start; max-width: none; }
+  .ac010b-context { align-items: flex-start; flex-direction: column; }
+}

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+
+# Local environment overrides (see .env.example in backend/ and frontend/)
+.env
+.env.local
+*.env.local
+
+# Editor/OS cruft
+.DS_Store
+*.swp
+backend/main_api/runtime_evidence/
+backend/main_api/output/
+*.jsonl

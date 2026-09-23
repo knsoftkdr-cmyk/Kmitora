@@ -1,0 +1,32 @@
+{
+  "name": "kmitora-ui-control-plane",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite --host 0.0.0.0",
+    "validate": "npm run build",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "test:e2e:smoke": "playwright test 01_health_and_safety.spec.ts 02_lifecycle_navigation.spec.ts 06_ui_button_smoke.spec.ts",
+    "test:e2e:golden": "playwright test \"tests/e2e/09_real_source_target_golden_path.spec.ts\"",
+    "test:e2e:governed": "playwright test \"tests/e2e/10_governed_execution_chain.spec.ts\"",
+    "test:e2e:a000-1m-ui": "playwright test \"tests/e2e/11_a000_1m_ui_lifecycle.spec.ts\""
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}

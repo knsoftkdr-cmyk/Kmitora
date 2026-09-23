@@ -1,0 +1,36 @@
+﻿KMITORA MAIN - Semantic + A000 Consolidated Update
+==================================================
+Updated: 20260920_002805
+Canonical Root: C:\KMITORA\Kmitora-main
+Backend: C:\KMITORA\Kmitora-main
+Semantic: C:\KMITORA\Kmitora-main\semantic
+Core API: 
+
+Applied:
+- canonical semantic engine
+- operation registry
+- semantic deduplication
+- generic source adapter
+- semantic service
+- confidence policy
+- A000 orchestrator
+- business-rule inference
+- semantic mapping
+- transformation planning
+- conflict detection
+- evidence hashing
+- FastAPI A000 semantic endpoints
+- smoke test
+
+Idempotent behavior:
+- identical managed files ignored
+- changed managed files updated in place
+- missing managed files created
+- API router block updated/reused, not duplicated
+
+Safety:
+- PLAN_ONLY
+- production writes = 0
+- no migration executed
+- no production activation
+- no CI/CD modification

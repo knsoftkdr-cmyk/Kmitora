@@ -1,0 +1,229 @@
+:root{
+  --km-bg:#f7f9fc;--km-panel:#fff;--km-border:#dfe6f1;--km-text:#0f1f3d;--km-muted:#6d7890;
+  --km-blue:#156bf3;--km-blue-2:#4ea1ff;--km-green:#16a766;--km-amber:#f59e0b;--km-violet:#6f50f5;
+  --km-shadow:0 8px 24px rgba(28,55,100,.06);--km-radius:12px;
+}
+*{box-sizing:border-box} body{margin:0;background:var(--km-bg);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--km-text)}
+button{font:inherit}.km-shell{min-height:100vh;display:grid;grid-template-columns:190px minmax(0,1fr) 285px;background:linear-gradient(180deg,#fbfcff 0,#f7f9fc 100%)}
+.km-sidebar{position:sticky;top:0;height:100vh;background:#fff;border-right:1px solid var(--km-border);padding:14px 10px;display:flex;flex-direction:column}
+.km-brand{display:flex;align-items:center;gap:10px;padding:4px 10px 20px}.km-logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(145deg,#071a3a,#173d73);color:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 6px 18px rgba(21,107,243,.18)}.km-logo.small{width:28px;height:28px}.km-brand strong{display:block;font-size:15px;letter-spacing:.02em}.km-brand small,.km-user small{display:block;color:var(--km-muted);font-size:9px;margin-top:2px}
+.km-sidebar nav{display:flex;flex-direction:column;gap:3px}.km-sidebar nav button{height:38px;border:0;background:transparent;border-radius:8px;text-align:left;padding:0 10px;display:flex;align-items:center;gap:10px;color:#31415f;font-size:12px}.km-sidebar nav button span{width:18px;text-align:center;color:#405477}.km-sidebar nav button:hover{background:#f3f7ff}.km-sidebar nav button.active{background:#eaf2ff;color:#0f62dc;font-weight:700}
+.km-user{margin-top:auto;border-top:1px solid #edf1f6;padding:14px 6px 0;display:flex;align-items:center;gap:8px}.km-user strong{display:block;font-size:10px}.km-user>span{margin-left:auto}
+.km-main{padding:18px 18px 28px;min-width:0}.km-page{max-width:1180px;margin:0 auto}
+.km-topbar{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:12px}.km-eyebrow{display:inline-flex;background:#edf4ff;color:#1665d8;border-radius:5px;padding:4px 7px;font-size:9px;font-weight:800;letter-spacing:.03em}.km-topbar h1{font-size:28px;line-height:1.1;margin:7px 0 5px}.km-topbar p{margin:0;color:var(--km-muted);font-size:11px}
+.km-top-actions{display:flex;align-items:center;gap:8px}.km-search{width:260px;height:36px;border:1px solid var(--km-border);border-radius:9px;background:#fff;color:#8390a8;font-size:11px;display:flex;align-items:center;padding:0 12px}.km-icon-btn{width:36px;height:36px;border:1px solid var(--km-border);background:#fff;border-radius:9px}.km-avatar{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e8f1ff;color:#135fbf;font-weight:800;font-size:11px}
+.km-command-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}.km-primary,.km-secondary{border:0;border-radius:7px;padding:9px 14px;font-size:10px;font-weight:700;cursor:pointer}.km-primary{background:linear-gradient(180deg,#237bff,#0d62e8);color:#fff;box-shadow:0 5px 12px rgba(21,107,243,.18)}.km-primary.full{width:100%;margin-top:10px}.km-secondary{background:#fff;border:1px solid #d4dfef;color:#164c96}.km-badge{padding:7px 10px;border-radius:7px;font-size:9px;font-weight:700}.km-badge-safe{background:#eef8f3;color:#187a4f}.km-meta{margin-left:auto;color:#8b96aa;font-size:9px}
+.km-status-strip{display:flex;gap:44px;margin:8px 0 14px}.km-status-strip>div{display:flex;flex-direction:column;gap:4px}.km-label{font-size:9px;color:#7c8799}.km-status-strip strong{font-size:9px}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:5px}.green{background:#12a560}.amber{background:#f59e0b}.blue{background:#2778ff}.violet{background:#6f50f5}
+.km-card{background:var(--km-panel);border:1px solid var(--km-border);border-radius:var(--km-radius);box-shadow:var(--km-shadow);overflow:hidden}.km-health-card{display:grid;grid-template-columns:1.05fr 1.1fr 1fr 1.05fr;margin-bottom:14px}.km-health-item{padding:22px 18px;display:flex;align-items:center;gap:15px;border-right:1px solid #edf1f6}.km-health-item:last-child{border-right:0}.km-health-item h3{font-size:13px;margin:4px 0}.km-health-item p{font-size:9px;color:var(--km-muted);margin:4px 0;line-height:1.4}.km-health-item a{font-size:9px;color:var(--km-blue)}
+.km-health-icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(145deg,#37b875,#198a57);color:#fff;display:grid;place-items:center;font-size:21px;box-shadow:0 8px 16px rgba(22,167,102,.2)}.km-ring{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--km-blue) 0 76%,#e6ebf1 76%);position:relative}.km-ring:before{content:"";position:absolute;inset:7px;background:#fff;border-radius:50%}.km-ring span{position:relative;font-size:14px;font-weight:800}.green-ring{background:conic-gradient(var(--km-green) 0 82%,#e6ebf1 82%)}.km-orb{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#315dff,#7a50f6);color:#fff;display:grid;place-items:center;font-size:25px;box-shadow:0 8px 18px rgba(85,80,245,.22)}
+.km-grid-two{display:grid;grid-template-columns:.9fr 1.8fr;gap:14px}.km-grid-two.bottom{margin-top:14px;grid-template-columns:.95fr 1.8fr}.km-section-title{padding:15px 16px 10px;display:flex;justify-content:space-between;align-items:flex-start}.km-section-title h2{font-size:13px;margin:0}.km-section-title p{font-size:9px;color:var(--km-muted);margin:4px 0 0}
+.km-indicators{display:grid;grid-template-columns:1fr 1fr;padding:0 16px 12px}.km-metric{display:flex;gap:9px;align-items:center;padding:10px 5px}.km-metric-icon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#eaf2ff;color:#1767dc}.km-metric-icon.amber{background:#fff3e8;color:#dc7216}.km-metric-icon.violet{background:#f0ebff;color:#6e4ee9}.km-metric span,.km-metric small{display:block;font-size:8px;color:var(--km-muted)}.km-metric strong{display:block;font-size:12px;margin:2px 0}.km-card-footer{border-top:1px solid #edf1f6;padding:10px 16px;text-align:center;color:var(--km-blue);font-size:9px;font-weight:700}
+.km-stages{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;padding:0 14px 14px}.km-stage{border:1px solid #dfe6ef;border-radius:8px;padding:10px;background:#fff;min-height:72px}.km-stage.done{box-shadow:inset 0 2px 0 #23a366}.km-stage.active{box-shadow:inset 0 2px 0 #2d76f4}.km-stage-head{display:flex;justify-content:space-between;font-size:10px}.km-progress{height:4px;border-radius:3px;background:#edf1f6;margin:7px 0}.km-progress i{display:block;height:100%;border-radius:3px;background:#87a8d8}.km-stage.done .km-progress i{background:#18a35d}.km-stage.active .km-progress i{background:#2475f1}.km-stage p{font-size:8px;color:var(--km-muted);margin:0;line-height:1.3}
+.km-activity{padding:0 16px 12px}.km-activity-row{display:grid;grid-template-columns:10px 42px 1fr;align-items:center;gap:5px;padding:7px 0;font-size:9px}.km-activity-row .time{color:#7c8799}.km-live{font-size:8px;color:#2f7d5d}
+.km-queue{display:grid;grid-template-columns:repeat(5,1fr);padding:4px 16px 16px}.km-queue-item{padding:8px 12px;border-right:1px solid #edf1f6}.km-queue-item:last-child{border-right:0}.km-queue-item span{display:block;font-size:8px;color:#5f6f89;min-height:24px}.km-queue-item strong{display:block;font-size:9px;margin:4px 0}.km-queue-item b{font-size:13px}.km-queue-item .green{color:#12945a}.km-queue-item .blue{color:#1869e6}.km-queue-item .violet{color:#6f50f5}.km-queue-item .amber{color:#df8610}.km-safety{border-top:1px solid #edf1f6;padding:10px 16px;display:flex;gap:9px;align-items:center}.km-safety>span{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#e8f8ef;color:#14925b}.km-safety strong{font-size:9px}.km-safety p{font-size:8px;color:var(--km-muted);margin:2px 0}
+.km-assistant{position:sticky;top:0;height:100vh;background:#fff;border-left:1px solid var(--km-border);padding:18px 12px;overflow:auto}.km-assistant-head{font-size:13px;padding:8px 8px 16px}.km-assistant-card{border:1px solid var(--km-border);border-radius:10px;padding:12px;margin-bottom:12px}.km-assistant-card h3{font-size:10px;margin:0 0 10px}.km-assistant-card p{font-size:9px;line-height:1.55;color:#55637b}.km-suggestion{display:block;width:100%;text-align:left;background:#fff;border:1px solid #d9e3f0;border-radius:7px;padding:9px;margin:7px 0;font-size:8px;color:#55637b}.km-link{border:0;background:transparent;color:#1767dc;font-size:8px;font-weight:700;padding:6px 0}.km-assistant-input{border:1px solid var(--km-border);border-radius:8px;padding:12px;color:#8793a6;font-size:9px;margin-top:16px}
+@media(max-width:1250px){.km-shell{grid-template-columns:175px minmax(0,1fr)}.km-assistant{display:none}.km-health-card{grid-template-columns:1fr 1fr}.km-health-item:nth-child(2){border-right:0}.km-health-item:nth-child(-n+2){border-bottom:1px solid #edf1f6}}
+@media(max-width:900px){.km-shell{grid-template-columns:72px minmax(0,1fr)}.km-brand div:last-child,.km-sidebar nav button:not(.active){font-size:0}.km-sidebar nav button{justify-content:center}.km-sidebar nav button span{font-size:16px}.km-user div:nth-child(2),.km-user>span{display:none}.km-grid-two,.km-grid-two.bottom{grid-template-columns:1fr}.km-top-actions .km-search{display:none}}
+
+
+/* KMITORA authoritative 13-stage autonomous lifecycle */
+.km-lifecycle{
+  padding:0 14px 16px;
+}
+.km-lifecycle-sequence{
+  margin:2px 0 12px;
+  padding:9px 12px;
+  border:1px solid #dce6f2;
+  border-radius:8px;
+  background:linear-gradient(90deg,#f7faff,#fbfcff);
+  color:#35445f;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.01em;
+  line-height:1.45;
+}
+.km-lifecycle-scroll{
+  overflow-x:auto;
+  scrollbar-width:thin;
+  padding-bottom:5px;
+}
+.km-lifecycle-rail{
+  display:grid;
+  grid-template-columns:repeat(13,minmax(138px,1fr));
+  gap:10px;
+  min-width:1900px;
+}
+.km-lifecycle-stage{
+  position:relative;
+  min-height:132px;
+  padding:10px;
+  border:1px solid #dfe6ef;
+  border-radius:9px;
+  background:#fff;
+}
+.km-lifecycle-stage.done{box-shadow:inset 0 2px 0 #23a366}
+.km-lifecycle-stage.active{box-shadow:inset 0 2px 0 #2d76f4}
+.km-lifecycle-stage.guarded{box-shadow:inset 0 2px 0 #df8610;background:#fffdf8}
+.km-lifecycle-stage.blocked{box-shadow:inset 0 2px 0 #d64b4b;background:#fffafa}
+.km-lifecycle-node-row{
+  display:flex;
+  align-items:center;
+  height:25px;
+  margin-bottom:8px;
+}
+.km-lifecycle-node{
+  position:relative;
+  z-index:2;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  background:#eef3f9;
+  border:1px solid #cbd8e8;
+  color:#52647d;
+  font-size:8px;
+  font-weight:800;
+}
+.km-lifecycle-stage.done .km-lifecycle-node{background:#e7f7ef;border-color:#57b987;color:#158352}
+.km-lifecycle-stage.active .km-lifecycle-node{background:#e8f1ff;border-color:#4d8af3;color:#1767dc}
+.km-lifecycle-stage.guarded .km-lifecycle-node{background:#fff3dd;border-color:#efaa48;color:#b46908}
+.km-lifecycle-stage.blocked .km-lifecycle-node{background:#feecec;border-color:#df7777;color:#b52c2c}
+.km-lifecycle-connector{
+  height:2px;
+  width:calc(100% - 13px);
+  margin-left:6px;
+  background:#dbe4ef;
+}
+.km-lifecycle-stage.done .km-lifecycle-connector{background:#8bcbaa}
+.km-lifecycle-stage.active .km-lifecycle-connector{background:#8bb1ef}
+.km-lifecycle-stage-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  font-size:10px;
+}
+.km-lifecycle-stage-head strong{
+  color:#26354c;
+  font-size:10px;
+}
+.km-lifecycle-stage-head span{
+  color:#6d7d94;
+  font-size:8px;
+  font-weight:700;
+}
+.km-lifecycle-progress{
+  height:4px;
+  border-radius:4px;
+  overflow:hidden;
+  background:#edf1f6;
+  margin:8px 0;
+}
+.km-lifecycle-progress i{
+  display:block;
+  height:100%;
+  border-radius:inherit;
+  background:#8aa5ca;
+}
+.km-lifecycle-stage.done .km-lifecycle-progress i{background:#23a366}
+.km-lifecycle-stage.active .km-lifecycle-progress i{background:#2d76f4}
+.km-lifecycle-stage.guarded .km-lifecycle-progress i{background:#df8610}
+.km-lifecycle-stage.blocked .km-lifecycle-progress i{background:#d64b4b}
+.km-lifecycle-stage p{
+  margin:0;
+  min-height:35px;
+  color:#68778d;
+  font-size:8px;
+  line-height:1.45;
+}
+.km-lifecycle-stage small{
+  display:inline-block;
+  margin-top:7px;
+  color:#8a97a8;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.km-lifecycle-stage.active small{color:#1767dc}
+.km-lifecycle-stage.done small{color:#158352}
+.km-lifecycle-stage.guarded small{color:#b46908}
+.km-lifecycle-stage.blocked small{color:#b52c2c}
+
+
+/* Exact KMITORA lifecycle navigation */
+.kmSidebarGroup{margin:12px 0 18px}
+.kmSidebarGroupTitle{
+  padding:0 14px 7px;
+  color:#7c8da6;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.kmSidebarStageNo{
+  width:20px;
+  color:#8fa0b7;
+  font-size:7px;
+  font-weight:800;
+  text-align:center;
+}
+.navItem.active .kmSidebarStageNo{color:inherit}
+
+.kmStagePage{padding:22px}
+.kmStageHero{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:16px;
+  padding:22px;
+  border:1px solid #dde6f0;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ffffff,#f7faff);
+}
+.kmStageHeroIcon{
+  width:48px;height:48px;border-radius:12px;
+  display:grid;place-items:center;
+  color:#1767dc;background:#eaf2ff;border:1px solid #cbdcf7;
+}
+.kmStageHero span{color:#5f7390;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.kmStageHero h1{margin:4px 0 5px;color:#22324b;font-size:22px}
+.kmStageHero p{margin:0;max-width:850px;color:#66758b;font-size:11px;line-height:1.55}
+.kmStageState{padding:8px 10px;border-radius:999px;background:#eef3f8;color:#64748b;font-size:8px;font-weight:900;letter-spacing:.08em}
+.kmStageState.done{background:#e8f7ef;color:#168350}
+.kmStageState.active{background:#e8f1ff;color:#1767dc}
+.kmStageState.guarded{background:#fff3dd;color:#ae6509}
+.kmStageState.blocked{background:#feecec;color:#b52c2c}
+.kmStageGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:14px}
+.kmStageCard{padding:18px;border:1px solid #e0e7f0;border-radius:12px;background:#fff}
+.kmStageCardTitle{display:flex;align-items:center;gap:8px;color:#2b3b54}
+.kmStageCardTitle h2{margin:0;font-size:13px}
+.kmStageCard>p{color:#68778d;font-size:10px;line-height:1.55}
+.kmStageActionList{display:grid;gap:10px;margin-top:14px}
+.kmStageActionList>div{display:flex;align-items:flex-start;gap:8px;color:#56677f;font-size:10px}
+.kmStageActionList svg{color:#1f9d63;flex:0 0 auto}
+.kmStageProgress{display:flex;align-items:center;gap:10px;margin-top:18px}
+.kmStageProgress>span{height:7px;flex:1;border-radius:999px;overflow:hidden;background:#eef2f7}
+.kmStageProgress i{display:block;height:100%;background:#2d76f4;border-radius:inherit}
+.kmStageProgress strong{color:#40516a;font-size:10px}
+.kmStageNext{
+  margin-top:14px;padding:18px 20px;border-radius:12px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  color:#fff;background:linear-gradient(135deg,#18345e,#235ba5);
+}
+.kmStageNext span{font-size:8px;font-weight:800;letter-spacing:.11em;color:#bcd3f5}
+.kmStageNext h2{margin:3px 0;font-size:17px}
+.kmStageNext p{margin:0;color:#d8e5f7;font-size:10px}
+.kmStageNext button{
+  display:flex;align-items:center;gap:8px;white-space:nowrap;
+  border:0;border-radius:8px;padding:10px 14px;background:#fff;color:#184f99;
+  font-size:10px;font-weight:800;cursor:pointer;
+}
+@media(max-width:900px){
+  .kmStageHero{grid-template-columns:auto 1fr}
+  .kmStageState{grid-column:1/-1;width:max-content}
+  .kmStageGrid{grid-template-columns:1fr}
+  .kmStageNext{align-items:flex-start;flex-direction:column}
+}

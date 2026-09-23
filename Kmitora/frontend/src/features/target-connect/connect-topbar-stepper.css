@@ -1,0 +1,16 @@
+/* KMITORA connect strip - restyled, 4 steps */
+.ku-strip{max-width:1280px;margin:0 auto 22px;display:flex;align-items:center;gap:0;padding:14px 16px;border:1px solid #e8ecf3;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.ku-strip > div{display:flex;align-items:center;gap:9px;flex:1 1 0;min-width:0;justify-content:center;border:0;background:transparent;padding:0}
+.ku-strip > div > strong{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:700;color:#fff;flex:0 0 auto}
+.ku-strip > div > span{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.ku-strip > div:nth-of-type(odd) > strong{background:#2f6bff}
+.ku-strip > div:nth-of-type(odd) > span{color:#2f6bff}
+.ku-strip > div:nth-of-type(even) > strong{background:#16a34a}
+.ku-strip > div:nth-of-type(even) > span{color:#15803d}
+
+.ku-strip .ku-arrow{color:#cbd5e1;flex:0 0 auto}
+
+@media (max-width:1100px){
+  .ku-strip > div > span{font-size:12px}
+}

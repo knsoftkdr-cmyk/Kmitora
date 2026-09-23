@@ -1,0 +1,10 @@
+﻿2026-09-22 12:45:36 | Supervisor started. PID=31780
+2026-09-22 12:45:38 | Runtime health check failed. Attempt=1
+2026-09-22 12:46:08 | Runtime still unavailable. Backoff=5s.
+2026-09-22 12:46:15 | Runtime health check failed. Attempt=2
+2026-09-22 12:47:43 | Runtime still unavailable. Backoff=10s.
+2026-09-22 12:47:55 | Runtime health check failed. Attempt=3
+2026-09-23 09:03:26 | Supervisor started. PID=18972
+2026-09-23 09:03:28 | Runtime health check failed. Attempt=1
+2026-09-23 11:22:31 | Runtime still unavailable. Backoff=5s.
+2026-09-23 11:22:38 | Runtime health check failed. Attempt=2

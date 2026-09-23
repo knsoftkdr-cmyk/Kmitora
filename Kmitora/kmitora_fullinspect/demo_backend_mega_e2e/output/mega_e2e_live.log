@@ -1,0 +1,127 @@
+[PASS] Platform     Health                                     HTTP 200   134ms
+[PASS] Platform     Capabilities                               HTTP 200    18ms
+[PASS] Platform     Environments                               HTTP 200    29ms
+[PASS] Platform     A000 status                                HTTP 200    78ms
+[PASS] Platform     A000 intelligence status                   HTTP 200    10ms
+[PASS] Platform     A000 intelligence capabilities             HTTP 200    28ms
+[PASS] Platform     A000 self-test                             HTTP 200     9ms
+[PASS] Understand   Universal domain catalog                   HTTP 200    15ms
+[PASS] Understand   Smart domain inference                     HTTP 200    40ms
+[PASS] Understand   Client business context                    HTTP 200    10ms
+[PASS] Understand   Dynamic A000 agent allocation              HTTP 200     6ms
+[PASS] Understand   Dynamic 13-stage scenario synthesis        HTTP 200    11ms
+[PASS] Discover     Deep enterprise discovery plan             HTTP 200     5ms
+[PASS] Discover     Process mining                             HTTP 200    53ms
+[PASS] Discover     Business-rule mining                       HTTP 200    25ms
+[PASS] Detect       Entity resolution                          HTTP 200    32ms
+[PASS] Detect       Privacy classification                     HTTP 200    26ms
+[PASS] Detect       Data observability                         HTTP 200    24ms
+[PASS] Diagnose     Root-cause ranking                         HTTP 200    20ms
+[PASS] Simulate     What-if simulation                         HTTP 200    18ms
+[PASS] Recommend    Dependency optimization                    HTTP 200    14ms
+[PASS] Recommend    Dynamic specialist plan                    HTTP 200    19ms
+[PASS] Governance   DEV policy evaluation                      HTTP 200    28ms
+[PASS] Governance   PROD destructive request governed          HTTP 200    14ms
+[PASS] Governance   Invalid capability serial rejected         HTTP 400    12ms
+[PASS] Governance   Oversized HTTP batch rejected              HTTP 400     5ms
+[PASS] Governance   Direct PROD migration blocked              HTTP 403     7ms
+[PASS] DigitalTwin  Live Digital Twin graph                    HTTP 200    12ms
+[PASS] DigitalTwin  Digital Twin blast radius                  HTTP 200     6ms
+[PASS] DigitalTwin  Digital Twin RCA path                      HTTP 200    20ms
+[PASS] DigitalTwin  Digital Twin future simulation             HTTP 200     8ms
+[PASS] 1M Universe  1M capability catalog summary              HTTP 200    27ms
+[PASS] 1M Universe  Capability descriptor 1                    HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 1                     HTTP 200    21ms
+[PASS] Learn        Learning classification 1                  HTTP 200    15ms
+[PASS] 1M Universe  Capability descriptor 250                  HTTP 200    14ms
+[PASS] 1M Universe  Capability execution 250                   HTTP 200    15ms
+[PASS] 1M Universe  Capability descriptor 251                  HTTP 200    15ms
+[PASS] 1M Universe  Capability execution 251                   HTTP 200    16ms
+[PASS] 1M Universe  Capability descriptor 100250               HTTP 200    15ms
+[PASS] 1M Universe  Capability execution 100250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 100251               HTTP 200    13ms
+[PASS] 1M Universe  Capability execution 100251                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 200250               HTTP 200    12ms
+[PASS] 1M Universe  Capability execution 200250                HTTP 200    15ms
+[PASS] 1M Universe  Capability descriptor 200251               HTTP 200     2ms
+[PASS] 1M Universe  Capability execution 200251                HTTP 200    12ms
+[PASS] 1M Universe  Capability descriptor 250250               HTTP 200     2ms
+[PASS] 1M Universe  Capability execution 250250                HTTP 200    12ms
+[PASS] 1M Universe  Capability descriptor 250251               HTTP 200     2ms
+[PASS] 1M Universe  Capability execution 250251                HTTP 200    12ms
+[PASS] 1M Universe  Capability descriptor 275250               HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 275250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 275251               HTTP 200     2ms
+[PASS] 1M Universe  Capability execution 275251                HTTP 200    21ms
+[PASS] 1M Universe  Capability descriptor 375250               HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 375250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 375251               HTTP 200     9ms
+[PASS] 1M Universe  Capability execution 375251                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 425250               HTTP 200     2ms
+[PASS] 1M Universe  Capability execution 425250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 425251               HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 425251                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 525250               HTTP 200    14ms
+[PASS] 1M Universe  Capability execution 525250                HTTP 200    17ms
+[PASS] 1M Universe  Capability descriptor 525251               HTTP 200     4ms
+[PASS] 1M Universe  Capability execution 525251                HTTP 200    24ms
+[PASS] 1M Universe  Capability descriptor 625250               HTTP 200    16ms
+[PASS] 1M Universe  Capability execution 625250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 625251               HTTP 200    11ms
+[PASS] 1M Universe  Capability execution 625251                HTTP 200    16ms
+[PASS] 1M Universe  Capability descriptor 825250               HTTP 200    15ms
+[PASS] 1M Universe  Capability execution 825250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 825251               HTTP 200     4ms
+[PASS] 1M Universe  Capability execution 825251                HTTP 200    24ms
+[PASS] Learn        Learning classification 825251             HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 850250               HTTP 200    12ms
+[PASS] 1M Universe  Capability execution 850250                HTTP 200    16ms
+[PASS] 1M Universe  Capability descriptor 850251               HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 850251                HTTP 200    28ms
+[PASS] 1M Universe  Capability descriptor 875250               HTTP 200    14ms
+[PASS] 1M Universe  Capability execution 875250                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 875251               HTTP 200    11ms
+[PASS] 1M Universe  Capability execution 875251                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 900250               HTTP 200    28ms
+[PASS] 1M Universe  Capability execution 900250                HTTP 200     6ms
+[PASS] 1M Universe  Capability descriptor 900251               HTTP 200     4ms
+[PASS] 1M Universe  Capability execution 900251                HTTP 200     6ms
+[PASS] 1M Universe  Capability descriptor 925250               HTTP 200    13ms
+[PASS] 1M Universe  Capability execution 925250                HTTP 200     6ms
+[PASS] 1M Universe  Capability descriptor 925251               HTTP 200    25ms
+[PASS] 1M Universe  Capability execution 925251                HTTP 200     5ms
+[PASS] 1M Universe  Capability descriptor 950250               HTTP 200     5ms
+[PASS] 1M Universe  Capability execution 950250                HTTP 200     5ms
+[PASS] 1M Universe  Capability descriptor 950251               HTTP 200    14ms
+[PASS] 1M Universe  Capability execution 950251                HTTP 200    16ms
+[PASS] 1M Universe  Capability descriptor 975250               HTTP 200     4ms
+[PASS] 1M Universe  Capability execution 975250                HTTP 200    25ms
+[PASS] 1M Universe  Capability descriptor 975251               HTTP 200    15ms
+[PASS] 1M Universe  Capability execution 975251                HTTP 200    16ms
+[PASS] 1M Universe  Capability descriptor 990250               HTTP 200    15ms
+[PASS] 1M Universe  Capability execution 990250                HTTP 200     4ms
+[PASS] 1M Universe  Capability descriptor 990251               HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 990251                HTTP 200     3ms
+[PASS] 1M Universe  Capability descriptor 1000000              HTTP 200     3ms
+[PASS] 1M Universe  Capability execution 1000000               HTTP 200    16ms
+[PASS] Learn        Learning classification 1000000            HTTP 200     5ms
+[PASS] 1M Universe  Safe batch 1-25                            HTTP 200     7ms
+[PASS] 1M Universe  Safe batch 100251-100275                   HTTP 200     6ms
+[PASS] 1M Universe  Safe batch 250251-250275                   HTTP 200    30ms
+[PASS] 1M Universe  Safe batch 525251-525275                   HTTP 200    30ms
+[PASS] 1M Universe  Safe batch 825251-825275                   HTTP 200     7ms
+[PASS] 1M Universe  Safe batch 975251-975275                   HTTP 200    24ms
+[PASS] 1M Universe  Safe batch 999976-1000000                  HTTP 200    19ms
+[PASS] Discover     Clean enterprise source discovery          HTTP 200  3513ms
+[PASS] Validate     Governed migration validation              HTTP 200    18ms
+[PASS] Approval     Authoritative approval request             HTTP 202     3ms
+[PASS] Approval     Authoritative approval decision            HTTP 200    28ms
+[PASS] Execute      Governed DEV dry-run execution             HTTP 202    16ms
+[PASS] Reconcile    Exact dry-run reconciliation               HTTP 202     3ms
+[PASS] Evidence     Evidence package generation                HTTP 202     5ms
+
+==============================================================================
+KMITORA MEGA ENTERPRISE BACKEND E2E: PASS
+Checks: 121/121 passed
+Report: D:\Kmitora\Kmitora\demo_backend_mega_e2e\output\mega_e2e_report.json
+==============================================================================

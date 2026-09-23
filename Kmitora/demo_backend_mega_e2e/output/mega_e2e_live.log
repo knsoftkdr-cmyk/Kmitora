@@ -1,0 +1,146 @@
+
+MEGA E2E STOPPED: A000 status failed: unsafe flag became true: target_write_executed
+[PASS] Platform     Health                                     HTTP 200    71ms
+[PASS] Platform     Capabilities                               HTTP 200    22ms
+[PASS] Platform     Environments                               HTTP 200     1ms
+[FAIL] Platform     A000 status                                HTTP 200  1146ms
+{
+  "product": "KMITORA",
+  "agent": "A000",
+  "version": "0.2.0-a000",
+  "kind": "a000_status",
+  "trace_id": "9522dba9-4789-4dab-b635-e546d88e0e3b",
+  "timestamp": "2026-09-20T12:47:12.794829+00:00",
+  "authoritative": false,
+  "production_action_executed": false,
+  "payload": {
+    "name": "A000",
+    "role": "KMITORA Orchestrator",
+    "mode": "safe-autonomy",
+    "text": true,
+    "voice_optional": true,
+    "runtime": {
+      "requests": 1421,
+      "issues": [],
+      "last_agent_action": "Evidence package created: 9ca286c1-42e5-4ab0-9724-b53d4f2d0239",
+      "executions": {
+        "ee2ea3ea-d790-4a91-baf8-60b6a979ebc6": {
+          "execution_id": "ee2ea3ea-d790-4a91-baf8-60b6a979ebc6",
+          "parent_dry_run_execution_id": "9436ff42-fa25-4f06-8c77-750c48749d82",
+          "migration_id": "DEV-UNIFIED-20260920092859",
+          "approval_id": "2bc9a825-73a2-4a07-9e12-646dc334654b",
+          "target_id": "TGT-0EE2C3DB64CD",
+          "status": "POST_LOAD_COMPLETED",
+          "execution_gate": "PASS",
+          "execution_mode": "DEV_REPLACE_LOAD",
+          "environment": "DEV",
+          "input_record_count": 2250,
+          "simulated_record_count": 2250,
+          "success_count": 2250,
+          "failure_count": 0,
+          "loaded_record_count": 2250,
+          "record_results": [
+            {
+              "sequence": 1,
+              "entity": "customer_master",
+              "row": 2,
+              "record_key": null,
+              "source_record": {
+                "customer_id": "C0214",
+                "full_name": "Aarav Chowdary",
+                "dob": "1993-03-10",
+                "mobile": "9687048611",
+                "email": "aarav.chowdary214@example.test",
+                "kyc_status": "VERIFIED",
+                "scenario_code": "S14"
+              },
+              "status": "SIMULATED",
+              "transformation_count": 7,
+              "transformations": [
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.customer_id",
+                  "target": "customer_master.customer_id",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                },
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.full_name",
+                  "target": "customer_master.full_name",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                },
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.dob",
+                  "target": "customer_master.dob",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                },
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.mobile",
+                  "target": "customer_master.mobile",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                },
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.email",
+                  "target": "customer_master.email",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                },
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.kyc_status",
+                  "target": "customer_master.kyc_status",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                },
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.scenario_code",
+                  "target": "customer_master.scenario_code",
+                  "business_rules": [],
+                  "status": "SIMULATED",
+                  "target_write": false
+                }
+              ],
+              "target_write_executed": false,
+              "production_action_executed": false
+            },
+            {
+              "sequence": 2,
+              "entity": "customer_master",
+              "row": 3,
+              "record_key": null,
+              "source_record": {
+                "customer_id": "C0210",
+                "full_name": "Kavya Reddy",
+                "dob": "2000-08-17",
+                "mobile": "9721505324",
+                "email": "kavya.reddy210@example.test",
+                "kyc_status": "VERIFIED",
+                "scenario_code": "S10"
+              },
+              "status": "SIMULATED",
+              "transformation_count": 7,
+              "transformations": [
+                {
+                  "action": "DIRECT_MAP",
+                  "source": "customer_master.customer_id",
+                  "target": "cu
+
+==============================================================================
+KMITORA MEGA ENTERPRISE BACKEND E2E: FAIL
+Checks: 3/4 passed
+Report: C:\KMITORA\Kmitora-main\Kmitora-main\demo_backend_mega_e2e\output\mega_e2e_report.json
+==============================================================================

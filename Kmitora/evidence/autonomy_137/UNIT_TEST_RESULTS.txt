@@ -1,0 +1,11 @@
+test_all_capabilities_have_single_canonical_owner_and_authority (backend.autonomy.test_autonomy_137.Autonomy137Tests.test_all_capabilities_have_single_canonical_owner_and_authority) ... ok
+test_full_program_has_acyclic_dependency_plan (backend.autonomy.test_autonomy_137.Autonomy137Tests.test_full_program_has_acyclic_dependency_plan) ... ok
+test_model_gate_blocks_migration_and_production_gates (backend.autonomy.test_autonomy_137.Autonomy137Tests.test_model_gate_blocks_migration_and_production_gates) ... ok
+test_production_mutation_is_not_auto_authorized (backend.autonomy.test_autonomy_137.Autonomy137Tests.test_production_mutation_is_not_auto_authorized) ... ok
+test_registry_is_exactly_137_unique_capabilities (backend.autonomy.test_autonomy_137.Autonomy137Tests.test_registry_is_exactly_137_unique_capabilities) ... ok
+test_unknown_capability_fails_closed (backend.autonomy.test_autonomy_137.Autonomy137Tests.test_unknown_capability_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

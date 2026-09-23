@@ -1,0 +1,28 @@
+﻿F1 -> F2 EXPECTED MAPPINGS
+
+Customer_ID -> customer_id
+Customer_Name -> legal_name
+Email -> email
+Phone -> phone
+Country -> country_code
+Status -> customer_status
+Credit_Limit -> credit_limit
+
+Order_ID -> order_id
+Customer_ID -> customer_id
+Order_Date -> order_date
+Amount -> order_amount
+Currency -> currency_code
+Status -> order_status
+
+EXPECTED TRANSFORMATIONS
+
+IN -> INDIA
+IND -> INDIA
+India -> INDIA
+
+A -> ACTIVE
+ACTIVE -> ACTIVE
+
+COMPLETE -> COMPLETED
+COMPLETED -> COMPLETED

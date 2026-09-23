@@ -1,0 +1,76 @@
+{
+  "scenario_id": "KMITORA-MEGA-E2E-001",
+  "scenario_name": "KMITORA Global Enterprise Transformation Mega Demo",
+  "started_at": "2026-09-20T12:47:12.700339+00:00",
+  "finished_at": "2026-09-20T12:47:14.844377+00:00",
+  "total_checks": 4,
+  "passed": 3,
+  "failed": 1,
+  "pass_rate": 75.0,
+  "hard_safety": {
+    "production_write_allowed": false,
+    "production_cutover_allowed": false,
+    "destructive_action_allowed": false,
+    "policy_bypass_allowed": false
+  },
+  "artifacts": {},
+  "checks": [
+    {
+      "name": "Health",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/health",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 71,
+      "detail": "status matched",
+      "response_kind": "health"
+    },
+    {
+      "name": "Capabilities",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/capabilities",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 22,
+      "detail": "status matched",
+      "response_kind": "capabilities"
+    },
+    {
+      "name": "Environments",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/environments",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": true,
+      "elapsed_ms": 1,
+      "detail": "status matched",
+      "response_kind": "environments"
+    },
+    {
+      "name": "A000 status",
+      "phase": "Platform",
+      "method": "GET",
+      "path": "/v1/a000/status",
+      "expected_status": [
+        200
+      ],
+      "actual_status": 200,
+      "passed": false,
+      "elapsed_ms": 1146,
+      "detail": "unsafe flag became true: target_write_executed",
+      "response_kind": "a000_status"
+    }
+  ],
+  "report_sha256": "7d4db2ed7460a6a275397dcf386e40c044a495f58937b312ed2920b52ff7cce2"
+}

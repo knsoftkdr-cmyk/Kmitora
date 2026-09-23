@@ -1,0 +1,27 @@
+﻿KMITORA REFERENCE_MIGRATION_002_DRY_RUN_CLEAN
+
+Purpose:
+Positive DEV dry-run, reconciliation and evidence test.
+
+Expected:
+Customers              = 8
+Orders                 = 7
+Total source records   = 15
+Execution ready        = 15
+Review                 = 0
+Quarantine             = 0
+Rejected               = 0
+Blocking findings      = 0
+Target writes          = 0
+Production actions     = 0
+
+Dry-run:
+Input                   = 15
+Simulated               = 15
+Matched                 = 15
+Variance                = 0
+Reconciliation          = PASS
+Evidence                = GENERATED
+
+Production migration    = DISABLED
+Cutover                 = DISABLED

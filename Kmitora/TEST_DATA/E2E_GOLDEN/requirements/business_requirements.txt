@@ -1,0 +1,15 @@
+Migrate customers, orders and order_items from the file source into PostgreSQL DEV while preserving keys, business rules and evidence.
+
+Rules:
+- customer_id must be unique and non-empty
+- order_id must be unique and non-empty
+- item_id must be unique and non-empty
+- orders.customer_id must reference customers.customer_id
+- order_items.order_id must reference orders.order_id
+- orders.amount cannot be negative
+- order_items.quantity must be greater than zero
+- customer status must be ACTIVE or INACTIVE
+- order status must be NEW, PAID, SHIPPED or CANCELLED
+- production writes are disabled unless separately authorized
+- reconcile row counts and referential integrity
+- capture evidence for every state-changing action

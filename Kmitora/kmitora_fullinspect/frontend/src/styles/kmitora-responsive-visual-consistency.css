@@ -1,0 +1,366 @@
+/* KMITORA Responsive + Visual Consistency R1
+   Presentation-only responsive normalization layer.
+   Designed to sit after kmitora-typography.css and kmitora-ui-conformity.css.
+*/
+
+:root {
+  --kmitora-page-max: 1920px;
+  --kmitora-page-pad-x: 24px;
+  --kmitora-page-pad-y: 20px;
+  --kmitora-grid-gap: 16px;
+  --kmitora-card-pad: 16px;
+  --kmitora-control-h: 36px;
+  --kmitora-tab-h: 38px;
+  --kmitora-table-row-h: 38px;
+  --kmitora-radius: 7px;
+  --kmitora-border: rgba(15, 23, 42, 0.12);
+  --kmitora-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Common app/workspace containers */
+.kmitora-page,
+.kmitora-workspace,
+.kmitora-page-shell,
+.page-container,
+.workspace-container,
+.main-content,
+.content-area {
+  width: 100%;
+  max-width: var(--kmitora-page-max);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.kmitora-page,
+.kmitora-workspace,
+.kmitora-page-shell,
+.page-container,
+.workspace-container {
+  padding-left: var(--kmitora-page-pad-x);
+  padding-right: var(--kmitora-page-pad-x);
+}
+
+/* Prevent grid/flex children from forcing horizontal overflow */
+.kmitora-page *,
+.kmitora-workspace *,
+.kmitora-page-shell *,
+.page-container *,
+.workspace-container *,
+.main-content *,
+.content-area * {
+  box-sizing: border-box;
+}
+
+.kmitora-page [class*="grid"],
+.kmitora-workspace [class*="grid"],
+.kmitora-page-shell [class*="grid"],
+.page-container [class*="grid"],
+.workspace-container [class*="grid"] {
+  min-width: 0;
+}
+
+/* Standard responsive grids */
+.kmitora-kpi-grid,
+.kpi-grid,
+.metrics-grid,
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--kmitora-grid-gap);
+}
+
+.kmitora-card-grid,
+.card-grid,
+.panel-grid,
+.workspace-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--kmitora-grid-gap);
+}
+
+/* Cards/panels */
+.kmitora-card,
+.kmitora-panel,
+.card,
+.panel {
+  min-width: 0;
+  border-radius: var(--kmitora-radius);
+}
+
+.kmitora-card,
+.kmitora-panel {
+  padding: var(--kmitora-card-pad);
+  border: 1px solid var(--kmitora-border);
+  box-shadow: var(--kmitora-shadow);
+}
+
+/* Tabs */
+.kmitora-tabs,
+.tabs,
+.tab-list,
+[role="tablist"] {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.kmitora-tabs > *,
+.tabs > *,
+.tab-list > *,
+[role="tab"] {
+  min-height: var(--kmitora-tab-h);
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+/* Toolbars/actions */
+.kmitora-toolbar,
+.toolbar,
+.page-actions,
+.header-actions,
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+/* Controls */
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+button,
+.kmitora-button,
+.btn {
+  min-height: var(--kmitora-control-h);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+  min-height: var(--kmitora-control-h);
+}
+
+/* Tables */
+.kmitora-table-wrap,
+.table-wrap,
+.table-container,
+.data-table-container {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  vertical-align: middle;
+}
+
+tbody tr {
+  min-height: var(--kmitora-table-row-h);
+}
+
+/* Long identifiers / evidence values */
+code,
+pre,
+.monospace,
+.technical-id,
+.trace-id,
+.evidence-id {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Charts/images */
+img,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+/* Modal/drawer safety */
+[role="dialog"],
+.modal,
+.dialog,
+.drawer {
+  max-width: min(960px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+}
+
+/* Desktop: 1440+ */
+@media (min-width: 1440px) {
+  :root {
+    --kmitora-page-pad-x: 28px;
+    --kmitora-grid-gap: 18px;
+  }
+
+  .kmitora-kpi-grid,
+  .kpi-grid,
+  .metrics-grid,
+  .summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Standard laptop: 1024–1439 */
+@media (max-width: 1439px) {
+  .kmitora-card-grid,
+  .card-grid,
+  .panel-grid,
+  .workspace-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tablet: 768–1023 */
+@media (max-width: 1023px) {
+  :root {
+    --kmitora-page-pad-x: 18px;
+    --kmitora-page-pad-y: 16px;
+    --kmitora-grid-gap: 12px;
+    --kmitora-card-pad: 14px;
+  }
+
+  .kmitora-kpi-grid,
+  .kpi-grid,
+  .metrics-grid,
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kmitora-card-grid,
+  .card-grid,
+  .panel-grid,
+  .workspace-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-header,
+  .workspace-header,
+  .kmitora-page-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .page-actions,
+  .header-actions {
+    width: 100%;
+  }
+}
+
+/* Mobile: <=767 */
+@media (max-width: 767px) {
+  :root {
+    --kmitora-page-pad-x: 12px;
+    --kmitora-page-pad-y: 12px;
+    --kmitora-grid-gap: 10px;
+    --kmitora-card-pad: 12px;
+    --kmitora-control-h: 38px;
+    --kmitora-tab-h: 40px;
+  }
+
+  .kmitora-kpi-grid,
+  .kpi-grid,
+  .metrics-grid,
+  .summary-grid,
+  .kmitora-card-grid,
+  .card-grid,
+  .panel-grid,
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kmitora-page,
+  .kmitora-workspace,
+  .kmitora-page-shell,
+  .page-container,
+  .workspace-container {
+    padding-left: var(--kmitora-page-pad-x);
+    padding-right: var(--kmitora-page-pad-x);
+  }
+
+  .kmitora-toolbar,
+  .toolbar,
+  .page-actions,
+  .header-actions,
+  .action-bar {
+    align-items: stretch;
+  }
+
+  .kmitora-toolbar > button,
+  .toolbar > button,
+  .page-actions > button,
+  .header-actions > button,
+  .action-bar > button {
+    width: 100%;
+  }
+
+  [role="dialog"],
+  .modal,
+  .dialog,
+  .drawer {
+    max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+  }
+}
+
+/* Compact mobile */
+@media (max-width: 479px) {
+  :root {
+    --kmitora-page-pad-x: 10px;
+  }
+
+  .kmitora-tabs,
+  .tabs,
+  .tab-list,
+  [role="tablist"] {
+    margin-left: -2px;
+    margin-right: -2px;
+  }
+}
+
+/* Accessibility and international-quality interaction */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

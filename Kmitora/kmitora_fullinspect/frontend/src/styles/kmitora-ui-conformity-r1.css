@@ -1,0 +1,381 @@
+/* KMITORA UI CONFORMITY R1
+   Presentation-only enterprise conformity layer.
+   Does not alter application logic, routes, API behavior, migration logic, approvals, or safety controls. */
+
+:root {
+  --kui-bg: #f6f8fb;
+  --kui-surface: #ffffff;
+  --kui-surface-subtle: #f8fafc;
+  --kui-border: #d9e1ea;
+  --kui-border-strong: #c8d2df;
+  --kui-text: #1d2939;
+  --kui-text-muted: #667085;
+  --kui-blue: #2563eb;
+  --kui-blue-soft: #eff6ff;
+  --kui-orange: #d97706;
+  --kui-teal: #0f766e;
+  --kui-green: #15803d;
+  --kui-red: #b42318;
+  --kui-radius: 7px;
+  --kui-radius-sm: 5px;
+  --kui-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 1px 3px rgba(16, 24, 40, .06);
+  --kui-shadow-raised: 0 4px 10px rgba(16, 24, 40, .08);
+  --kui-page-gap: 16px;
+  --kui-panel-pad: 16px;
+  --kui-control-height: 34px;
+}
+
+html, body, #root {
+  min-height: 100%;
+  background: var(--kui-bg);
+  color: var(--kui-text);
+}
+
+/* Main application canvas */
+main,
+.kmitora-main,
+.kmitora-page,
+.page,
+.page-content,
+.content-area,
+.workspace-content {
+  min-width: 0;
+}
+
+/* Page headers */
+.kmitora-page-header,
+.page-header,
+.workspace-header,
+[class*="PageHeader"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.kmitora-page-header p,
+.page-header p,
+.workspace-header p {
+  margin: 4px 0 0;
+  color: var(--kui-text-muted);
+}
+
+/* Tabs */
+[role="tablist"],
+.tabs,
+.kmitora-tabs,
+.tab-list,
+.workspace-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 40px;
+  border-bottom: 1px solid var(--kui-border);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+[role="tab"],
+.tabs > button,
+.kmitora-tabs > button,
+.tab,
+.tab-button,
+.workspace-tab {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: #475467;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+[role="tab"]:hover,
+.tabs > button:hover,
+.kmitora-tabs > button:hover,
+.tab:hover,
+.tab-button:hover,
+.workspace-tab:hover {
+  color: var(--kui-text);
+  background: #f9fafb;
+}
+
+[role="tab"][aria-selected="true"],
+.tab.active,
+.tab-button.active,
+.workspace-tab.active,
+.kmitora-tab.active,
+.tabs > button.active,
+.kmitora-tabs > button.active {
+  color: var(--kui-blue);
+  border-bottom-color: var(--kui-blue);
+  background: transparent;
+}
+
+/* Panels / cards */
+.card,
+.panel,
+.kmitora-card,
+.kmitora-panel,
+.workspace-card,
+.dashboard-card,
+[class*="Card"],
+[class*="Panel"] {
+  border-radius: var(--kui-radius);
+}
+
+.kmitora-card,
+.kmitora-panel,
+.workspace-card,
+.dashboard-card,
+.panel {
+  border: 1px solid var(--kui-border);
+  background: var(--kui-surface);
+  box-shadow: var(--kui-shadow);
+}
+
+.kmitora-card,
+.kmitora-panel,
+.workspace-card,
+.dashboard-card {
+  padding: var(--kui-panel-pad);
+}
+
+/* KPI grids and cards */
+.kpi-grid,
+.metrics-grid,
+.stat-grid,
+.kmitora-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.kpi-card,
+.metric-card,
+.stat-card,
+.kmitora-kpi-card {
+  min-height: 108px;
+  padding: 14px 16px;
+  border: 1px solid var(--kui-border);
+  border-radius: var(--kui-radius);
+  background: var(--kui-surface);
+  box-shadow: var(--kui-shadow);
+}
+
+/* Tables */
+.table-wrap,
+.table-container,
+.kmitora-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--kui-border);
+  border-radius: var(--kui-radius);
+  background: var(--kui-surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: var(--kui-surface);
+}
+
+thead th {
+  height: 36px;
+  padding: 8px 10px;
+  color: #475467;
+  background: #eef3f8;
+  border-bottom: 2px solid #3b82f6;
+  text-align: left;
+  vertical-align: middle;
+}
+
+tbody td {
+  min-height: 36px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e7edf4;
+  vertical-align: middle;
+}
+
+tbody tr:nth-child(even) td {
+  background: #fbfcfe;
+}
+
+tbody tr:hover td {
+  background: #f4f8fc;
+}
+
+/* Buttons */
+button,
+.btn,
+.button,
+.kmitora-button {
+  min-height: var(--kui-control-height);
+  border-radius: var(--kui-radius-sm);
+}
+
+button:disabled,
+.btn:disabled,
+.button:disabled,
+.kmitora-button:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+/* Forms */
+input,
+select,
+textarea {
+  border: 1px solid var(--kui-border-strong);
+  border-radius: var(--kui-radius-sm);
+  background: var(--kui-surface);
+  color: var(--kui-text);
+}
+
+input,
+select {
+  min-height: var(--kui-control-height);
+  padding: 6px 9px;
+}
+
+textarea {
+  padding: 9px 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #84adff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .10);
+  outline: none;
+}
+
+/* Status/badges */
+.status,
+.status-pill,
+.badge,
+.pill,
+.kmitora-status,
+.kmitora-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--kui-border);
+  background: #f8fafc;
+}
+
+.status-success,
+.status.pass,
+.status-passed,
+.badge-success,
+.pill-success {
+  color: var(--kui-green);
+  background: #ecfdf3;
+  border-color: #abefc6;
+}
+
+.status-warning,
+.status.review,
+.badge-warning,
+.pill-warning {
+  color: var(--kui-orange);
+  background: #fffaeb;
+  border-color: #fedf89;
+}
+
+.status-error,
+.status.blocked,
+.status-failed,
+.badge-error,
+.pill-error {
+  color: var(--kui-red);
+  background: #fef3f2;
+  border-color: #fecdca;
+}
+
+.status-info,
+.badge-info,
+.pill-info {
+  color: var(--kui-blue);
+  background: var(--kui-blue-soft);
+  border-color: #b2ccff;
+}
+
+/* Consistent vertical rhythm */
+section + section,
+.kmitora-section + .kmitora-section,
+.workspace-section + .workspace-section {
+  margin-top: var(--kui-page-gap);
+}
+
+/* Toolbar conformity */
+.toolbar,
+.page-toolbar,
+.kmitora-toolbar,
+.workspace-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Empty / unavailable states */
+.empty-state,
+.not-configured,
+.no-data,
+.kmitora-empty-state {
+  padding: 20px;
+  border: 1px dashed var(--kui-border-strong);
+  border-radius: var(--kui-radius);
+  background: var(--kui-surface-subtle);
+  color: var(--kui-text-muted);
+  text-align: center;
+}
+
+/* Avoid destructive global element sizing. Component-specific premium layouts remain authoritative. */
+
+@media (max-width: 1024px) {
+  :root {
+    --kui-panel-pad: 14px;
+  }
+
+  .kpi-grid,
+  .metrics-grid,
+  .stat-grid,
+  .kmitora-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .kmitora-page-header,
+  .page-header,
+  .workspace-header,
+  [class*="PageHeader"] {
+    flex-direction: column;
+  }
+
+  .kpi-grid,
+  .metrics-grid,
+  .stat-grid,
+  .kmitora-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  [role="tab"],
+  .tabs > button,
+  .kmitora-tabs > button,
+  .tab,
+  .tab-button,
+  .workspace-tab {
+    min-height: 40px;
+    padding-inline: 10px;
+  }
+}

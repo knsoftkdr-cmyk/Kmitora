@@ -1,0 +1,32 @@
+﻿=== DIGITAL TWIN ENGINE ===
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\services\digitalTwinEngine.ts
+
+=== ENTERPRISE XRAY BACKEND ===
+C:\KMITORA_UPDATED\Kmitora-main\backend\main_api\advanced_capabilities.py
+C:\KMITORA_UPDATED\Kmitora-main\backend\main_api\digital_twin_graph_api.py
+C:\KMITORA_UPDATED\Kmitora-main\backend\main_api\F1033_server.py
+
+=== ENTERPRISE XRAY FRONTEND ===
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\components\A000DigitalTwinPanel.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\components\DiscoverPremiumWorkspace.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\components\LifecycleStageWorkspace.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\components\SettingsGovernancePremiumWorkspace.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\components\Sidebar.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\components\SystemExplorerPremiumWorkspace.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\config\capabilityRegistry.ts
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\config\knowledgePackRegistry.ts
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\data\clientDemoScenarios.ts
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\pages\CinematicExecutiveDemo.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\pages\DigitalTwinGraph.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\pages\DomainIntelligence.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\pages\MegaDemoControlRoom.tsx
+C:\KMITORA_UPDATED\Kmitora-main\frontend\src\services\digitalTwinGraphApi.ts
+
+=== APP ROUTING ===
+FILE: C:\KMITORA_UPDATED\Kmitora-main\frontend\src\App.tsx
+LINE 21: import DigitalTwinGraph from "./pages/DigitalTwinGraph";
+LINE 39: case "simulate": return <LifecycleStageWorkspace stageKey="simulate" onNavigate={setActive}/>;
+LINE 53: case "digitalTwinGraph": return <DigitalTwinGraph/>;
+
+=== CORE SERVER ===
+C:\KMITORA_UPDATED\Kmitora-main\backend\main_api\F1033_server.py
