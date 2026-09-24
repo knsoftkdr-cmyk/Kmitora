@@ -1,0 +1,1395 @@
+{
+  "id": "b7cd1c5f-7180-4069-bbc3-30b4fe3763de",
+  "migration_id": "DEV-UNIFIED-20260923113711",
+  "status": "DISCOVERED",
+  "mode": "DISCOVERY_ONLY",
+  "production_action_executed": false,
+  "source": {
+    "type": "CONNECTED_SOURCE",
+    "path": "SRC-F9009E1C05CC",
+    "entities": [
+      {
+        "entity": "customers",
+        "file": "kmitora_source.customers",
+        "row_count": 5,
+        "fields": [
+          "customer_id",
+          "customer_name",
+          "status",
+          "region",
+          "email",
+          "balance"
+        ],
+        "field_profiles": [
+          {
+            "name": "customer_id",
+            "row_count": 5,
+            "null_count": 0,
+            "distinct_count": 5,
+            "sample_values": [
+              "1001",
+              "1002",
+              "1003",
+              "1004",
+              "1005"
+            ]
+          },
+          {
+            "name": "customer_name",
+            "row_count": 5,
+            "null_count": 0,
+            "distinct_count": 5,
+            "sample_values": [
+              "ABC Industries",
+              "XYZ Enterprises",
+              "Delta Systems",
+              "Nova Retail",
+              "Omega Manufacturing"
+            ]
+          },
+          {
+            "name": "status",
+            "row_count": 5,
+            "null_count": 0,
+            "distinct_count": 2,
+            "sample_values": [
+              "ACTIVE",
+              "ACTIVE",
+              "INACTIVE",
+              "ACTIVE",
+              "ACTIVE"
+            ]
+          },
+          {
+            "name": "region",
+            "row_count": 5,
+            "null_count": 0,
+            "distinct_count": 4,
+            "sample_values": [
+              "SOUTH",
+              "NORTH",
+              "WEST",
+              "EAST",
+              "SOUTH"
+            ]
+          },
+          {
+            "name": "email",
+            "row_count": 5,
+            "null_count": 0,
+            "distinct_count": 5,
+            "sample_values": [
+              "accounts@abc.com",
+              "finance@xyz.com",
+              "ops@delta.com",
+              "admin@nova.com",
+              "finance@omega.com"
+            ]
+          },
+          {
+            "name": "balance",
+            "row_count": 5,
+            "null_count": 0,
+            "distinct_count": 5,
+            "sample_values": [
+              "125000.00",
+              "238500.00",
+              "78000.00",
+              "415000.00",
+              "92500.00"
+            ]
+          }
+        ],
+        "duplicate_rows": [],
+        "quality_findings": []
+      },
+      {
+        "entity": "orders",
+        "file": "kmitora_source.orders",
+        "row_count": 6,
+        "fields": [
+          "order_id",
+          "customer_id",
+          "order_date",
+          "status",
+          "amount"
+        ],
+        "field_profiles": [
+          {
+            "name": "order_id",
+            "row_count": 6,
+            "null_count": 0,
+            "distinct_count": 6,
+            "sample_values": [
+              "9001",
+              "9002",
+              "9003",
+              "9004",
+              "9005"
+            ]
+          },
+          {
+            "name": "customer_id",
+            "row_count": 6,
+            "null_count": 0,
+            "distinct_count": 4,
+            "sample_values": [
+              "1001",
+              "1002",
+              "1001",
+              "1004",
+              "1005"
+            ]
+          },
+          {
+            "name": "order_date",
+            "row_count": 6,
+            "null_count": 0,
+            "distinct_count": 6,
+            "sample_values": [
+              "2026-08-01",
+              "2026-08-03",
+              "2026-08-05",
+              "2026-08-09",
+              "2026-08-10"
+            ]
+          },
+          {
+            "name": "status",
+            "row_count": 6,
+            "null_count": 0,
+            "distinct_count": 3,
+            "sample_values": [
+              "OPEN",
+              "COMPLETED",
+              "COMPLETED",
+              "OPEN",
+              "CANCELLED"
+            ]
+          },
+          {
+            "name": "amount",
+            "row_count": 6,
+            "null_count": 0,
+            "distinct_count": 6,
+            "sample_values": [
+              "12500.00",
+              "48000.00",
+              "19500.00",
+              "76000.00",
+              "8400.00"
+            ]
+          }
+        ],
+        "duplicate_rows": [],
+        "quality_findings": []
+      }
+    ]
+  },
+  "target": {
+    "type": "postgresql",
+    "name": "Kmitora_target",
+    "database": "kmitora_target",
+    "schema": "public",
+    "entities": [
+      {
+        "schema": "public",
+        "name": "customers",
+        "stem": "customers",
+        "columns": [
+          {
+            "name": "customer_id",
+            "dataType": "integer",
+            "nullable": false,
+            "ordinal": 1
+          },
+          {
+            "name": "customer_name",
+            "dataType": "character varying",
+            "nullable": false,
+            "ordinal": 2
+          },
+          {
+            "name": "status",
+            "dataType": "character varying",
+            "nullable": false,
+            "ordinal": 3
+          },
+          {
+            "name": "region",
+            "dataType": "character varying",
+            "nullable": false,
+            "ordinal": 4
+          },
+          {
+            "name": "email",
+            "dataType": "character varying",
+            "nullable": true,
+            "ordinal": 5
+          },
+          {
+            "name": "balance",
+            "dataType": "numeric",
+            "nullable": false,
+            "ordinal": 6
+          }
+        ]
+      },
+      {
+        "schema": "public",
+        "name": "orders",
+        "stem": "orders",
+        "columns": [
+          {
+            "name": "order_id",
+            "dataType": "integer",
+            "nullable": false,
+            "ordinal": 1
+          },
+          {
+            "name": "customer_id",
+            "dataType": "integer",
+            "nullable": false,
+            "ordinal": 2
+          },
+          {
+            "name": "order_date",
+            "dataType": "date",
+            "nullable": false,
+            "ordinal": 3
+          },
+          {
+            "name": "status",
+            "dataType": "character varying",
+            "nullable": false,
+            "ordinal": 4
+          },
+          {
+            "name": "amount",
+            "dataType": "numeric",
+            "nullable": false,
+            "ordinal": 5
+          }
+        ]
+      }
+    ]
+  },
+  "business_rules": [
+    "BR-001  customer_id must be unique and non-null.",
+    "BR-002  order_id must be unique and non-null.",
+    "BR-003  customer_name must be trimmed before target mapping.",
+    "BR-004  email must be normalized to lowercase.",
+    "BR-005  ACTIVE customer status must normalize to A.",
+    "BR-006  INACTIVE customer status must normalize to I.",
+    "BR-007  SOUTH region must normalize to S.",
+    "BR-008  NORTH region must normalize to N.",
+    "BR-009  EAST region must normalize to E.",
+    "BR-010  WEST region must normalize to W.",
+    "BR-011  OPEN order status must normalize to PENDING.",
+    "BR-012  COMPLETED order status must remain COMPLETED.",
+    "BR-013  CANCELLED order status must remain CANCELLED.",
+    "BR-014  customer balance must be non-negative.",
+    "BR-015  order amount must be greater than zero.",
+    "BR-016  order_date must not be a future date relative to the migration run date.",
+    "BR-017  every order must reference an existing customer_id.",
+    "BR-019  source data must remain read-only.",
+    "BR-020  only validated records may proceed toward the DEV target.",
+    "BR-021  Customers must be processed before Orders (dependency-ordered load).",
+    "BR-022  re-running the migration must not create duplicate customer_id/order_id rows (idempotent load).",
+    "BR-023  source and target record counts must reconcile for both customers and orders.",
+    "BR-024  SUM(amount) per customer_id must reconcile between source and target.",
+    "BR-025  evidence must capture mappings, transformations, validation, load and reconciliation.",
+    "this list should be extended with payment reference-integrity and"
+  ],
+  "supporting_artifacts": [],
+  "source_scope": {
+    "mode": "UNSCOPED",
+    "predicates": [],
+    "description": "No row-level source scope compiled from business rules.",
+    "agent": "A200",
+    "orchestrator": "A000",
+    "execution_mode": "READ_ONLY_SCOPE_FILTER"
+  },
+  "source_scope_evidence": {
+    "mode": "UNSCOPED",
+    "description": "No row-level source scope compiled from business rules.",
+    "rows_scanned": 11,
+    "rows_matched": 11,
+    "entities": []
+  },
+  "transform_spec": {
+    "signature": "83b57dd77e3f9a9d3df27802ca06936e3582a6ac0465cef99fe4d5e61b2c1125",
+    "compiled_by": null,
+    "transforms": [],
+    "rules_considered": 25,
+    "status": "COMPILER_UNAVAILABLE"
+  },
+  "universal_business_logic_plan": {
+    "engine": "KMITORA_UNIVERSAL_TRANSFORMATION_ENGINE",
+    "version": "2.0.0",
+    "status": "COMPILED",
+    "internal_prompt_hash": "86bcee6e1f92664e339889aa17a05cd0b92a1837caca7d2ab2c97381eb6faaf2",
+    "internal_prompt": "You are KMITORA A230/A240 Business Logic and Transformation Compiler.\nCompile business intent into a declarative transformation plan. Never emit arbitrary code. Only use capability names from CAPABILITIES. Prefer deterministic operations. External calls, stored procedures, custom code and HTTP are PLAN_ONLY unless an approved adapter is explicitly configured. Every operation must trace to one or more business-rule IDs and real source/target fields. Source is read-only. Production writes and cutover are prohibited.\n\nSOURCE_MODEL={\"entities\": [{\"name\": \"customers\", \"logical_name\": \"customers\", \"fields\": [\"customer_id\", \"customer_name\", \"status\", \"region\", \"email\", \"balance\"], \"row_count\": 5, \"origin\": \"kmitora_source.customers\"}, {\"name\": \"orders\", \"logical_name\": \"orders\", \"fields\": [\"order_id\", \"customer_id\", \"order_date\", \"status\", \"amount\"], \"row_count\": 6, \"origin\": \"kmitora_source.orders\"}]}\nTARGET_MODEL={\"entities\": [{\"name\": \"customers\", \"logical_name\": \"customers\", \"fields\": [\"customer_id\", \"customer_name\", \"status\", \"region\", \"email\", \"balance\"], \"schema\": \"public\"}, {\"name\": \"orders\", \"logical_name\": \"orders\", \"fields\": [\"order_id\", \"customer_id\", \"order_date\", \"status\", \"amount\"], \"schema\": \"public\"}]}\nBUSINESS_RULES=[{\"id\": \"BR-001\", \"rule\": \"BR-001  customer_id must be unique and non-null.\"}, {\"id\": \"BR-002\", \"rule\": \"BR-002  order_id must be unique and non-null.\"}, {\"id\": \"BR-003\", \"rule\": \"BR-003  customer_name must be trimmed before target mapping.\"}, {\"id\": \"BR-004\", \"rule\": \"BR-004  email must be normalized to lowercase.\"}, {\"id\": \"BR-005\", \"rule\": \"BR-005  ACTIVE customer status must normalize to A.\"}, {\"id\": \"BR-006\", \"rule\": \"BR-006  INACTIVE customer status must normalize to I.\"}, {\"id\": \"BR-007\", \"rule\": \"BR-007  SOUTH region must normalize to S.\"}, {\"id\": \"BR-008\", \"rule\": \"BR-008  NORTH region must normalize to N.\"}, {\"id\": \"BR-009\", \"rule\": \"BR-009  EAST region must normalize to E.\"}, {\"id\": \"BR-010\", \"rule\": \"BR-010  WEST region must normalize to W.\"}, {\"id\": \"BR-011\", \"rule\": \"BR-011  OPEN order status must normalize to PENDING.\"}, {\"id\": \"BR-012\", \"rule\": \"BR-012  COMPLETED order status must remain COMPLETED.\"}, {\"id\": \"BR-013\", \"rule\": \"BR-013  CANCELLED order status must remain CANCELLED.\"}, {\"id\": \"BR-014\", \"rule\": \"BR-014  customer balance must be non-negative.\"}, {\"id\": \"BR-015\", \"rule\": \"BR-015  order amount must be greater than zero.\"}, {\"id\": \"BR-016\", \"rule\": \"BR-016  order_date must not be a future date relative to the migration run date.\"}, {\"id\": \"BR-017\", \"rule\": \"BR-017  every order must reference an existing customer_id.\"}, {\"id\": \"BR-018\", \"rule\": \"BR-019  source data must remain read-only.\"}, {\"id\": \"BR-019\", \"rule\": \"BR-020  only validated records may proceed toward the DEV target.\"}, {\"id\": \"BR-020\", \"rule\": \"BR-021  Customers must be processed before Orders (dependency-ordered load).\"}, {\"id\": \"BR-021\", \"rule\": \"BR-022  re-running the migration must not create duplicate customer_id/order_id rows (idempotent load).\"}, {\"id\": \"BR-022\", \"rule\": \"BR-023  source and target record counts must reconcile for both customers and orders.\"}, {\"id\": \"BR-023\", \"rule\": \"BR-024  SUM(amount) per customer_id must reconcile between source and target.\"}, {\"id\": \"BR-024\", \"rule\": \"BR-025  evidence must capture mappings, transformations, validation, load and reconciliation.\"}, {\"id\": \"BR-025\", \"rule\": \"this list should be extended with payment reference-integrity and\"}]\nCAPABILITIES=[{\"name\": \"Expression\", \"execution\": \"NATIVE\", \"capture\": \"Expressions, functions, datatypes, dependencies\"}, {\"name\": \"Aggregator\", \"execution\": \"NATIVE\", \"capture\": \"Group-by ports, aggregate expressions, sorted-input option\"}, {\"name\": \"Filter\", \"execution\": \"NATIVE\", \"capture\": \"Filter expression and rejected-row behavior\"}, {\"name\": \"Router\", \"execution\": \"NATIVE\", \"capture\": \"Group conditions, precedence, default group\"}, {\"name\": \"Joiner\", \"execution\": \"NATIVE\", \"capture\": \"Join type, master/detail, join keys, sorted-input settings\"}, {\"name\": \"Sorter\", \"execution\": \"NATIVE\", \"capture\": \"Sort keys, direction, distinct settings\"}, {\"name\": \"Lookup\", \"execution\": \"NATIVE\", \"capture\": \"Lookup source, condition, return fields, cache mode\"}, {\"name\": \"Update Strategy\", \"execution\": \"NATIVE\", \"capture\": \"Operation expressions and target effect\"}, {\"name\": \"Sequence Generator\", \"execution\": \"NATIVE\", \"capture\": \"Start value, increment, current/next value\"}, {\"name\": \"Union\", \"execution\": \"NATIVE\", \"capture\": \"Input groups, compatibility, ordering\"}, {\"name\": \"Rank\", \"execution\": \"NATIVE\", \"capture\": \"Rank field, group-by fields, top/bottom count\"}, {\"name\": \"Normalizer\", \"execution\": \"NATIVE\", \"capture\": \"Occurrence mapping, generated keys, source structure\"}, {\"name\": \"Transaction Control\", \"execution\": \"POLICY\", \"capture\": \"Commit/rollback conditions and boundaries\"}, {\"name\": \"Java Transformation\", \"execution\": \"ADAPTER\", \"capture\": \"Code, imports, ports, state, exceptions\"}, {\"name\": \"SQL Transformation\", \"execution\": \"ADAPTER\", \"capture\": \"SQL, parameters, connection, mode\"}, {\"name\": \"Stored Procedure\", \"execution\": \"ADAPTER\", \"capture\": \"Procedure, parameters, execution point\"}, {\"name\": \"Custom Transformation\", \"execution\": \"ADAPTER\", \"capture\": \"Library/procedure, I/O groups, transaction behavior\"}, {\"name\": \"External Procedure\", \"execution\": \"ADAPTER\", \"capture\": \"Procedure metadata, parameters, dependencies\"}, {\"name\": \"HTTP Transformation\", \"execution\": \"ADAPTER\", \"capture\": \"URL, method, request/response mapping, auth\"}, {\"name\": \"Web Service Consumer\", \"execution\": \"ADAPTER\", \"capture\": \"WSDL, operation, request/response ports\"}, {\"name\": \"XML Parser\", \"execution\": \"NATIVE\", \"capture\": \"Schema, hierarchy, XPath and relationships\"}, {\"name\": \"XML Generator\", \"execution\": \"NATIVE\", \"capture\": \"Hierarchy, schema, document/group boundaries\"}, {\"name\": \"XML Source Qualifier\", \"execution\": \"NATIVE\", \"capture\": \"Source hierarchy and extraction rules\"}, {\"name\": \"Source Qualifier\", \"execution\": \"NATIVE\", \"capture\": \"Pushdown filters, joins, sort and source metadata\"}, {\"name\": \"Application Source Qualifier\", \"execution\": \"ADAPTER\", \"capture\": \"Connector/source configuration\"}, {\"name\": \"Unstructured Data Transformation\", \"execution\": \"NATIVE\", \"capture\": \"Parsing rules, schemas, formats\"}, {\"name\": \"Data Masking\", \"execution\": \"NATIVE\", \"capture\": \"Masking rule, deterministic/random behavior, domains\"}, {\"name\": \"Hierarchy Parser\", \"execution\": \"NATIVE\", \"capture\": \"Schema, nested paths, arrays, relationships\"}, {\"name\": \"Hierarchy Builder\", \"execution\": \"NATIVE\", \"capture\": \"Hierarchy definition and output schema\"}, {\"name\": \"REST / Web Services\", \"execution\": \"ADAPTER\", \"capture\": \"Endpoint, payload, headers, auth, pagination\"}, {\"name\": \"Mapplet\", \"execution\": \"NATIVE\", \"capture\": \"Internal graph, parameters, reusable ports\"}, {\"name\": \"Mapplet\", \"execution\": \"NATIVE\", \"capture\": \"Nested lineage and dependencies\"}, {\"name\": \"Standardizer\", \"execution\": \"NATIVE\", \"capture\": \"Dictionaries/rules\"}, {\"name\": \"Parser\", \"execution\": \"NATIVE\", \"capture\": \"Patterns, tokens, output groups\"}, {\"name\": \"Address Validation\", \"execution\": \"NATIVE\", \"capture\": \"Country rules, reference data, confidence/status\"}, {\"name\": \"Labeler\", \"execution\": \"NATIVE\", \"capture\": \"Labels and token patterns\"}, {\"name\": \"Match\", \"execution\": \"NATIVE\", \"capture\": \"Fields, algorithms, weights, thresholds\"}, {\"name\": \"Exception\", \"execution\": \"NATIVE\", \"capture\": \"Conditions, workflow, resolution status\"}, {\"name\": \"Cleanse / Rule Specifications\", \"execution\": \"NATIVE\", \"capture\": \"Rule logic, dictionaries, reference tables\"}, {\"name\": \"Decision\", \"execution\": \"NATIVE\", \"capture\": \"Inputs, conditions, outputs\"}, {\"name\": \"Association\", \"execution\": \"NATIVE\", \"capture\": \"Association/grouping rules\"}, {\"name\": \"Key Generator\", \"execution\": \"NATIVE\", \"capture\": \"Algorithm and source fields\"}, {\"name\": \"Landing\", \"execution\": \"NATIVE\", \"capture\": \"Source, batch, raw attributes\"}, {\"name\": \"Stage / Cleanse\", \"execution\": \"NATIVE\", \"capture\": \"Cleanse and validation rules\"}, {\"name\": \"Tokenization\", \"execution\": \"NATIVE\", \"capture\": \"Token functions and match fields\"}, {\"name\": \"Match\", \"execution\": \"NATIVE\", \"capture\": \"Match rules, thresholds, strategy\"}, {\"name\": \"Merge\", \"execution\": \"NATIVE\", \"capture\": \"Merge groups and source records\"}, {\"name\": \"Survivorship\", \"execution\": \"NATIVE\", \"capture\": \"Trust, source priority, recency, validation rules\"}, {\"name\": \"Golden Record\", \"execution\": \"NATIVE\", \"capture\": \"Winning attributes and source lineage\"}, {\"name\": \"Cross-reference/XREF\", \"execution\": \"NATIVE\", \"capture\": \"Source keys, master key, record state\"}, {\"name\": \"Trust\", \"execution\": \"NATIVE\", \"capture\": \"Trust scores, decay and source priority\"}, {\"name\": \"Validation\", \"execution\": \"NATIVE\", \"capture\": \"Validation rules and reject behavior\"}]\n\nReturn JSON only: {\"nodes\":[{\"capability\":\"...\",\"op\":\"...\",\"entity\":\"...\",\"inputs\":[\"...\"],\"output\":null,\"field\":null,\"condition\":null,\"params\":{},\"business_rules\":[\"BR-001\"],\"confidence\":0.0}],\"entity_mappings\":[],\"dependencies\":[],\"target_mutations\":[]}.",
+    "llm_status": "UNAVAILABLE",
+    "nodes": [
+      {
+        "id": "TX-0441E6A98261",
+        "capability": "Validation",
+        "op": "VALIDATE_GT",
+        "entity": "orders",
+        "inputs": [],
+        "output": null,
+        "field": "amount",
+        "condition": null,
+        "params": {
+          "value": 0,
+          "on_fail": "REJECT"
+        },
+        "business_rules": [
+          "BR-015"
+        ],
+        "execution": "NATIVE",
+        "confidence": 0.98
+      },
+      {
+        "id": "TX-B0683EDFA5FB",
+        "capability": "Validation",
+        "op": "VALIDATE_REFERENCE",
+        "entity": "orders",
+        "inputs": [
+          "customer_id"
+        ],
+        "output": null,
+        "field": "customer_id_id",
+        "condition": null,
+        "params": {
+          "parent_entity": "customer_id",
+          "parent_field": "customer_id_id",
+          "on_fail": "REJECT"
+        },
+        "business_rules": [
+          "BR-017"
+        ],
+        "execution": "NATIVE",
+        "confidence": 0.98
+      }
+    ],
+    "entity_mappings": [],
+    "dependencies": [],
+    "target_mutations": [],
+    "rules": [
+      {
+        "id": "BR-001",
+        "rule": "BR-001  customer_id must be unique and non-null."
+      },
+      {
+        "id": "BR-002",
+        "rule": "BR-002  order_id must be unique and non-null."
+      },
+      {
+        "id": "BR-003",
+        "rule": "BR-003  customer_name must be trimmed before target mapping."
+      },
+      {
+        "id": "BR-004",
+        "rule": "BR-004  email must be normalized to lowercase."
+      },
+      {
+        "id": "BR-005",
+        "rule": "BR-005  ACTIVE customer status must normalize to A."
+      },
+      {
+        "id": "BR-006",
+        "rule": "BR-006  INACTIVE customer status must normalize to I."
+      },
+      {
+        "id": "BR-007",
+        "rule": "BR-007  SOUTH region must normalize to S."
+      },
+      {
+        "id": "BR-008",
+        "rule": "BR-008  NORTH region must normalize to N."
+      },
+      {
+        "id": "BR-009",
+        "rule": "BR-009  EAST region must normalize to E."
+      },
+      {
+        "id": "BR-010",
+        "rule": "BR-010  WEST region must normalize to W."
+      },
+      {
+        "id": "BR-011",
+        "rule": "BR-011  OPEN order status must normalize to PENDING."
+      },
+      {
+        "id": "BR-012",
+        "rule": "BR-012  COMPLETED order status must remain COMPLETED."
+      },
+      {
+        "id": "BR-013",
+        "rule": "BR-013  CANCELLED order status must remain CANCELLED."
+      },
+      {
+        "id": "BR-014",
+        "rule": "BR-014  customer balance must be non-negative."
+      },
+      {
+        "id": "BR-015",
+        "rule": "BR-015  order amount must be greater than zero."
+      },
+      {
+        "id": "BR-016",
+        "rule": "BR-016  order_date must not be a future date relative to the migration run date."
+      },
+      {
+        "id": "BR-017",
+        "rule": "BR-017  every order must reference an existing customer_id."
+      },
+      {
+        "id": "BR-018",
+        "rule": "BR-019  source data must remain read-only."
+      },
+      {
+        "id": "BR-019",
+        "rule": "BR-020  only validated records may proceed toward the DEV target."
+      },
+      {
+        "id": "BR-020",
+        "rule": "BR-021  Customers must be processed before Orders (dependency-ordered load)."
+      },
+      {
+        "id": "BR-021",
+        "rule": "BR-022  re-running the migration must not create duplicate customer_id/order_id rows (idempotent load)."
+      },
+      {
+        "id": "BR-022",
+        "rule": "BR-023  source and target record counts must reconcile for both customers and orders."
+      },
+      {
+        "id": "BR-023",
+        "rule": "BR-024  SUM(amount) per customer_id must reconcile between source and target."
+      },
+      {
+        "id": "BR-024",
+        "rule": "BR-025  evidence must capture mappings, transformations, validation, load and reconciliation."
+      },
+      {
+        "id": "BR-025",
+        "rule": "this list should be extended with payment reference-integrity and"
+      }
+    ],
+    "capability_coverage": {
+      "catalog_size": 52,
+      "planned_native": 2,
+      "planned_policy": 0,
+      "planned_adapter": 0
+    },
+    "safety": {
+      "source_write": false,
+      "target_write": false,
+      "production_action": false,
+      "arbitrary_code_execution": false
+    }
+  },
+  "universal_business_logic_simulation": {
+    "status": "SIMULATED",
+    "mode": "DETERMINISTIC_IN_MEMORY",
+    "counts": {
+      "customers": 5,
+      "orders": 6
+    },
+    "total_records": 11,
+    "applied_transform_count": 0,
+    "exception_count": 6,
+    "exceptions": [
+      {
+        "entity": "orders",
+        "row": 1,
+        "node_id": "TX-B0683EDFA5FB",
+        "reason": "customer_id_id must reference customer_id.customer_id_id",
+        "disposition": "REJECT"
+      },
+      {
+        "entity": "orders",
+        "row": 2,
+        "node_id": "TX-B0683EDFA5FB",
+        "reason": "customer_id_id must reference customer_id.customer_id_id",
+        "disposition": "REJECT"
+      },
+      {
+        "entity": "orders",
+        "row": 3,
+        "node_id": "TX-B0683EDFA5FB",
+        "reason": "customer_id_id must reference customer_id.customer_id_id",
+        "disposition": "REJECT"
+      },
+      {
+        "entity": "orders",
+        "row": 4,
+        "node_id": "TX-B0683EDFA5FB",
+        "reason": "customer_id_id must reference customer_id.customer_id_id",
+        "disposition": "REJECT"
+      },
+      {
+        "entity": "orders",
+        "row": 5,
+        "node_id": "TX-B0683EDFA5FB",
+        "reason": "customer_id_id must reference customer_id.customer_id_id",
+        "disposition": "REJECT"
+      },
+      {
+        "entity": "orders",
+        "row": 6,
+        "node_id": "TX-B0683EDFA5FB",
+        "reason": "customer_id_id must reference customer_id.customer_id_id",
+        "disposition": "REJECT"
+      }
+    ],
+    "target_mutation_records": [
+      {
+        "entity": "customers",
+        "row": 1,
+        "action": "INSERT",
+        "record": {
+          "customer_id": 1001,
+          "customer_name": "ABC Industries",
+          "status": "ACTIVE",
+          "region": "SOUTH",
+          "email": "accounts@abc.com",
+          "balance": "125000.00"
+        }
+      },
+      {
+        "entity": "customers",
+        "row": 2,
+        "action": "INSERT",
+        "record": {
+          "customer_id": 1002,
+          "customer_name": "XYZ Enterprises",
+          "status": "ACTIVE",
+          "region": "NORTH",
+          "email": "finance@xyz.com",
+          "balance": "238500.00"
+        }
+      },
+      {
+        "entity": "customers",
+        "row": 3,
+        "action": "INSERT",
+        "record": {
+          "customer_id": 1003,
+          "customer_name": "Delta Systems",
+          "status": "INACTIVE",
+          "region": "WEST",
+          "email": "ops@delta.com",
+          "balance": "78000.00"
+        }
+      },
+      {
+        "entity": "customers",
+        "row": 4,
+        "action": "INSERT",
+        "record": {
+          "customer_id": 1004,
+          "customer_name": "Nova Retail",
+          "status": "ACTIVE",
+          "region": "EAST",
+          "email": "admin@nova.com",
+          "balance": "415000.00"
+        }
+      },
+      {
+        "entity": "customers",
+        "row": 5,
+        "action": "INSERT",
+        "record": {
+          "customer_id": 1005,
+          "customer_name": "Omega Manufacturing",
+          "status": "ACTIVE",
+          "region": "SOUTH",
+          "email": "finance@omega.com",
+          "balance": "92500.00"
+        }
+      },
+      {
+        "entity": "orders",
+        "row": 1,
+        "action": "INSERT",
+        "record": {
+          "order_id": 9001,
+          "customer_id": 1001,
+          "order_date": "2026-08-01",
+          "status": "OPEN",
+          "amount": "12500.00"
+        }
+      },
+      {
+        "entity": "orders",
+        "row": 2,
+        "action": "INSERT",
+        "record": {
+          "order_id": 9002,
+          "customer_id": 1002,
+          "order_date": "2026-08-03",
+          "status": "COMPLETED",
+          "amount": "48000.00"
+        }
+      },
+      {
+        "entity": "orders",
+        "row": 3,
+        "action": "INSERT",
+        "record": {
+          "order_id": 9003,
+          "customer_id": 1001,
+          "order_date": "2026-08-05",
+          "status": "COMPLETED",
+          "amount": "19500.00"
+        }
+      },
+      {
+        "entity": "orders",
+        "row": 4,
+        "action": "INSERT",
+        "record": {
+          "order_id": 9004,
+          "customer_id": 1004,
+          "order_date": "2026-08-09",
+          "status": "OPEN",
+          "amount": "76000.00"
+        }
+      },
+      {
+        "entity": "orders",
+        "row": 5,
+        "action": "INSERT",
+        "record": {
+          "order_id": 9005,
+          "customer_id": 1005,
+          "order_date": "2026-08-10",
+          "status": "CANCELLED",
+          "amount": "8400.00"
+        }
+      },
+      {
+        "entity": "orders",
+        "row": 6,
+        "action": "INSERT",
+        "record": {
+          "order_id": 9006,
+          "customer_id": 1002,
+          "order_date": "2026-08-12",
+          "status": "OPEN",
+          "amount": "22400.00"
+        }
+      }
+    ],
+    "target_schema_mutations": [],
+    "plan_only_nodes": [],
+    "safety": {
+      "source_write": false,
+      "target_write": false,
+      "production_action": false
+    }
+  },
+  "relationships": [
+    {
+      "parent_entity": "customers",
+      "parent_field": "customer_id",
+      "child_entity": "orders",
+      "child_field": "customer_id",
+      "relationship_type": "FOREIGN_KEY_REFERENCE",
+      "business_rule": "RULE-017",
+      "orphan_values": [],
+      "status": "VALID",
+      "reason": "Every orders row must reference an existing customers row."
+    }
+  ],
+  "quality_findings": [],
+  "suggested_mappings": [
+    {
+      "source": "customers.customer_id",
+      "target": "customers.customer_id",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "customers.customer_name",
+      "target": "customers.customer_name",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "customers.status",
+      "target": "customers.status",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "customers.region",
+      "target": "customers.region",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "customers.email",
+      "target": "customers.email",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "customers.balance",
+      "target": "customers.balance",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "orders.order_id",
+      "target": "orders.order_id",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "orders.customer_id",
+      "target": "orders.customer_id",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "orders.order_date",
+      "target": "orders.order_date",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "orders.status",
+      "target": "orders.status",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    },
+    {
+      "source": "orders.amount",
+      "target": "orders.amount",
+      "confidence": 1.0,
+      "status": "ACCEPTED",
+      "decision": "ACCEPT",
+      "reason": "Source field maps to the target field of the same name.",
+      "business_rules": [],
+      "relationship_role": null,
+      "requires_transformation": false
+    }
+  ],
+  "transformation_plan": [
+    {
+      "action": "DIRECT_MAP",
+      "source": "customers.customer_id",
+      "target": "customers.customer_id",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "customers.customer_name",
+      "target": "customers.customer_name",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "customers.status",
+      "target": "customers.status",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "customers.region",
+      "target": "customers.region",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "customers.email",
+      "target": "customers.email",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "customers.balance",
+      "target": "customers.balance",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "orders.order_id",
+      "target": "orders.order_id",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "orders.customer_id",
+      "target": "orders.customer_id",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "orders.order_date",
+      "target": "orders.order_date",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "orders.status",
+      "target": "orders.status",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "DIRECT_MAP",
+      "source": "orders.amount",
+      "target": "orders.amount",
+      "business_rules": [],
+      "reason": "Source field maps to the target field of the same name.",
+      "confidence": 1.0,
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    },
+    {
+      "action": "REFERENTIAL_CHECK",
+      "source": "orders.customer_id",
+      "target": "customers.customer_id",
+      "business_rules": [
+        "RULE-017"
+      ],
+      "orphan_values": [],
+      "reason": "Every orders row must reference an existing customers row.",
+      "status": "PLANNED",
+      "execution_state": "NOT_EXECUTED"
+    }
+  ],
+  "record_dispositions": [],
+  "target_staging_plan": {
+    "status": "PLANNED",
+    "execution_state": "NOT_EXECUTED",
+    "target_write": false,
+    "ready_records": [
+      {
+        "entity": "customers",
+        "row": 2,
+        "source_record": {
+          "customer_id": 1001,
+          "customer_name": "ABC Industries",
+          "status": "ACTIVE",
+          "region": "SOUTH",
+          "email": "accounts@abc.com",
+          "balance": "125000.00"
+        },
+        "transformed_record": {
+          "customer_id": 1001,
+          "customer_name": "ABC Industries",
+          "status": "ACTIVE",
+          "region": "SOUTH",
+          "email": "accounts@abc.com",
+          "balance": "125000.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "customers",
+        "row": 3,
+        "source_record": {
+          "customer_id": 1002,
+          "customer_name": "XYZ Enterprises",
+          "status": "ACTIVE",
+          "region": "NORTH",
+          "email": "finance@xyz.com",
+          "balance": "238500.00"
+        },
+        "transformed_record": {
+          "customer_id": 1002,
+          "customer_name": "XYZ Enterprises",
+          "status": "ACTIVE",
+          "region": "NORTH",
+          "email": "finance@xyz.com",
+          "balance": "238500.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "customers",
+        "row": 4,
+        "source_record": {
+          "customer_id": 1003,
+          "customer_name": "Delta Systems",
+          "status": "INACTIVE",
+          "region": "WEST",
+          "email": "ops@delta.com",
+          "balance": "78000.00"
+        },
+        "transformed_record": {
+          "customer_id": 1003,
+          "customer_name": "Delta Systems",
+          "status": "INACTIVE",
+          "region": "WEST",
+          "email": "ops@delta.com",
+          "balance": "78000.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "customers",
+        "row": 5,
+        "source_record": {
+          "customer_id": 1004,
+          "customer_name": "Nova Retail",
+          "status": "ACTIVE",
+          "region": "EAST",
+          "email": "admin@nova.com",
+          "balance": "415000.00"
+        },
+        "transformed_record": {
+          "customer_id": 1004,
+          "customer_name": "Nova Retail",
+          "status": "ACTIVE",
+          "region": "EAST",
+          "email": "admin@nova.com",
+          "balance": "415000.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "customers",
+        "row": 6,
+        "source_record": {
+          "customer_id": 1005,
+          "customer_name": "Omega Manufacturing",
+          "status": "ACTIVE",
+          "region": "SOUTH",
+          "email": "finance@omega.com",
+          "balance": "92500.00"
+        },
+        "transformed_record": {
+          "customer_id": 1005,
+          "customer_name": "Omega Manufacturing",
+          "status": "ACTIVE",
+          "region": "SOUTH",
+          "email": "finance@omega.com",
+          "balance": "92500.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "orders",
+        "row": 2,
+        "source_record": {
+          "order_id": 9001,
+          "customer_id": 1001,
+          "order_date": "2026-08-01",
+          "status": "OPEN",
+          "amount": "12500.00"
+        },
+        "transformed_record": {
+          "order_id": 9001,
+          "customer_id": 1001,
+          "order_date": "2026-08-01",
+          "status": "OPEN",
+          "amount": "12500.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "orders",
+        "row": 3,
+        "source_record": {
+          "order_id": 9002,
+          "customer_id": 1002,
+          "order_date": "2026-08-03",
+          "status": "COMPLETED",
+          "amount": "48000.00"
+        },
+        "transformed_record": {
+          "order_id": 9002,
+          "customer_id": 1002,
+          "order_date": "2026-08-03",
+          "status": "COMPLETED",
+          "amount": "48000.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "orders",
+        "row": 4,
+        "source_record": {
+          "order_id": 9003,
+          "customer_id": 1001,
+          "order_date": "2026-08-05",
+          "status": "COMPLETED",
+          "amount": "19500.00"
+        },
+        "transformed_record": {
+          "order_id": 9003,
+          "customer_id": 1001,
+          "order_date": "2026-08-05",
+          "status": "COMPLETED",
+          "amount": "19500.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "orders",
+        "row": 5,
+        "source_record": {
+          "order_id": 9004,
+          "customer_id": 1004,
+          "order_date": "2026-08-09",
+          "status": "OPEN",
+          "amount": "76000.00"
+        },
+        "transformed_record": {
+          "order_id": 9004,
+          "customer_id": 1004,
+          "order_date": "2026-08-09",
+          "status": "OPEN",
+          "amount": "76000.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "orders",
+        "row": 6,
+        "source_record": {
+          "order_id": 9005,
+          "customer_id": 1005,
+          "order_date": "2026-08-10",
+          "status": "CANCELLED",
+          "amount": "8400.00"
+        },
+        "transformed_record": {
+          "order_id": 9005,
+          "customer_id": 1005,
+          "order_date": "2026-08-10",
+          "status": "CANCELLED",
+          "amount": "8400.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      },
+      {
+        "entity": "orders",
+        "row": 7,
+        "source_record": {
+          "order_id": 9006,
+          "customer_id": 1002,
+          "order_date": "2026-08-12",
+          "status": "OPEN",
+          "amount": "22400.00"
+        },
+        "transformed_record": {
+          "order_id": 9006,
+          "customer_id": 1002,
+          "order_date": "2026-08-12",
+          "status": "OPEN",
+          "amount": "22400.00"
+        },
+        "applied_transforms": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      }
+    ],
+    "review_records": [],
+    "quarantine_records": [],
+    "rejected_records": [],
+    "referential_dependencies": [
+      {
+        "source": "orders.customer_id",
+        "target": "customers.customer_id",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "value": null,
+        "business_rules": [
+          "RULE-017"
+        ],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED",
+        "target_write": false
+      }
+    ],
+    "evidence": [
+      {
+        "action": "DIRECT_MAP",
+        "source": "customers.customer_id",
+        "target": "customers.customer_id",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "customers.customer_name",
+        "target": "customers.customer_name",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "customers.status",
+        "target": "customers.status",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "customers.region",
+        "target": "customers.region",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "customers.email",
+        "target": "customers.email",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "customers.balance",
+        "target": "customers.balance",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "orders.order_id",
+        "target": "orders.order_id",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "orders.customer_id",
+        "target": "orders.customer_id",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "orders.order_date",
+        "target": "orders.order_date",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "orders.status",
+        "target": "orders.status",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "DIRECT_MAP",
+        "source": "orders.amount",
+        "target": "orders.amount",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      },
+      {
+        "action": "REFERENTIAL_CHECK",
+        "source": "orders.customer_id",
+        "target": "customers.customer_id",
+        "entity": null,
+        "field": null,
+        "row": null,
+        "business_rules": [
+          "RULE-017"
+        ],
+        "status": "PLANNED",
+        "execution_state": "NOT_EXECUTED"
+      }
+    ]
+  },
+  "summary": {
+    "source_entity_count": 2,
+    "target_entity_count": 2,
+    "business_rule_count": 25,
+    "supporting_artifact_count": 0,
+    "source_scope_mode": "UNSCOPED",
+    "source_scope_description": "No row-level source scope compiled from business rules.",
+    "source_rows_scanned": 11,
+    "source_rows_matched": 11,
+    "relationship_count": 1,
+    "quality_finding_count": 0,
+    "transformation_plan_count": 12,
+    "universal_logic_node_count": 2,
+    "universal_logic_applied_transform_count": 0,
+    "universal_logic_exception_count": 6,
+    "universal_logic_capability_catalog_size": 52,
+    "record_disposition_count": 0,
+    "staging_ready_count": 11,
+    "staging_review_count": 0,
+    "staging_quarantine_count": 0,
+    "staging_rejected_count": 0,
+    "staging_referential_dependency_count": 1
+  }
+}

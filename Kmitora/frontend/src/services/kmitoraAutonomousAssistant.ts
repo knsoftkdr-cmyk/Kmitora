@@ -29,7 +29,7 @@ export type AssistantPlan = {
   steps: AssistantPlanStep[];
 };
 
-const RUNTIME = "http://127.0.0.1:8083";
+const RUNTIME = import.meta.env.VITE_ASSISTANT_API_URL || "http://127.0.0.1:8083";
 
 function localPlan(prompt: string, mode: AssistantMode): AssistantPlan {
   const lower = prompt.toLowerCase();

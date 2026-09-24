@@ -1,0 +1,751 @@
+{
+  "execution_id": "9240d349-a66e-4129-b6b6-6713929c327a",
+  "parent_dry_run_execution_id": "cb70f1aa-4d9f-4a81-ae6d-5fabaa76e46b",
+  "migration_id": "DEV-UNIFIED-20260923113711",
+  "approval_id": "e695b031-c19b-48ce-b140-ae6b3034ca2c",
+  "target_id": "TGT-99D55D3D5735",
+  "status": "POST_LOAD_COMPLETED",
+  "execution_gate": "PASS",
+  "execution_mode": "DEV_REPLACE_LOAD",
+  "environment": "DEV",
+  "input_record_count": 11,
+  "simulated_record_count": 11,
+  "success_count": 11,
+  "failure_count": 0,
+  "loaded_record_count": 11,
+  "record_results": [
+    {
+      "sequence": 1,
+      "entity": "customers",
+      "row": 2,
+      "record_key": null,
+      "source_record": {
+        "customer_id": 1001,
+        "customer_name": "ABC Industries",
+        "status": "ACTIVE",
+        "region": "SOUTH",
+        "email": "accounts@abc.com",
+        "balance": "125000.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 6,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_id",
+          "target": "customers.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_name",
+          "target": "customers.customer_name",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.status",
+          "target": "customers.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.region",
+          "target": "customers.region",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.email",
+          "target": "customers.email",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.balance",
+          "target": "customers.balance",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 2,
+      "entity": "customers",
+      "row": 3,
+      "record_key": null,
+      "source_record": {
+        "customer_id": 1002,
+        "customer_name": "XYZ Enterprises",
+        "status": "ACTIVE",
+        "region": "NORTH",
+        "email": "finance@xyz.com",
+        "balance": "238500.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 6,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_id",
+          "target": "customers.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_name",
+          "target": "customers.customer_name",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.status",
+          "target": "customers.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.region",
+          "target": "customers.region",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.email",
+          "target": "customers.email",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.balance",
+          "target": "customers.balance",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 3,
+      "entity": "customers",
+      "row": 4,
+      "record_key": null,
+      "source_record": {
+        "customer_id": 1003,
+        "customer_name": "Delta Systems",
+        "status": "INACTIVE",
+        "region": "WEST",
+        "email": "ops@delta.com",
+        "balance": "78000.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 6,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_id",
+          "target": "customers.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_name",
+          "target": "customers.customer_name",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.status",
+          "target": "customers.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.region",
+          "target": "customers.region",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.email",
+          "target": "customers.email",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.balance",
+          "target": "customers.balance",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 4,
+      "entity": "customers",
+      "row": 5,
+      "record_key": null,
+      "source_record": {
+        "customer_id": 1004,
+        "customer_name": "Nova Retail",
+        "status": "ACTIVE",
+        "region": "EAST",
+        "email": "admin@nova.com",
+        "balance": "415000.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 6,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_id",
+          "target": "customers.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_name",
+          "target": "customers.customer_name",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.status",
+          "target": "customers.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.region",
+          "target": "customers.region",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.email",
+          "target": "customers.email",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.balance",
+          "target": "customers.balance",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 5,
+      "entity": "customers",
+      "row": 6,
+      "record_key": null,
+      "source_record": {
+        "customer_id": 1005,
+        "customer_name": "Omega Manufacturing",
+        "status": "ACTIVE",
+        "region": "SOUTH",
+        "email": "finance@omega.com",
+        "balance": "92500.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 6,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_id",
+          "target": "customers.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.customer_name",
+          "target": "customers.customer_name",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.status",
+          "target": "customers.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.region",
+          "target": "customers.region",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.email",
+          "target": "customers.email",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "customers.balance",
+          "target": "customers.balance",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 6,
+      "entity": "orders",
+      "row": 2,
+      "record_key": null,
+      "source_record": {
+        "order_id": 9001,
+        "customer_id": 1001,
+        "order_date": "2026-08-01",
+        "status": "OPEN",
+        "amount": "12500.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 5,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_id",
+          "target": "orders.order_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.customer_id",
+          "target": "orders.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_date",
+          "target": "orders.order_date",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.status",
+          "target": "orders.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.amount",
+          "target": "orders.amount",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 7,
+      "entity": "orders",
+      "row": 3,
+      "record_key": null,
+      "source_record": {
+        "order_id": 9002,
+        "customer_id": 1002,
+        "order_date": "2026-08-03",
+        "status": "COMPLETED",
+        "amount": "48000.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 5,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_id",
+          "target": "orders.order_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.customer_id",
+          "target": "orders.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_date",
+          "target": "orders.order_date",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.status",
+          "target": "orders.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.amount",
+          "target": "orders.amount",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 8,
+      "entity": "orders",
+      "row": 4,
+      "record_key": null,
+      "source_record": {
+        "order_id": 9003,
+        "customer_id": 1001,
+        "order_date": "2026-08-05",
+        "status": "COMPLETED",
+        "amount": "19500.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 5,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_id",
+          "target": "orders.order_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.customer_id",
+          "target": "orders.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_date",
+          "target": "orders.order_date",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.status",
+          "target": "orders.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.amount",
+          "target": "orders.amount",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 9,
+      "entity": "orders",
+      "row": 5,
+      "record_key": null,
+      "source_record": {
+        "order_id": 9004,
+        "customer_id": 1004,
+        "order_date": "2026-08-09",
+        "status": "OPEN",
+        "amount": "76000.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 5,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_id",
+          "target": "orders.order_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.customer_id",
+          "target": "orders.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_date",
+          "target": "orders.order_date",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.status",
+          "target": "orders.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.amount",
+          "target": "orders.amount",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 10,
+      "entity": "orders",
+      "row": 6,
+      "record_key": null,
+      "source_record": {
+        "order_id": 9005,
+        "customer_id": 1005,
+        "order_date": "2026-08-10",
+        "status": "CANCELLED",
+        "amount": "8400.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 5,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_id",
+          "target": "orders.order_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.customer_id",
+          "target": "orders.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_date",
+          "target": "orders.order_date",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.status",
+          "target": "orders.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.amount",
+          "target": "orders.amount",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    },
+    {
+      "sequence": 11,
+      "entity": "orders",
+      "row": 7,
+      "record_key": null,
+      "source_record": {
+        "order_id": 9006,
+        "customer_id": 1002,
+        "order_date": "2026-08-12",
+        "status": "OPEN",
+        "amount": "22400.00"
+      },
+      "status": "SIMULATED",
+      "transformation_count": 5,
+      "transformations": [
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_id",
+          "target": "orders.order_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.customer_id",
+          "target": "orders.customer_id",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.order_date",
+          "target": "orders.order_date",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.status",
+          "target": "orders.status",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        },
+        {
+          "action": "DIRECT_MAP",
+          "source": "orders.amount",
+          "target": "orders.amount",
+          "business_rules": [],
+          "status": "SIMULATED",
+          "target_write": false
+        }
+      ],
+      "target_write_executed": false,
+      "production_action_executed": false
+    }
+  ],
+  "write_results": [
+    {
+      "table": "public.customers",
+      "attempted": 5,
+      "inserted": 5,
+      "skipped_no_matching_columns": 0
+    },
+    {
+      "table": "public.orders",
+      "attempted": 6,
+      "inserted": 6,
+      "skipped_no_matching_columns": 0
+    }
+  ],
+  "target_counts": {
+    "customers": 5,
+    "orders": 6
+  },
+  "disposition_summary": {
+    "ready": 11,
+    "review": 0,
+    "quarantine": 0,
+    "rejected": 0
+  },
+  "held_records_preserved": true,
+  "review_records_written": false,
+  "quarantine_records_written": false,
+  "rejected_records_written": false,
+  "source_write_executed": false,
+  "target_write_executed": true,
+  "production_executed": false,
+  "production_action_executed": false,
+  "cutover": "DISABLED",
+  "completed_at": "2026-09-23T11:38:12.737196+00:00",
+  "reconciled": true,
+  "reconciliation_id": "43e582ab-3f6a-44d5-9fd1-96324732cf64",
+  "reconciliation_status": "PASS",
+  "reconciled_at": "2026-09-23T11:38:40.422780+00:00",
+  "persistence_version": "EXECUTION_CONTEXT_001"
+}

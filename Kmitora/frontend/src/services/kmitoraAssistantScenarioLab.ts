@@ -19,10 +19,10 @@ type ServiceState = {
   modelConfigured: boolean;
 };
 
-const CORE = "http://127.0.0.1:8080";
-const SOURCE = "http://127.0.0.1:8081";
-const TARGET = "http://127.0.0.1:8082";
-const ASSISTANT = "http://127.0.0.1:8083";
+const CORE = import.meta.env.VITE_CORE_API_URL || "http://127.0.0.1:8090";
+const SOURCE = import.meta.env.VITE_SOURCE_API_URL || "http://127.0.0.1:8081";
+const TARGET = import.meta.env.VITE_TARGET_API_URL || "http://127.0.0.1:8082";
+const ASSISTANT = import.meta.env.VITE_ASSISTANT_API_URL || "http://127.0.0.1:8083";
 
 async function json(url: string, init?: RequestInit): Promise<Record<string, unknown>> {
   const response = await fetch(url, init);

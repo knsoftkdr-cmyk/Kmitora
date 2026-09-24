@@ -1,0 +1,40 @@
+{
+  "id": "e695b031-c19b-48ce-b140-ae6b3034ca2c",
+  "migration_id": "DEV-UNIFIED-20260923113711",
+  "status": "APPROVED",
+  "approved": true,
+  "rejected": false,
+  "superseded": false,
+  "requires_authoritative_approver": true,
+  "requested_at": "2026-09-23T11:37:44.966086+00:00",
+  "decision_at": "2026-09-23T11:38:02.567141+00:00",
+  "decision_by": "DEV_AUTHORIZED_REVIEWER",
+  "decision_reason": "Approved by Aswini",
+  "production_action_executed": false,
+  "target_write_executed": false,
+  "input": {
+    "migration_id": "DEV-UNIFIED-20260923113711",
+    "requested_action": "MIGRATION_APPROVAL",
+    "environment": "DEV",
+    "execution_requested": false,
+    "target_write_requested": false,
+    "staging_snapshot": {
+      "total_planned_records": 11,
+      "ready_records": 11,
+      "blocked_records": 0,
+      "review_records": 0,
+      "quarantine_records": 0,
+      "rejected_records": 0
+    },
+    "validation_snapshot": {
+      "quality_findings": 0,
+      "blocking_findings": 0,
+      "validation_ready": true
+    },
+    "safety": {
+      "production_action_executed": false,
+      "target_write_detected": false
+    }
+  },
+  "persistence_version": "APPROVAL_CONTEXT_001"
+}

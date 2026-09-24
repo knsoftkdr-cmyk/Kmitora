@@ -57,7 +57,7 @@ type UnifiedContext = {
   environment?: string;
 };
 
-const RUNTIME = "http://127.0.0.1:8083";
+const RUNTIME = import.meta.env.VITE_ASSISTANT_API_URL || "http://127.0.0.1:8083";
 
 function clean(value: unknown): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";

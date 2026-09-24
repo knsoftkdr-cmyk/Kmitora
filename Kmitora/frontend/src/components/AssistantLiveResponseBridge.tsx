@@ -12,7 +12,7 @@ type ChatTurn = {
 type UnknownRecord = Record<string, unknown>;
 
 const A000_BASE = import.meta.env.VITE_API_BASE || "";
-const ASSISTANT_RUNTIME = "http://127.0.0.1:8083";
+const ASSISTANT_RUNTIME = import.meta.env.VITE_ASSISTANT_API_URL || "http://127.0.0.1:8083";
 const PAGE_LABELS: Record<string, string> = {
   overview: "Control Tower",
   understand: "Understand",
