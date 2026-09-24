@@ -150,4 +150,16 @@ if __name__=="__main__":
     print(f"Workspace: {ROOT}")
     print("Production mutation: DISABLED")
     print("KMITORA model runtime:", "CONFIGURED" if MODEL_ENDPOINT else "NOT CONFIGURED")
-    ThreadingHTTPServer(("127.0.0.1",PORT),Handler).serve_forever()
+    import sys as _port_sys
+    from pathlib import Path as _PortPath
+    _project_root = _PortPath(__file__).resolve().parents[1]
+    _port_sys.path.insert(0, str(_project_root / "backend"))
+    from port_utils import find_free_port, write_active_port
+    resolved_port = find_free_port(PORT)
+    write_active_port("assistant", resolved_port, _project_root)
+    print(f"KMITORA Assistant Runtime actually listening on http://127.0.0.1:{resolved_port}")
+    try:
+        ThreadingHTTPServer(("127.0.0.1",resolved_port),Handler).serve_forever()
+    except KeyboardInterrupt:
+        pass
+

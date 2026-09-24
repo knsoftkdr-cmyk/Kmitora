@@ -9618,6 +9618,13 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def run(host: str = HOST, port: int = PORT) -> None:
+    import sys as _port_sys
+    from pathlib import Path as _PortPath
+    _project_root = _PortPath(__file__).resolve().parents[2]
+    _port_sys.path.insert(0, str(_project_root / "backend"))
+    from port_utils import find_free_port, write_active_port
+    port = find_free_port(port)
+    write_active_port("core", port, _project_root)
     server = ThreadingHTTPServer((host, port), Handler)
     print(f"KMITORA A000 reference runtime listening on http://{host}:{port}")
     try:
@@ -9665,4 +9672,6 @@ try:
 except Exception as kmitora_a000_core_error:
     print(f"[KMITORA] A000 core intelligence router not loaded: {kmitora_a000_core_error}")
 # END KMITORA_A000_E2E_INTELLIGENCE_013_026
+
+
 

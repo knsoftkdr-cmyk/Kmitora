@@ -680,11 +680,20 @@ def main():
     print("Credentials: PROCESS MEMORY ONLY")
     print("Production target writes: DISABLED")
     print("Cutover: DISABLED")
-    s=ThreadingHTTPServer((HOST,PORT),Handler)
+    import sys as _port_sys
+    from pathlib import Path as _PortPath
+    _project_root = _PortPath(__file__).resolve().parents[2]
+    _port_sys.path.insert(0, str(_project_root / "backend"))
+    from port_utils import find_free_port, write_active_port
+    resolved_port = find_free_port(PORT)
+    write_active_port("target", resolved_port, _project_root)
+    print(f"KMITORA Target API actually listening on http://{HOST}:{resolved_port}")
+    s=ThreadingHTTPServer((HOST,resolved_port),Handler)
     try: s.serve_forever()
     except KeyboardInterrupt: pass
     finally: s.server_close()
 
 if __name__=="__main__":
     main()
+
 
