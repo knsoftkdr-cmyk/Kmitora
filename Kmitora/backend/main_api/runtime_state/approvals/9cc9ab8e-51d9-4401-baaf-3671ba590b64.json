@@ -1,0 +1,33 @@
+{
+  "id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+  "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+  "status": "APPROVED",
+  "approved": true,
+  "rejected": false,
+  "superseded": false,
+  "requires_authoritative_approver": true,
+  "requested_at": "2026-09-25T08:37:01.527737+00:00",
+  "decision_at": "2026-09-25T08:37:01.571822+00:00",
+  "decision_by": "KMITORA Assistant (DEV operator confirmation in chat)",
+  "decision_reason": "User confirmed the governed DEV migration in KMITORA Assistant chat: \"yes\"",
+  "production_action_executed": false,
+  "target_write_executed": false,
+  "input": {
+    "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+    "validation_snapshot": {
+      "validation_ready": true,
+      "blocking_findings": 0
+    },
+    "staging_snapshot": {
+      "ready_records": 11,
+      "blocked_records": 0,
+      "review_records": 0,
+      "quarantine_records": 0,
+      "rejected_records": 0
+    },
+    "environment": "DEV",
+    "execution_mode": "DRY_RUN",
+    "target_write_requested": false
+  },
+  "persistence_version": "APPROVAL_CONTEXT_001"
+}

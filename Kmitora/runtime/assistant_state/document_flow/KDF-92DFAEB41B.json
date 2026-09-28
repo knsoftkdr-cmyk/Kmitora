@@ -1,0 +1,1556 @@
+{
+  "session_id": "KDF-92DFAEB41B",
+  "status": "COMPLETED",
+  "model": "gemini-3.7-flash",
+  "plan": {
+    "project": "Customer & Order Migration - DEV",
+    "source": {
+      "type": "mysql",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "database": "kmitora_source",
+      "schema": "",
+      "username": "kmitora",
+      "tables": [
+        "customers",
+        "orders"
+      ],
+      "password": "<provided in document - injected by KMITORA at execution, never shown>"
+    },
+    "target": {
+      "type": "postgresql",
+      "host": "127.0.0.1",
+      "port": 5433,
+      "database": "kmitora_target",
+      "schema": "public",
+      "username": "kmitora",
+      "environment": "DEV",
+      "password": "<provided in document - injected by KMITORA at execution, never shown>"
+    },
+    "business_rules": [
+      {
+        "id": "BR-001",
+        "text": "customer_id must be unique and non-null."
+      },
+      {
+        "id": "BR-002",
+        "text": "order_id must be unique and non-null."
+      },
+      {
+        "id": "BR-003",
+        "text": "customer_name must be trimmed before target mapping."
+      },
+      {
+        "id": "BR-004",
+        "text": "email must be normalized to lowercase."
+      },
+      {
+        "id": "BR-005",
+        "text": "ACTIVE customer status must normalize to A."
+      },
+      {
+        "id": "BR-006",
+        "text": "INACTIVE customer status must normalize to I."
+      },
+      {
+        "id": "BR-007",
+        "text": "SOUTH region must normalize to S."
+      },
+      {
+        "id": "BR-008",
+        "text": "NORTH region must normalize to N."
+      },
+      {
+        "id": "BR-009",
+        "text": "EAST region must normalize to E."
+      },
+      {
+        "id": "BR-010",
+        "text": "WEST region must normalize to W."
+      },
+      {
+        "id": "BR-011",
+        "text": "OPEN order status must normalize to PENDING."
+      },
+      {
+        "id": "BR-012",
+        "text": "COMPLETED order status must remain COMPLETED."
+      },
+      {
+        "id": "BR-013",
+        "text": "CANCELLED order status must remain CANCELLED."
+      },
+      {
+        "id": "BR-014",
+        "text": "customer balance must be non-negative."
+      },
+      {
+        "id": "BR-015",
+        "text": "order amount must be greater than zero."
+      },
+      {
+        "id": "BR-016",
+        "text": "order_date must not be a future date relative to the migration run date."
+      },
+      {
+        "id": "BR-017",
+        "text": "every order must reference an existing customer_id."
+      },
+      {
+        "id": "BR-018",
+        "text": "no order may be loaded whose parent customer failed migration."
+      },
+      {
+        "id": "BR-019",
+        "text": "source data must remain read-only."
+      },
+      {
+        "id": "BR-020",
+        "text": "only validated records may proceed toward the DEV target."
+      },
+      {
+        "id": "BR-021",
+        "text": "Customers must be processed before Orders (dependency-ordered load)."
+      },
+      {
+        "id": "BR-022",
+        "text": "re-running the migration must not create duplicate customer_id/order_id rows."
+      },
+      {
+        "id": "BR-023",
+        "text": "source and target record counts must reconcile for both customers and orders."
+      },
+      {
+        "id": "BR-024",
+        "text": "SUM(amount) per customer_id must reconcile between source and target."
+      },
+      {
+        "id": "BR-025",
+        "text": "evidence must capture mappings, transformations, validation, load and reconciliation."
+      }
+    ],
+    "instruction": "Connect the source and target systems above, apply the business rules, discover the source schema, validate against the rules, and run a governed DEV migration of customers and orders. Do not perform any production migration or cutover. Produce evidence at each stage.",
+    "production_requested": false
+  },
+  "ids": {
+    "source_id": "SRC-1F97F97BA5E8",
+    "target_id": "TGT-99D55D3D5735",
+    "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+    "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+    "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+    "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+    "evidence_id": "5a1f2f3e-7123-4c6f-8372-a8a838f06d5a"
+  },
+  "pending": null,
+  "events": [
+    {
+      "ts": "2026-09-25T13:45:57",
+      "event": "extracted",
+      "plan": {
+        "project": "Customer & Order Migration - DEV",
+        "source": {
+          "type": "mysql",
+          "host": "127.0.0.1",
+          "port": 3306,
+          "database": "kmitora_source",
+          "schema": "",
+          "username": "kmitora",
+          "tables": [
+            "customers",
+            "orders"
+          ],
+          "password": "<provided in document - injected by KMITORA at execution, never shown>"
+        },
+        "target": {
+          "type": "postgresql",
+          "host": "127.0.0.1",
+          "port": 5433,
+          "database": "kmitora_target",
+          "schema": "public",
+          "username": "kmitora",
+          "environment": "DEV",
+          "password": "<provided in document - injected by KMITORA at execution, never shown>"
+        },
+        "business_rules": [
+          {
+            "id": "BR-001",
+            "text": "customer_id must be unique and non-null."
+          },
+          {
+            "id": "BR-002",
+            "text": "order_id must be unique and non-null."
+          },
+          {
+            "id": "BR-003",
+            "text": "customer_name must be trimmed before target mapping."
+          },
+          {
+            "id": "BR-004",
+            "text": "email must be normalized to lowercase."
+          },
+          {
+            "id": "BR-005",
+            "text": "ACTIVE customer status must normalize to A."
+          },
+          {
+            "id": "BR-006",
+            "text": "INACTIVE customer status must normalize to I."
+          },
+          {
+            "id": "BR-007",
+            "text": "SOUTH region must normalize to S."
+          },
+          {
+            "id": "BR-008",
+            "text": "NORTH region must normalize to N."
+          },
+          {
+            "id": "BR-009",
+            "text": "EAST region must normalize to E."
+          },
+          {
+            "id": "BR-010",
+            "text": "WEST region must normalize to W."
+          },
+          {
+            "id": "BR-011",
+            "text": "OPEN order status must normalize to PENDING."
+          },
+          {
+            "id": "BR-012",
+            "text": "COMPLETED order status must remain COMPLETED."
+          },
+          {
+            "id": "BR-013",
+            "text": "CANCELLED order status must remain CANCELLED."
+          },
+          {
+            "id": "BR-014",
+            "text": "customer balance must be non-negative."
+          },
+          {
+            "id": "BR-015",
+            "text": "order amount must be greater than zero."
+          },
+          {
+            "id": "BR-016",
+            "text": "order_date must not be a future date relative to the migration run date."
+          },
+          {
+            "id": "BR-017",
+            "text": "every order must reference an existing customer_id."
+          },
+          {
+            "id": "BR-018",
+            "text": "no order may be loaded whose parent customer failed migration."
+          },
+          {
+            "id": "BR-019",
+            "text": "source data must remain read-only."
+          },
+          {
+            "id": "BR-020",
+            "text": "only validated records may proceed toward the DEV target."
+          },
+          {
+            "id": "BR-021",
+            "text": "Customers must be processed before Orders (dependency-ordered load)."
+          },
+          {
+            "id": "BR-022",
+            "text": "re-running the migration must not create duplicate customer_id/order_id rows."
+          },
+          {
+            "id": "BR-023",
+            "text": "source and target record counts must reconcile for both customers and orders."
+          },
+          {
+            "id": "BR-024",
+            "text": "SUM(amount) per customer_id must reconcile between source and target."
+          },
+          {
+            "id": "BR-025",
+            "text": "evidence must capture mappings, transformations, validation, load and reconciliation."
+          }
+        ],
+        "instruction": "Connect the source and target systems above, apply the business rules, discover the source schema, validate against the rules, and run a governed DEV migration of customers and orders. Do not perform any production migration or cutover. Produce evidence at each stage.",
+        "production_requested": false
+      }
+    },
+    {
+      "ts": "2026-09-25T13:46:00",
+      "event": "proposal",
+      "phase": "CONNECT",
+      "lines": [
+        "Create SOURCE connection 'Customer & Order Migration - DEV source': POST Source API http://127.0.0.1:8081/v1/sources",
+        "   mysql://kmitora@127.0.0.1:3306/kmitora_source | read-only | password: from document (not shown)",
+        "Create TARGET connection 'Customer & Order Migration - DEV target': POST Target API http://127.0.0.1:8082/v1/targets",
+        "   postgresql://kmitora@127.0.0.1:5433/kmitora_target | schema public | environment DEV | password: from document (not shown)"
+      ]
+    },
+    {
+      "ts": "2026-09-25T13:46:55",
+      "event": "user_message",
+      "kind": "CONFIRM",
+      "text": "yes"
+    },
+    {
+      "ts": "2026-09-25T13:46:55",
+      "event": "confirmed",
+      "phase": "CONNECT",
+      "text": "yes"
+    },
+    {
+      "ts": "2026-09-25T13:46:55",
+      "event": "tool_executed",
+      "tool": "create_source_connection",
+      "phase": "CONNECT",
+      "args": {
+        "type": "mysql",
+        "database": "kmitora_source",
+        "port": 3306,
+        "name": "Customer & Order Migration - DEV source",
+        "schema": "",
+        "host": "127.0.0.1",
+        "username": "kmitora"
+      },
+      "result": {
+        "ok": false,
+        "error": "POST source/v1/sources failed with HTTP 400: (1045, \"Access denied for user 'kmitora'@'localhost' (using password: YES)\")"
+      }
+    },
+    {
+      "ts": "2026-09-25T13:47:03",
+      "event": "tool_executed",
+      "tool": "create_target_connection",
+      "phase": "CONNECT",
+      "args": {
+        "database": "kmitora_target",
+        "host": "127.0.0.1",
+        "type": "postgresql",
+        "username": "kmitora",
+        "name": "Customer & Order Migration - DEV target",
+        "port": 5433,
+        "schema": "public",
+        "environment": "DEV"
+      },
+      "result": {
+        "ok": false,
+        "error": "POST target/v1/targets failed with HTTP 400: connection timeout expired"
+      }
+    },
+    {
+      "ts": "2026-09-25T13:57:25",
+      "event": "user_message",
+      "kind": "DECLINE",
+      "text": "KMITORA MIGRATION REQUEST\nProject: Customer & Order Migration - DEV\n\n===========================================\nSOURCE SYSTEM\n===========================================\nType: MySQL\nHost: 127.0.0.1\nPort: 3306\nDatabase: kmitora_source\nUsername: kmitora\nPassword: kmitora\nTables to migrate: customers, orders\n\n===========================================\nTARGET SYSTEM\n===========================================\nType: PostgreSQL\nHost: 127.0.0.1\nPort: 5433\nDatabase: kmitora_target\nSchema: public\nUsern"
+    },
+    {
+      "ts": "2026-09-25T13:57:28",
+      "event": "tool_executed",
+      "tool": "create_source_connection",
+      "phase": "CONNECT",
+      "args": {
+        "type": "mysql",
+        "name": "Customer & Order Migration - DEV source",
+        "username": "kmitora",
+        "host": "127.0.0.1",
+        "database": "kmitora_source",
+        "schema": "",
+        "port": 3306
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "status": "CONNECTED",
+          "source_id": "SRC-1F97F97BA5E8",
+          "source": {
+            "id": "SRC-1F97F97BA5E8",
+            "name": "Customer & Order Migration - DEV source",
+            "type": "mysql",
+            "status": "connected",
+            "host": "127.0.0.1",
+            "port": 3306,
+            "database": "kmitora_source",
+            "schema": null,
+            "filePath": null
+          }
+        }
+      }
+    },
+    {
+      "ts": "2026-09-25T13:57:29",
+      "event": "tool_executed",
+      "tool": "create_target_connection",
+      "phase": "CONNECT",
+      "args": {
+        "database": "kmitora_target",
+        "environment": "DEV",
+        "host": "127.0.0.1",
+        "type": "postgresql",
+        "name": "Customer & Order Migration - DEV target",
+        "port": 5433,
+        "username": "kmitora",
+        "schema": "public"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "status": "CONNECTED",
+          "target_id": "TGT-99D55D3D5735",
+          "target": {
+            "id": "TGT-99D55D3D5735",
+            "name": "Customer & Order Migration - DEV target",
+            "type": "postgresql",
+            "status": "connected",
+            "host": "127.0.0.1",
+            "port": 5433,
+            "database": "kmitora_target",
+            "schema": "public",
+            "environment": "DEV"
+          }
+        }
+      }
+    },
+    {
+      "ts": "2026-09-25T13:57:32",
+      "event": "proposal",
+      "phase": "VALIDATE",
+      "lines": [
+        "Discover source SRC-1F97F97BA5E8 against DEV target TGT-99D55D3D5735 (schema public)",
+        "   tables: customers, orders | business rules: 25 | Core POST http://127.0.0.1:8090/v1/discovery/jobs (read-only)",
+        "   then validate the business rules on the result: Core POST /v1/validations/resolve-governed (no writes)"
+      ]
+    },
+    {
+      "ts": "2026-09-25T13:58:24",
+      "event": "user_message",
+      "kind": "CONFIRM",
+      "text": "yes"
+    },
+    {
+      "ts": "2026-09-25T13:58:24",
+      "event": "confirmed",
+      "phase": "VALIDATE",
+      "text": "yes"
+    },
+    {
+      "ts": "2026-09-25T13:58:25",
+      "event": "tool_executed",
+      "tool": "discover_source_schema",
+      "phase": "VALIDATE",
+      "args": {
+        "target_schema": "public",
+        "source_id": "SRC-1F97F97BA5E8",
+        "tables": [
+          "customers",
+          "orders"
+        ],
+        "target_id": "TGT-99D55D3D5735"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "status": "DISCOVERED",
+          "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+          "mode": "DISCOVERY_ONLY",
+          "summary": {
+            "source_entity_count": 2,
+            "target_entity_count": 2,
+            "business_rule_count": 25,
+            "supporting_artifact_count": 0,
+            "source_scope_mode": "UNSCOPED",
+            "source_scope_description": "No row-level source scope compiled from business rules.",
+            "source_rows_scanned": 11,
+            "source_rows_matched": 11,
+            "relationship_count": 1,
+            "quality_finding_count": 0,
+            "transformation_plan_count": 12,
+            "universal_logic_node_count": 2,
+            "universal_logic_applied_transform_count": 0,
+            "universal_logic_exception_count": 6,
+            "universal_logic_capability_catalog_size": 52,
+            "record_disposition_count": 0,
+            "staging_ready_count": 11,
+            "staging_review_count": 0,
+            "staging_quarantine_count": 0,
+            "staging_rejected_count": 0,
+            "staging_referential_dependency_count": 1
+          },
+          "target_entities": [
+            "customers",
+            "orders"
+          ],
+          "mapping_count": 11,
+          "transformation_count": 12,
+          "quality_findings_by_severity": {},
+          "sample_quality_findings": [],
+          "production_action_executed": false
+        }
+      }
+    },
+    {
+      "ts": "2026-09-25T13:58:28",
+      "event": "tool_executed",
+      "tool": "apply_business_rules",
+      "phase": "VALIDATE",
+      "args": {
+        "migration_id": "DEV-DOCFLOW-20260925135824-CCDF"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "id": "ff9155dc-b527-4254-b93e-f1241d44ef58",
+          "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+          "status": "READY",
+          "validation_ready": true,
+          "created_at": "2026-09-25T08:28:28.909034+00:00",
+          "counts": {
+            "ready_records": 11,
+            "review_records": 0,
+            "quarantine_records": 0,
+            "rejected_records": 0,
+            "blocking_findings": 0,
+            "referential_dependencies": 1,
+            "unresolved_referential": 0
+          },
+          "governed_exceptions": {
+            "review_records": [],
+            "quarantine_records": [],
+            "rejected_records": [],
+            "blocking_findings": [],
+            "referential_dependencies": [
+              {
+                "source": "orders.customer_id",
+                "target": "customers.customer_id",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "value": null,
+                "business_rules": [
+                  "..."
+                ],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED",
+                "target_write": false
+              }
+            ]
+          },
+          "safety": {
+            "source_write_executed": false,
+            "target_write_executed": false,
+            "migration_execution_started": false,
+            "production_action_executed": false
+          },
+          "lifecycle_runtime": {
+            "patch_id": "A000_LIFECYCLE_UNIFIED_RUNTIME_029",
+            "hardening_patch_id": "A000_LIFECYCLE_RUNTIME_SCHEMA_029C",
+            "stage": "VALIDATE",
+            "stage_position": {
+              "number": 10,
+              "total": 13,
+              "previous": "TEST",
+              "next": "RECONCILE"
+            },
+            "responsibility": "Validate technical, business-rule and safety outcomes.",
+            "route": "/v1/validations/resolve-governed",
+            "response_kind": "governed_validation",
+            "integration": "ADDITIVE_READ_ONLY_PROJECTION",
+            "authoritative_payload_preserved": true,
+            "response_status_code": 200,
+            "guarded_or_error_response": false,
+            "backbone": "A000_E2E_INTELLIGENCE_013_026",
+            "live_runtime": "A000_LIVE_UNIFIED_RUNTIME_027_028A",
+            "unified_patch_id": "A000_LIVE_UNIFIED_RUNTIME_027",
+            "trace_id": "TRACE-83f164e4-7be7-4fac-9dc4-f55ea840b610",
+            "status": "READY",
+            "decision": "PLAN_READY",
+            "mode": "PLAN_ONLY",
+            "intent": {
+              "primary_intent": "DEFECT",
+              "scores": {
+                "MIGRATION": 0,
+                "DATA_QUALITY": 0,
+                "PERFORMANCE": 0,
+                "SECURITY": 0,
+                "INTEGRATION": 0,
+                "MODERNIZATION": 0,
+                "DEFECT": 1,
+                "RESILIENCE": 0,
+                "GOVERNANCE": 0
+              },
+              "risk": "LOW",
+              "environment": "DEV"
+            },
+            "selected_capabilities": [
+              {
+                "capability_id": "KCP90002",
+                "name": "Intent and Situation Classification"
+              },
+              {
+                "capability_id": "KCP90003",
+                "name": "Policy and Business Rule Runtime"
+              },
+              {
+                "capability_id": "KCP90008",
+                "name": "Dynamic Specialist Allocation"
+              },
+              {
+                "capability_id": "KCP90013",
+                "name": "Simulation and What-if Analysis"
+              },
+              {
+                "capability_id": "KCP90017",
+                "name": "Data Contract and Drift Governance"
+              }
+            ],
+            "deduplication": {
+              "strategy": "REUSE_CANONICAL_REGISTRY_FIRST",
+              "selected_count": 5,
+              "duplicate_creation_executed": false
+            },
+            "dag_step_count": 5,
+            "simulation_status": "SIMULATED",
+            "database_translation": {
+              "status": "NOT_REQUESTED",
+              "production_writes": 0
+            },
+            "validation_status": "PASS",
+            "confidence": {
+              "confidence": 1.0,
+              "abstain": false,
+              "threshold": 0.7
+            },
+            "evidence_id": "EVD-11d4f09f-2cdc-4274-80b2-aa2e0b34e3b4",
+            "learning": {
+              "promotion_gate": "BLOCK",
+              "evidence_ok": true,
+              "validators_ok": true,
+              "regression_ok": false,
+              "safety_ok": true,
+              "durable": false
+            },
+            "safety": {
+              "execution_authority": "NONE",
+              "source_write_executed": false,
+              "target_write_executed": false,
+              "production_action_executed": false,
+              "cutover_executed": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "ts": "2026-09-25T13:58:31",
+      "event": "proposal",
+      "phase": "MIGRATE",
+      "lines": [
+        "Governed DEV migration DEV-DOCFLOW-20260925135824-CCDF:",
+        "   1) record approval from your confirmation (Core /v1/approvals, decision_by: KMITORA Assistant)",
+        "   2) DEV dry run (Core POST /v1/migrations, execution_mode DRY_RUN)",
+        "   3) DEV replace-load of 11 ready records into target TGT-99D55D3D5735 (schema public, parents before children, idempotent re-run)",
+        "      0 review/quarantine/rejected records stay held and are NOT loaded",
+        "   4) test qualification, reconciliation and evidence package (Core /v1/tests, /v1/reconciliations, /v1/evidence)"
+      ]
+    },
+    {
+      "ts": "2026-09-25T14:07:01",
+      "event": "user_message",
+      "kind": "CONFIRM",
+      "text": "yes"
+    },
+    {
+      "ts": "2026-09-25T14:07:01",
+      "event": "confirmed",
+      "phase": "MIGRATE",
+      "text": "yes"
+    },
+    {
+      "ts": "2026-09-25T14:07:02",
+      "event": "tool_executed",
+      "tool": "run_dev_migration",
+      "phase": "MIGRATE",
+      "args": {
+        "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+        "target_id": "TGT-99D55D3D5735"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+          "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+          "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+          "evidence_id": "5a1f2f3e-7123-4c6f-8372-a8a838f06d5a",
+          "held_records": {
+            "review_records": 0,
+            "quarantine_records": 0,
+            "rejected_records": 0
+          },
+          "steps": [
+            {
+              "step": "approval",
+              "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+              "status": "APPROVED"
+            },
+            {
+              "step": "dry_run",
+              "execution_id": "bedbf079-015a-40c7-9e75-d70c16380405",
+              "status": "DRY_RUN_COMPLETED",
+              "input": 11,
+              "simulated": 11,
+              "failures": 0
+            },
+            {
+              "step": "dev_replace_load",
+              "load_order": [
+                "customers",
+                "orders"
+              ],
+              "counts": {
+                "customers": 5,
+                "orders": 6
+              },
+              "total_loaded": 11
+            },
+            {
+              "step": "post_load_registration",
+              "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+              "status": "POST_LOAD_COMPLETED",
+              "loaded": 11
+            },
+            {
+              "step": "test_qualification",
+              "status": "PASSED",
+              "passed": 9,
+              "total": 9,
+              "critical_failures": []
+            },
+            {
+              "step": "reconciliation",
+              "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+              "status": "PASS"
+            },
+            {
+              "step": "evidence",
+              "evidence_id": "5a1f2f3e-7123-4c6f-8372-a8a838f06d5a",
+              "status": "COMPLETE"
+            }
+          ],
+          "production_action_executed": false,
+          "cutover": "DISABLED"
+        }
+      }
+    },
+    {
+      "ts": "2026-09-25T14:07:06",
+      "event": "tool_executed",
+      "tool": "get_migration_evidence",
+      "phase": "READ",
+      "args": {
+        "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+        "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+        "evidence_id": "5a1f2f3e-7123-4c6f-8372-a8a838f06d5a"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "execution": {
+            "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+            "parent_dry_run_execution_id": "bedbf079-015a-40c7-9e75-d70c16380405",
+            "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+            "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+            "target_id": "TGT-99D55D3D5735",
+            "status": "POST_LOAD_COMPLETED",
+            "execution_gate": "PASS",
+            "execution_mode": "DEV_REPLACE_LOAD",
+            "environment": "DEV",
+            "input_record_count": 11,
+            "simulated_record_count": 11,
+            "success_count": 11,
+            "failure_count": 0,
+            "loaded_record_count": 11,
+            "record_results": [
+              {
+                "sequence": 1,
+                "entity": "customers",
+                "row": 2,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 2,
+                "entity": "customers",
+                "row": 3,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 3,
+                "entity": "customers",
+                "row": 4,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 4,
+                "entity": "customers",
+                "row": 5,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              "... 7 more"
+            ],
+            "write_results": [
+              {
+                "table": "public.customers",
+                "attempted": 5,
+                "inserted": 5,
+                "skipped_no_matching_columns": 0
+              },
+              {
+                "table": "public.orders",
+                "attempted": 6,
+                "inserted": 6,
+                "skipped_no_matching_columns": 0
+              }
+            ],
+            "target_counts": {
+              "customers": 5,
+              "orders": 6
+            },
+            "disposition_summary": {
+              "ready": 11,
+              "review": 0,
+              "quarantine": 0,
+              "rejected": 0
+            },
+            "held_records_preserved": true,
+            "review_records_written": false,
+            "quarantine_records_written": false,
+            "rejected_records_written": false,
+            "source_write_executed": false,
+            "target_write_executed": true,
+            "production_executed": false,
+            "production_action_executed": false,
+            "cutover": "DISABLED",
+            "completed_at": "2026-09-25T08:37:02.013786+00:00",
+            "reconciled": true,
+            "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+            "reconciliation_status": "PASS",
+            "reconciled_at": "2026-09-25T08:37:02.032027+00:00",
+            "lifecycle_runtime": {
+              "patch_id": "A000_LIFECYCLE_UNIFIED_RUNTIME_029",
+              "hardening_patch_id": "A000_LIFECYCLE_RUNTIME_SCHEMA_029C",
+              "stage": "EXECUTE",
+              "stage_position": {
+                "number": 8,
+                "total": 13,
+                "previous": "SIMULATE",
+                "next": "TEST"
+              },
+              "responsibility": "Coordinate governed execution subject to environment and approval policy.",
+              "route": "/v1/executions/ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+              "response_kind": "execution",
+              "integration": "ADDITIVE_READ_ONLY_PROJECTION",
+              "authoritative_payload_preserved": true,
+              "response_status_code": 200,
+              "guarded_or_error_response": false,
+              "backbone": "A000_E2E_INTELLIGENCE_013_026",
+              "live_runtime": "A000_LIVE_UNIFIED_RUNTIME_027_028A",
+              "unified_patch_id": "A000_LIVE_UNIFIED_RUNTIME_027",
+              "trace_id": "TRACE-a41f8dc5-f3b6-480d-b2cd-a0f89e5c7fa4",
+              "status": "READY",
+              "decision": "PLAN_READY",
+              "mode": "PLAN_ONLY",
+              "intent": {
+                "primary_intent": "DEFECT",
+                "scores": {
+                  "MIGRATION": "...",
+                  "DATA_QUALITY": "...",
+                  "PERFORMANCE": "...",
+                  "SECURITY": "...",
+                  "INTEGRATION": "...",
+                  "MODERNIZATION": "...",
+                  "DEFECT": "...",
+                  "RESILIENCE": "...",
+                  "GOVERNANCE": "..."
+                },
+                "risk": "LOW",
+                "environment": "DEV"
+              },
+              "selected_capabilities": [
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                }
+              ],
+              "deduplication": {
+                "strategy": "REUSE_CANONICAL_REGISTRY_FIRST",
+                "selected_count": 4,
+                "duplicate_creation_executed": false
+              },
+              "dag_step_count": 4,
+              "simulation_status": "SIMULATED",
+              "database_translation": {
+                "status": "NOT_REQUESTED",
+                "production_writes": 0
+              },
+              "validation_status": "PASS",
+              "confidence": {
+                "confidence": 1.0,
+                "abstain": false,
+                "threshold": 0.7
+              },
+              "evidence_id": "EVD-77468cf8-1793-484f-8354-b6268fa8d96e",
+              "learning": {
+                "promotion_gate": "BLOCK",
+                "evidence_ok": true,
+                "validators_ok": true,
+                "regression_ok": false,
+                "safety_ok": true,
+                "durable": false
+              },
+              "safety": {
+                "execution_authority": "NONE",
+                "source_write_executed": false,
+                "target_write_executed": false,
+                "production_action_executed": false,
+                "cutover_executed": false
+              }
+            }
+          },
+          "reconciliation": {
+            "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+            "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+            "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+            "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+            "status": "PASS",
+            "reconciled_at": "2026-09-25T08:37:02.032027+00:00",
+            "input_record_count": 11,
+            "simulated_record_count": 11,
+            "matched_records": 11,
+            "unmatched_source": 0,
+            "unexpected_simulated": 0,
+            "failed_records": 0,
+            "count_variance": 0,
+            "target_write_count": 11,
+            "production_action_count": 0,
+            "production_executed": false,
+            "production_action_executed": false,
+            "target_write_executed": true,
+            "reconciliation_mode": "POST_LOAD_DEV",
+            "held_records": {
+              "ready": 11,
+              "review": 0,
+              "quarantine": 0,
+              "rejected": 0
+            },
+            "lifecycle_runtime": {
+              "patch_id": "A000_LIFECYCLE_UNIFIED_RUNTIME_029",
+              "hardening_patch_id": "A000_LIFECYCLE_RUNTIME_SCHEMA_029C",
+              "stage": "RECONCILE",
+              "stage_position": {
+                "number": 11,
+                "total": 13,
+                "previous": "VALIDATE",
+                "next": "EVIDENCE"
+              },
+              "responsibility": "Compare source, target and expected outcomes and explain variance.",
+              "route": "/v1/reconciliations/2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+              "response_kind": "reconciliation",
+              "integration": "ADDITIVE_READ_ONLY_PROJECTION",
+              "authoritative_payload_preserved": true,
+              "response_status_code": 200,
+              "guarded_or_error_response": false,
+              "backbone": "A000_E2E_INTELLIGENCE_013_026",
+              "live_runtime": "A000_LIVE_UNIFIED_RUNTIME_027_028A",
+              "unified_patch_id": "A000_LIVE_UNIFIED_RUNTIME_027",
+              "trace_id": "TRACE-2b441de4-7111-42f5-9252-66adadb6ebd6",
+              "status": "READY",
+              "decision": "PLAN_READY",
+              "mode": "PLAN_ONLY",
+              "intent": {
+                "primary_intent": "DEFECT",
+                "scores": {
+                  "MIGRATION": "...",
+                  "DATA_QUALITY": "...",
+                  "PERFORMANCE": "...",
+                  "SECURITY": "...",
+                  "INTEGRATION": "...",
+                  "MODERNIZATION": "...",
+                  "DEFECT": "...",
+                  "RESILIENCE": "...",
+                  "GOVERNANCE": "..."
+                },
+                "risk": "LOW",
+                "environment": "DEV"
+              },
+              "selected_capabilities": [
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                }
+              ],
+              "deduplication": {
+                "strategy": "REUSE_CANONICAL_REGISTRY_FIRST",
+                "selected_count": 5,
+                "duplicate_creation_executed": false
+              },
+              "dag_step_count": 5,
+              "simulation_status": "SIMULATED",
+              "database_translation": {
+                "status": "NOT_REQUESTED",
+                "production_writes": 0
+              },
+              "validation_status": "PASS",
+              "confidence": {
+                "confidence": 1.0,
+                "abstain": false,
+                "threshold": 0.7
+              },
+              "evidence_id": "EVD-2c744a48-41cd-43e5-ad37-954b05348b5c",
+              "learning": {
+                "promotion_gate": "BLOCK",
+                "evidence_ok": true,
+                "validators_ok": true,
+                "regression_ok": false,
+                "safety_ok": true,
+                "durable": false
+              },
+              "safety": {
+                "execution_authority": "NONE",
+                "source_write_executed": false,
+                "target_write_executed": false,
+                "production_action_executed": false,
+                "cutover_executed": false
+              }
+            }
+          },
+          "evidence": {
+            "evidence_id": "5a1f2f3e-7123-4c6f-8372-a8a838f06d5a",
+            "created_at": "2026-09-25T08:37:02.070448+00:00",
+            "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+            "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+            "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+            "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+            "status": "COMPLETE",
+            "discovery_summary": {
+              "source_entity_count": 2,
+              "target_entity_count": 2,
+              "business_rule_count": 25,
+              "supporting_artifact_count": 0,
+              "source_scope_mode": "UNSCOPED",
+              "source_scope_description": "No row-level source scope compiled from business rules.",
+              "source_rows_scanned": 11,
+              "source_rows_matched": 11,
+              "relationship_count": 1,
+              "quality_finding_count": 0,
+              "transformation_plan_count": 12,
+              "universal_logic_node_count": 2,
+              "universal_logic_applied_transform_count": 0,
+              "universal_logic_exception_count": 6,
+              "universal_logic_capability_catalog_size": 52,
+              "record_disposition_count": 0,
+              "staging_ready_count": 11,
+              "staging_review_count": 0,
+              "staging_quarantine_count": 0,
+              "staging_rejected_count": 0,
+              "staging_referential_dependency_count": 1
+            },
+            "approval_summary": {
+              "status": "APPROVED",
+              "approved": true,
+              "rejected": false,
+              "decision_at": "2026-09-25T08:37:01.571822+00:00",
+              "decision_by": "KMITORA Assistant (DEV operator confirmation in chat)",
+              "decision_reason": "User confirmed the governed DEV migration in KMITORA Assistant chat: \"yes\""
+            },
+            "execution_summary": {
+              "status": "POST_LOAD_COMPLETED",
+              "execution_gate": "PASS",
+              "input_record_count": 11,
+              "simulated_record_count": 11,
+              "success_count": 11,
+              "failure_count": 0,
+              "started_at": null,
+              "completed_at": "2026-09-25T08:37:02.013786+00:00"
+            },
+            "reconciliation_summary": {
+              "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+              "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+              "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+              "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+              "status": "PASS",
+              "reconciled_at": "2026-09-25T08:37:02.032027+00:00",
+              "input_record_count": 11,
+              "simulated_record_count": 11,
+              "matched_records": 11,
+              "unmatched_source": 0,
+              "unexpected_simulated": 0,
+              "failed_records": 0,
+              "count_variance": 0,
+              "target_write_count": 11,
+              "production_action_count": 0,
+              "production_executed": false,
+              "production_action_executed": false,
+              "target_write_executed": true,
+              "reconciliation_mode": "POST_LOAD_DEV",
+              "held_records": {
+                "ready": 11,
+                "review": 0,
+                "quarantine": 0,
+                "rejected": 0
+              }
+            },
+            "record_results": [
+              {
+                "sequence": 1,
+                "entity": "customers",
+                "row": 2,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 2,
+                "entity": "customers",
+                "row": 3,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 3,
+                "entity": "customers",
+                "row": 4,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 4,
+                "entity": "customers",
+                "row": 5,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 5,
+                "entity": "customers",
+                "row": 6,
+                "record_key": null,
+                "source_record": {
+                  "customer_id": "...",
+                  "customer_name": "...",
+                  "status": "...",
+                  "region": "...",
+                  "email": "...",
+                  "balance": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 6,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              {
+                "sequence": 6,
+                "entity": "orders",
+                "row": 2,
+                "record_key": null,
+                "source_record": {
+                  "order_id": "...",
+                  "customer_id": "...",
+                  "order_date": "...",
+                  "status": "...",
+                  "amount": "..."
+                },
+                "status": "SIMULATED",
+                "transformation_count": 5,
+                "transformations": [
+                  "...",
+                  "...",
+                  "...",
+                  "...",
+                  "..."
+                ],
+                "target_write_executed": false,
+                "production_action_executed": false
+              },
+              "... 5 more"
+            ],
+            "transformation_evidence": [
+              {
+                "action": "DIRECT_MAP",
+                "source": "customers.customer_id",
+                "target": "customers.customer_id",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "business_rules": [],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED"
+              },
+              {
+                "action": "DIRECT_MAP",
+                "source": "customers.customer_name",
+                "target": "customers.customer_name",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "business_rules": [],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED"
+              },
+              {
+                "action": "DIRECT_MAP",
+                "source": "customers.status",
+                "target": "customers.status",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "business_rules": [],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED"
+              },
+              {
+                "action": "DIRECT_MAP",
+                "source": "customers.region",
+                "target": "customers.region",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "business_rules": [],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED"
+              },
+              {
+                "action": "DIRECT_MAP",
+                "source": "customers.email",
+                "target": "customers.email",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "business_rules": [],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED"
+              },
+              {
+                "action": "DIRECT_MAP",
+                "source": "customers.balance",
+                "target": "customers.balance",
+                "entity": null,
+                "field": null,
+                "row": null,
+                "business_rules": [],
+                "status": "PLANNED",
+                "execution_state": "NOT_EXECUTED"
+              },
+              "... 6 more"
+            ],
+            "business_rules": [
+              "BR-001 customer_id must be unique and non-null.",
+              "BR-002 order_id must be unique and non-null.",
+              "BR-003 customer_name must be trimmed before target mapping.",
+              "BR-004 email must be normalized to lowercase.",
+              "BR-005 ACTIVE customer status must normalize to A.",
+              "BR-006 INACTIVE customer status must normalize to I.",
+              "... 19 more"
+            ],
+            "safety": {
+              "production_executed": false,
+              "production_action_executed": false,
+              "target_write_executed": true,
+              "target_write_count": 11,
+              "production_action_count": 0
+            },
+            "lifecycle_runtime": {
+              "patch_id": "A000_LIFECYCLE_UNIFIED_RUNTIME_029",
+              "hardening_patch_id": "A000_LIFECYCLE_RUNTIME_SCHEMA_029C",
+              "stage": "EVIDENCE",
+              "stage_position": {
+                "number": 12,
+                "total": 13,
+                "previous": "RECONCILE",
+                "next": "LEARN"
+              },
+              "responsibility": "Assemble traceable evidence, lineage, approvals and decision proof.",
+              "route": "/v1/evidence/5a1f2f3e-7123-4c6f-8372-a8a838f06d5a",
+              "response_kind": "evidence",
+              "integration": "ADDITIVE_READ_ONLY_PROJECTION",
+              "authoritative_payload_preserved": true,
+              "response_status_code": 200,
+              "guarded_or_error_response": false,
+              "backbone": "A000_E2E_INTELLIGENCE_013_026",
+              "live_runtime": "A000_LIVE_UNIFIED_RUNTIME_027_028A",
+              "unified_patch_id": "A000_LIVE_UNIFIED_RUNTIME_027",
+              "trace_id": "TRACE-97b33c34-167b-451f-b0fa-49d3fd4759b5",
+              "status": "READY",
+              "decision": "PLAN_READY",
+              "mode": "PLAN_ONLY",
+              "intent": {
+                "primary_intent": "MIGRATION",
+                "scores": {
+                  "MIGRATION": "...",
+                  "DATA_QUALITY": "...",
+                  "PERFORMANCE": "...",
+                  "SECURITY": "...",
+                  "INTEGRATION": "...",
+                  "MODERNIZATION": "...",
+                  "DEFECT": "...",
+                  "RESILIENCE": "...",
+                  "GOVERNANCE": "..."
+                },
+                "risk": "LOW",
+                "environment": "DEV"
+              },
+              "selected_capabilities": [
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                {
+                  "capability_id": "...",
+                  "name": "..."
+                },
+                "... 6 more"
+              ],
+              "deduplication": {
+                "strategy": "REUSE_CANONICAL_REGISTRY_FIRST",
+                "selected_count": 12,
+                "duplicate_creation_executed": false
+              },
+              "dag_step_count": 12,
+              "simulation_status": "SIMULATED",
+              "database_translation": {
+                "status": "NOT_REQUESTED",
+                "production_writes": 0
+              },
+              "validation_status": "PASS",
+              "confidence": {
+                "confidence": 1.0,
+                "abstain": false,
+                "threshold": 0.7
+              },
+              "evidence_id": "EVD-2f3f0d58-1a27-4927-82e5-88d2add14cb1",
+              "learning": {
+                "promotion_gate": "BLOCK",
+                "evidence_ok": true,
+                "validators_ok": true,
+                "regression_ok": false,
+                "safety_ok": true,
+                "durable": false
+              },
+              "safety": {
+                "execution_authority": "NONE",
+                "source_write_executed": false,
+                "target_write_executed": false,
+                "production_action_executed": false,
+                "cutover_executed": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "production_mutation": false,
+  "cutover": "DISABLED"
+}

@@ -1,0 +1,3 @@
+# Optional: Gemini document -> governed DEV migration flow (document_flow.py).
+# Without it (or without GEMINI_API_KEY) the Assistant runtime still starts normally.
+google-genai>=2.20,<3

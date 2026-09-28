@@ -562,15 +562,20 @@ export async function postA000Message(
     }),
   });
 
-  const body = (await response.json()) as A000LiveMessageResponse;
+  // The Vite proxy answers 500 with an empty body when the Core API is not
+  // running, so never assume the response carries JSON.
+  const body = (await response.json().catch(() => null)) as A000LiveMessageResponse | null;
   if (!response.ok) {
     const payload = body?.payload as Record<string, unknown> | undefined;
     const messageText =
       typeof payload?.message === "string"
         ? payload.message
-        : `A000 request failed: ${response.status}`;
+        : body
+          ? `A000 request failed: ${response.status}`
+          : `KMITORA Core API did not respond (HTTP ${response.status}, empty response). Check that the Core API (F1033_server.py) is running.`;
     throw new Error(messageText);
   }
+  if (!body) throw new Error("KMITORA Core API returned an empty response.");
   return body;
 }
 

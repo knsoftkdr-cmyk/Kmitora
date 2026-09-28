@@ -1,0 +1,28 @@
+{
+  "reconciliation_id": "2a717c4c-e4f1-41d8-8933-c8b5028e488a",
+  "execution_id": "ac3dc8a5-c0f1-4e93-9e48-235023a2a435",
+  "migration_id": "DEV-DOCFLOW-20260925135824-CCDF",
+  "approval_id": "9cc9ab8e-51d9-4401-baaf-3671ba590b64",
+  "status": "PASS",
+  "reconciled_at": "2026-09-25T08:37:02.032027+00:00",
+  "input_record_count": 11,
+  "simulated_record_count": 11,
+  "matched_records": 11,
+  "unmatched_source": 0,
+  "unexpected_simulated": 0,
+  "failed_records": 0,
+  "count_variance": 0,
+  "target_write_count": 11,
+  "production_action_count": 0,
+  "production_executed": false,
+  "production_action_executed": false,
+  "target_write_executed": true,
+  "reconciliation_mode": "POST_LOAD_DEV",
+  "held_records": {
+    "ready": 11,
+    "review": 0,
+    "quarantine": 0,
+    "rejected": 0
+  },
+  "persistence_version": "RECONCILIATION_EVIDENCE_STORAGE_001"
+}

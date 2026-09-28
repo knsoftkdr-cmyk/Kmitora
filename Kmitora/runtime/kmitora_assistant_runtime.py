@@ -2,6 +2,8 @@ from __future__ import annotations
 import json, os, re, subprocess, sys, time, uuid
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv(Path(__file__).resolve().parent / ".env")
 from urllib.request import Request, urlopen
 
 ROOT = Path(os.environ.get("KMITORA_ROOT", r"C:\KMITORA\Kmitora-main\Kmitora-main")).resolve()
@@ -9,6 +11,11 @@ PORT = int(os.environ.get("KMITORA_ASSISTANT_PORT", "8083"))
 STATE = ROOT / "runtime" / "assistant_state"
 STATE.mkdir(parents=True, exist_ok=True)
 MODEL_ENDPOINT = os.environ.get("KMITORA_MODEL_ENDPOINT", "").strip()
+# Gemini document -> governed DEV migration flow (runtime/document_flow.py). Optional:
+# without GEMINI_API_KEY the runtime starts as before and the flow returns a clear error.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import document_flow
+MODEL_CONFIGURED = bool(MODEL_ENDPOINT) or document_flow.configured()
 MAX_FILES = 2500
 MAX_REPAIR_LOOPS = 5
 
@@ -35,7 +42,7 @@ def workspace_context():
                 if len(samples)<80: samples.append(str(Path(base,name).relative_to(ROOT)))
             if counts["files"] >= MAX_FILES: break
         if counts["files"] >= MAX_FILES: break
-    return {"root":str(ROOT),"counts":counts,"languages":languages,"sample_files":samples,"model_runtime":"CONFIGURED" if MODEL_ENDPOINT else "NOT_CONFIGURED","production_mutation":False}
+    return {"root":str(ROOT),"counts":counts,"languages":languages,"sample_files":samples,"model_runtime":"CONFIGURED" if MODEL_CONFIGURED else "NOT_CONFIGURED","production_mutation":False}
 
 def classify(prompt: str):
     p=prompt.lower()
@@ -132,7 +139,7 @@ class Handler(BaseHTTPRequestHandler):
     def _body(self):
         n=int(self.headers.get("Content-Length","0")); return json.loads(self.rfile.read(n) or b"{}")
     def do_GET(self):
-        if self.path=="/health": return self._send(200,{"status":"HEALTHY","mode":"KMITORA_AUTONOMOUS_DEV","workspace":str(ROOT),"production_mutation":False,"model_runtime":"CONFIGURED" if MODEL_ENDPOINT else "NOT_CONFIGURED"})
+        if self.path=="/health": return self._send(200,{"status":"HEALTHY","mode":"KMITORA_AUTONOMOUS_DEV","workspace":str(ROOT),"production_mutation":False,"model_runtime":"CONFIGURED" if MODEL_CONFIGURED else "NOT_CONFIGURED","document_automation":document_flow.GEMINI_MODEL if document_flow.configured() else "NOT_CONFIGURED"})
         if self.path=="/v1/assistant/context": return self._send(200,workspace_context())
         return self._send(404,{"error":"not found"})
     def do_POST(self):
@@ -140,6 +147,9 @@ class Handler(BaseHTTPRequestHandler):
         except Exception as e: return self._send(400,{"error":str(e)})
         if self.path=="/v1/assistant/plan": return self._send(200,make_plan(str(body.get("prompt","")),str(body.get("mode",""))))
         if self.path=="/v1/assistant/execute": return self._send(200,execute(body.get("plan") or {}))
+        if self.path=="/v1/assistant/document-flow":
+            try: return self._send(200,document_flow.handle_message(str(body.get("message","")),body.get("session_id"),STATE))
+            except Exception as e: return self._send(500,{"handled":True,"state":"ENDED","session_id":None,"reply":f"KMITORA document automation failed: {e}. Nothing further was executed.","production_mutation":False})
         if self.path=="/v1/assistant/schedule":
             sid=f"SCH-{uuid.uuid4().hex[:10].upper()}"; rec={"schedule_id":sid,"schedule":body.get("schedule"),"plan":body.get("plan"),"enabled":True,"created_at":time.time(),"production_mutation":False}; (STATE/f"{sid}.json").write_text(json.dumps(rec,indent=2),encoding="utf-8"); return self._send(200,{"status":"SCHEDULED","schedule_id":sid})
         return self._send(404,{"error":"not found"})
@@ -149,7 +159,8 @@ if __name__=="__main__":
     print(f"KMITORA Assistant Runtime DEV listening on http://127.0.0.1:{PORT}")
     print(f"Workspace: {ROOT}")
     print("Production mutation: DISABLED")
-    print("KMITORA model runtime:", "CONFIGURED" if MODEL_ENDPOINT else "NOT CONFIGURED")
+    print("KMITORA model runtime:", "CONFIGURED" if MODEL_CONFIGURED else "NOT CONFIGURED")
+    print("Document automation:", f"Gemini {document_flow.GEMINI_MODEL}" if document_flow.configured() else "NOT CONFIGURED (set GEMINI_API_KEY)")
     import sys as _port_sys
     from pathlib import Path as _PortPath
     _project_root = _PortPath(__file__).resolve().parents[1]
@@ -162,4 +173,5 @@ if __name__=="__main__":
         ThreadingHTTPServer(("127.0.0.1",resolved_port),Handler).serve_forever()
     except KeyboardInterrupt:
         pass
+
 

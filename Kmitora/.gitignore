@@ -21,3 +21,4 @@ dist/
 backend/main_api/runtime_evidence/
 backend/main_api/output/
 *.jsonl
+runtime/.env

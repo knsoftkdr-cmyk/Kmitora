@@ -3,6 +3,7 @@ import { Bot, LoaderCircle, RefreshCw, TriangleAlert } from "lucide-react";
 
 import { routeUnifiedAssistantRequest } from "../services/kmitoraUnifiedAssistant";
 import { runScenarioCommand } from "../services/kmitoraAssistantScenarioLab";
+import { routeDocumentFlow } from "../services/kmitoraDocumentFlow";
 type ChatTurn = {
   id: string;
   role: "USER" | "ASSISTANT" | "ERROR";
@@ -697,6 +698,13 @@ async function readRuntimeFallback(message: string): Promise<string> {
 }
 
 async function askKmitora(message: string, activePage: string): Promise<string> {
+  // Migration request documents, and replies while a request is awaiting a
+  // checkpoint confirmation, go to the Gemini document flow first.
+  const documentFlowReply = await routeDocumentFlow(message);
+  if (documentFlowReply !== null) {
+    return documentFlowReply;
+  }
+
   const navigation = requestedNavigation(message);
 
   if (navigation) {
@@ -749,13 +757,10 @@ async function askKmitora(message: string, activePage: string): Promise<string> 
   }
 }
 
-function extractQuestionFromQuickAction(label: string): string {
-  const normalized = text(label);
-  const quote = normalized.match(/Ask\s+[â€œ\"'](.+?)[â€\"']/i);
-  if (quote?.[1]) return quote[1].trim();
-  if (/^open assistant$/i.test(normalized)) return "Open Assistant";
-  return "";
-}
+// A000Panel.submit() is the single owner of the chat composer (Send button,
+// Enter key, quick prompts, attachments). It dispatches this event once per
+// user message; the bridge only renders the replies.
+export const ASSISTANT_SUBMIT_EVENT = "kmitora:assistant-submit";
 
 export default function AssistantLiveResponseBridge() {
   const [turns, setTurns] = useState<ChatTurn[]>([]);
@@ -787,87 +792,60 @@ export default function AssistantLiveResponseBridge() {
       window.removeEventListener("storage", handleStorage);
     };
   }, []);
-  const lastSentRef = useRef<{ value: string; at: number }>({ value: "", at: 0 });
+  const activePageRef = useRef(activePage);
+  activePageRef.current = activePage;
+  // Messages are queued, never dropped: a checkpoint reply sent while the
+  // previous request is still running is processed right after it.
+  const queueRef = useRef<string[]>([]);
+  const drainingRef = useRef(false);
 
   const latestAssistant = useMemo(
     () => [...turns].reverse().find((turn) => turn.role === "ASSISTANT"),
     [turns],
   );
 
-  async function submit(message: string) {
-    const prompt = text(message);
-    if (!prompt || busy) return;
-    const now = Date.now();
-    if (lastSentRef.current.value === prompt && now - lastSentRef.current.at < 2000) return;
-    lastSentRef.current = { value: prompt, at: now };
-
+  async function drain() {
+    if (drainingRef.current) return;
+    drainingRef.current = true;
     setBusy(true);
-    setLastError("");
-    setTurns((current) => [...current, { id: `u-${now}`, role: "USER", text: prompt }]);
     try {
-      const reply = await askKmitora(prompt, activePage);
-      setTurns((current) => [...current, { id: `a-${Date.now()}`, role: "ASSISTANT", text: reply }]);
-    } catch (error) {
-      const messageText = error instanceof Error ? error.message : "KMITORA Assistant request failed.";
-      setLastError(messageText);
-      setTurns((current) => [...current, { id: `e-${Date.now()}`, role: "ERROR", text: messageText }]);
+      let prompt: string | undefined;
+      while ((prompt = queueRef.current.shift()) !== undefined) {
+        const turnId = `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+        setLastError("");
+        setTurns((current) => [...current, { id: `u-${turnId}`, role: "USER", text: prompt as string }]);
+        try {
+          const reply = await askKmitora(prompt, activePageRef.current);
+          setTurns((current) => [...current, { id: `a-${turnId}`, role: "ASSISTANT", text: reply }]);
+        } catch (error) {
+          const messageText = error instanceof Error ? error.message : "KMITORA Assistant request failed.";
+          setLastError(messageText);
+          setTurns((current) => [...current, { id: `e-${turnId}`, role: "ERROR", text: messageText }]);
+        }
+      }
     } finally {
+      drainingRef.current = false;
       setBusy(false);
     }
   }
 
+  function submit(message: string) {
+    // Keep line breaks: pasted/attached migration request documents are line-structured.
+    const prompt = typeof message === "string" ? message.trim() : "";
+    if (!prompt) return;
+    queueRef.current.push(prompt);
+    void drain();
+  }
+
   useEffect(() => {
-    const root = rootRef.current?.closest("aside.copilot") as HTMLElement | null;
-    if (!root) return;
-
-    function inputValue(): string {
-      const composer = root.querySelector<HTMLElement>(".chatInput, .copilotInputRow") ?? root;
-      const field = composer.querySelector<HTMLInputElement | HTMLTextAreaElement>("input, textarea");
-      return field ? field.value : "";
-    }
-
-    function onClick(event: MouseEvent) {
-      const target = event.target as HTMLElement | null;
-      const button = target?.closest("button") as HTMLButtonElement | null;
-      if (!button || rootRef.current?.contains(button)) return;
-
-      const label = firstText(button.getAttribute("aria-label"), button.getAttribute("title"), button.textContent);
-      const quickQuestion = extractQuestionFromQuickAction(label);
-      if (quickQuestion === "Open Assistant") {
-        void submit("What is current system status?");
-        return;
-      }
-      if (quickQuestion) {
-        void submit(quickQuestion);
-        return;
-      }
-
-      const lower = label.toLowerCase();
-      const isAttachment = /attach|paperclip|file|upload/.test(lower);
-      const isSend = /send|submit|ask/.test(lower) || button.matches('[type="submit"]');
-      if (isSend && !isAttachment) {
-        const value = inputValue();
-        if (value.trim()) void submit(value);
-      }
-    }
-
-    function onKeyDown(event: KeyboardEvent) {
-      const target = event.target;
-      if (!(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement)) return;
-      if (!root.contains(target)) return;
-      if (event.key === "Enter" && !event.shiftKey) {
-        const value = target.value;
-        if (value.trim()) void submit(value);
-      }
-    }
-
-    root.addEventListener("click", onClick, true);
-    root.addEventListener("keydown", onKeyDown, true);
-    return () => {
-      root.removeEventListener("click", onClick, true);
-      root.removeEventListener("keydown", onKeyDown, true);
+    const handleSubmit = (event: Event) => {
+      submit(String((event as CustomEvent<{ message?: string }>).detail?.message ?? ""));
     };
-  });
+    window.addEventListener(ASSISTANT_SUBMIT_EVENT, handleSubmit as EventListener);
+    return () => window.removeEventListener(ASSISTANT_SUBMIT_EVENT, handleSubmit as EventListener);
+    // submit/drain only touch refs and state setters, so one subscription is enough.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="kmitoraLiveResponseBridge" data-kmitora-live-chat="1" ref={rootRef}>
@@ -885,7 +863,7 @@ export default function AssistantLiveResponseBridge() {
       {turns.slice(-8).map((turn) => (
         <div key={turn.id} className={`kmitoraLiveTurn ${turn.role.toLowerCase()}`}>
           <b>{turn.role === "USER" ? "You" : turn.role === "ASSISTANT" ? "KMITORA" : "Runtime"}</b>
-          <span>{turn.text}</span>
+          <span style={{ whiteSpace: "pre-wrap" }}>{turn.text}</span>
         </div>
       ))}
 
@@ -898,7 +876,7 @@ export default function AssistantLiveResponseBridge() {
       )}
 
       {latestAssistant && (
-        <button type="button" className="kmitoraLiveRetry" onClick={() => void submit("What is current system status?")}>
+        <button type="button" className="kmitoraLiveRetry" onClick={() => submit("What is current system status?")}>
           <RefreshCw size={12} /> Refresh status
         </button>
       )}

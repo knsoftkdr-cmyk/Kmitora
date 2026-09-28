@@ -25,7 +25,8 @@ import type {
 } from "../services/api";
 import type { AdvancedRuntime } from "../types/advancedRuntime";
 import AssistantConversationGuard from "./AssistantConversationGuard";
-import AssistantLiveResponseBridge from "./AssistantLiveResponseBridge";
+import AssistantLiveResponseBridge, { ASSISTANT_SUBMIT_EVENT } from "./AssistantLiveResponseBridge";
+import { looksLikeMigrationRequest } from "../services/kmitoraDocumentFlow";
 type ChatMessage = {
   id: string;
   role: "assistant" | "user" | "system";
@@ -60,6 +61,7 @@ type AssistantAttachment = {
     | "DRAWING"
     | "OTHER";
   excerpt?: string;
+  documentText?: string;
   previewUrl?: string;
 };
 
@@ -186,6 +188,7 @@ async function buildAssistantAttachment(
   if (isTextLikeFile(file)) {
     const text = await file.text();
     item.excerpt = text.slice(0, 4000);
+    item.documentText = text.slice(0, 200000);
   }
 
   if (isImageFile(file)) {
@@ -313,6 +316,23 @@ export default function A000Panel({ activePage, onNavigate, onAdvancedRuntime }:
     if ((!message && attachments.length === 0) || loading) return;
 
     const attachmentContext = buildAttachmentContext(attachments);
+
+    // This submit() is the only handler for the composer. Hand each user
+    // message to AssistantLiveResponseBridge exactly once; an attached
+    // migration request document replaces the typed text so it reaches the
+    // Gemini document flow, which gates every step. Silent auto-summaries are
+    // not forwarded, so they can never be read as a checkpoint reply.
+    if (!silentUser) {
+      const migrationRequest = attachments.find(
+        (item) => item.documentText && looksLikeMigrationRequest(item.documentText),
+      );
+      const bridgeMessage = migrationRequest?.documentText ?? message;
+      if (bridgeMessage) {
+        window.dispatchEvent(
+          new CustomEvent(ASSISTANT_SUBMIT_EVENT, { detail: { message: bridgeMessage } }),
+        );
+      }
+    }
 
     let domainContext = "";
     try {

@@ -1,0 +1,9 @@
+KMITORA Assistant Runtime DEV listening on http://127.0.0.1:8083
+Workspace: C:\KMITORA\Kmitora-main\Kmitora-main
+Production mutation: DISABLED
+KMITORA model runtime: CONFIGURED
+Document automation: Gemini gemini-3.7-flash
+KMITORA Assistant Runtime actually listening on http://127.0.0.1:8083
+[KMITORA Assistant] "POST /v1/assistant/document-flow HTTP/1.1" 200 -
+[KMITORA Assistant] "POST /v1/assistant/document-flow HTTP/1.1" 200 -
+[KMITORA Assistant] "POST /v1/assistant/document-flow HTTP/1.1" 200 -
