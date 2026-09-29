@@ -6,8 +6,15 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).resolve().parent / ".env")
 from urllib.request import Request, urlopen
 
-ROOT = Path(os.environ.get("KMITORA_ROOT", r"C:\KMITORA\Kmitora-main\Kmitora-main")).resolve()
-PORT = int(os.environ.get("KMITORA_ASSISTANT_PORT", "8083"))
+# ROOT = Path(os.environ.get("KMITORA_ROOT", r"C:\KMITORA\Kmitora-main\Kmitora-main")).resolve()
+# PORT = int(os.environ.get("KMITORA_ASSISTANT_PORT", "8083"))
+ROOT = Path(
+    os.environ.get("KMITORA_ROOT", str(Path(__file__).resolve().parents[1]))
+).resolve()
+
+PORT = int(os.environ.get("PORT", os.environ.get("KMITORA_ASSISTANT_PORT", "8083")))
+HOST = os.environ.get("KMITORA_HOST", "0.0.0.0")
+
 STATE = ROOT / "runtime" / "assistant_state"
 STATE.mkdir(parents=True, exist_ok=True)
 MODEL_ENDPOINT = os.environ.get("KMITORA_MODEL_ENDPOINT", "").strip()
@@ -166,11 +173,14 @@ if __name__=="__main__":
     _project_root = _PortPath(__file__).resolve().parents[1]
     _port_sys.path.insert(0, str(_project_root / "backend"))
     from port_utils import find_free_port, write_active_port
-    resolved_port = find_free_port(PORT)
+    # resolved_port = find_free_port(PORT)
+    resolved_port = int(os.environ["PORT"]) if os.environ.get("PORT") else find_free_port(PORT)
     write_active_port("assistant", resolved_port, _project_root)
-    print(f"KMITORA Assistant Runtime actually listening on http://127.0.0.1:{resolved_port}")
+    # print(f"KMITORA Assistant Runtime actually listening on http://127.0.0.1:{resolved_port}")
+    print(f"KMITORA Assistant Runtime actually listening on http://{HOST}:{resolved_port}")
     try:
-        ThreadingHTTPServer(("127.0.0.1",resolved_port),Handler).serve_forever()
+        # ThreadingHTTPServer(("127.0.0.1",resolved_port),Handler).serve_forever()
+        ThreadingHTTPServer((HOST, resolved_port), Handler).serve_forever()
     except KeyboardInterrupt:
         pass
 
