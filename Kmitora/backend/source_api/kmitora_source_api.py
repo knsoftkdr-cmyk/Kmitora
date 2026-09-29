@@ -23,8 +23,11 @@ if _REPO_ROOT not in sys.path:
     sys.path.insert(0, _REPO_ROOT)
 from backend.closure20.connection_persistence import persist_connection, delete_connection, restore_registry
 
-HOST = "127.0.0.1"
-PORT = int(os.getenv("KMITORA_SOURCE_API_PORT", "8081"))
+# HOST = "127.0.0.1"
+# PORT = int(os.getenv("KMITORA_SOURCE_API_PORT", "8081"))
+HOST = os.getenv("KMITORA_HOST", "0.0.0.0")
+PORT = int(os.getenv("PORT", os.getenv("KMITORA_SOURCE_API_PORT", "8081")))
+
 MAX_PREVIEW = 1000000
 DEFAULT_PREVIEW = 100
 
@@ -686,7 +689,8 @@ def main():
     _project_root = _PortPath(__file__).resolve().parents[2]
     _port_sys.path.insert(0, str(_project_root / "backend"))
     from port_utils import find_free_port, write_active_port
-    resolved_port = find_free_port(PORT)
+    # resolved_port = find_free_port(PORT)
+    resolved_port = int(os.environ["PORT"]) if os.environ.get("PORT") else find_free_port(PORT)
     write_active_port("source", resolved_port, _project_root)
     print(f"KMITORA Source API actually listening on http://{HOST}:{resolved_port}")
     server = ThreadingHTTPServer((HOST, resolved_port), Handler)
