@@ -1,5 +1,5 @@
 from __future__ import annotations
-import json, os, re, subprocess, sys, time, uuid
+import json, os, re, subprocess, sys, time, uuid, hmac
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from dotenv import load_dotenv
@@ -141,15 +141,29 @@ def execute(plan: dict):
 
 class Handler(BaseHTTPRequestHandler):
     def _send(self,code,obj):
-        data=json.dumps(obj).encode(); self.send_response(code); self.send_header("Content-Type","application/json"); self.send_header("Access-Control-Allow-Origin","*"); self.send_header("Access-Control-Allow-Headers","Content-Type"); self.send_header("Access-Control-Allow-Methods","GET,POST,OPTIONS"); self.end_headers(); self.wfile.write(data)
+        data=json.dumps(obj).encode(); self.send_response(code); self.send_header("Content-Type","application/json"); self.send_header("Access-Control-Allow-Origin","*"); self.send_header("Access-Control-Allow-Headers","Content-Type, Authorization"); self.send_header("Access-Control-Allow-Methods","GET,POST,OPTIONS"); self.end_headers(); self.wfile.write(data)
+    def _authorized(self):
+        expected = os.environ.get("KMITORA_API_TOKEN", "").strip()
+        if not expected:
+            self._send(503, {"error": "API authentication is not configured"})
+            return False
+        supplied = self.headers.get("Authorization", "")
+        if not hmac.compare_digest(supplied, f"Bearer {expected}"):
+            self._send(401, {"error": "Unauthorized"})
+            return False
+        return True
+
     def do_OPTIONS(self): self._send(200,{"ok":True})
     def _body(self):
         n=int(self.headers.get("Content-Length","0")); return json.loads(self.rfile.read(n) or b"{}")
     def do_GET(self):
         if self.path=="/health": return self._send(200,{"status":"HEALTHY","mode":"KMITORA_AUTONOMOUS_DEV","workspace":str(ROOT),"production_mutation":False,"model_runtime":"CONFIGURED" if MODEL_CONFIGURED else "NOT_CONFIGURED","document_automation":document_flow.GEMINI_MODEL if document_flow.configured() else "NOT_CONFIGURED"})
-        if self.path=="/v1/assistant/context": return self._send(200,workspace_context())
+        if self.path=="/v1/assistant/context":
+            if not self._authorized(): return
+            return self._send(200,workspace_context())
         return self._send(404,{"error":"not found"})
     def do_POST(self):
+        if not self._authorized(): return
         try: body=self._body()
         except Exception as e: return self._send(400,{"error":str(e)})
         if self.path=="/v1/assistant/plan": return self._send(200,make_plan(str(body.get("prompt","")),str(body.get("mode",""))))
