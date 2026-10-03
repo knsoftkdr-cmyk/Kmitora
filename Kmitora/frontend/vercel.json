@@ -1,0 +1,24 @@
+﻿{
+  "rewrites": [
+    {
+      "source": "/source-api/:path*",
+      "destination": "https://kmitora-source-api.onrender.com/:path*"
+    },
+    {
+      "source": "/target-api/:path*",
+      "destination": "https://kmitora-target-api.onrender.com/:path*"
+    },
+    {
+      "source": "/core-api/:path*",
+      "destination": "https://kmitora-main-api.onrender.com/:path*"
+    },
+    {
+      "source": "/v1/:path*",
+      "destination": "https://kmitora-main-api.onrender.com/v1/:path*"
+    },
+    {
+      "source": "/health",
+      "destination": "https://kmitora-main-api.onrender.com/health"
+    }
+  ]
+}
